@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8a01f03f-5d5d-4954-a05e-8ada7ea441e1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://focpds1164:8731/InfoHubService/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="23b9809e-a79d-4f53-b528-751fabc724f3" SourceId="1" SourceUrl="http://focpds1164:8731/InfoHubService/?xsd=xsd1" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="9d5b2e61-5d25-485f-aaa5-0b6546c8d7be" SourceId="1" SourceUrl="http://focpds1164:8731/InfoHubService/?disco" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="4818f2e9-3376-4cee-bf31-444b5a5bf686" SourceId="1" SourceUrl="http://focpds1164:8731/InfoHubService/?xsd=xsd4" />
+    <MetadataFile FileName="LP2Service.wsdl" MetadataType="Wsdl" ID="803802f4-8f55-49be-a1ee-f7c1572fcfa7" SourceId="1" SourceUrl="http://focpds1164:8731/InfoHubService/?wsdl" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="7ae7fd02-9d01-4ebd-8d68-721126369d5d" SourceId="1" SourceUrl="http://focpds1164:8731/InfoHubService/?xsd=xsd2" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="5e0f7eae-9573-47b6-a4c1-d0daa4cd1c43" SourceId="1" SourceUrl="http://focpds1164:8731/InfoHubService/?xsd=xsd3" />
+    <MetadataFile FileName="item4.xsd" MetadataType="Schema" ID="8f3beb2f-655d-484a-aa7b-bd758fb3a98e" SourceId="1" SourceUrl="http://focpds1164:8731/InfoHubService/?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

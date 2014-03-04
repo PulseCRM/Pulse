@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="054892b1-ccef-48ce-84ab-c25f1b96f5ec" solutionId="054892b1-ccef-48ce-84ab-c25f1b96f5ec" resetWebServer="false" name="LPWeb" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <projectOutputAssembly location="BLL.dll" deploymentTarget="WebApplication" projectPath="..\BLL\BLL.csproj">
+      <safeControls>
+        <safeControl assemblyName="BLL" namespaceName="LPWeb.BLL" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </projectOutputAssembly>
+    <projectOutputAssembly location="DAL.dll" deploymentTarget="WebApplication" projectPath="..\DAL\DAL.csproj">
+      <safeControls>
+        <safeControl assemblyName="DAL" namespaceName="LPWeb.DAL" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </projectOutputAssembly>
+    <projectOutputAssembly location="Model.dll" deploymentTarget="WebApplication" projectPath="..\Model\Model.csproj">
+      <safeControls>
+        <safeControl assemblyName="Model" namespaceName="LPWeb.Model" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </projectOutputAssembly>
+    <projectOutputAssembly location="Utilities.dll" deploymentTarget="WebApplication" projectPath="..\Utilities\Utilities.csproj">
+      <safeControls>
+        <safeControl assemblyName="Utilities" namespaceName="Utilities" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </projectOutputAssembly>
+    <customAssembly location="AspNetPager.dll" deploymentTarget="WebApplication" sourcePath="..\Libs\AspNetPager.dll">
+      <safeControls>
+        <safeControl assemblyName="AspNetPager" namespaceName="Wuqi.Webdiyer" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+    <customAssembly location="Microsoft.Practices.EnterpriseLibrary.Common.dll" deploymentTarget="WebApplication" sourcePath="..\Libs\Microsoft.Practices.EnterpriseLibrary.Common.dll">
+      <safeControls>
+        <safeControl assemblyName="Microsoft.Practices.EnterpriseLibrary.Common" namespaceName="Microsoft.Practices.EnterpriseLibrary.Common.Configuration" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+    <customAssembly location="Microsoft.Practices.EnterpriseLibrary.Logging.dll" deploymentTarget="WebApplication" sourcePath="..\Libs\Microsoft.Practices.EnterpriseLibrary.Logging.dll">
+      <safeControls>
+        <safeControl assemblyName="Microsoft.Practices.EnterpriseLibrary.Logging" namespaceName="Microsoft.Practices.EnterpriseLibrary.Logging" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+    <customAssembly location="Microsoft.Practices.ServiceLocation.dll" deploymentTarget="WebApplication" sourcePath="..\Libs\Microsoft.Practices.ServiceLocation.dll">
+      <safeControls>
+        <safeControl assemblyName="Microsoft.Practices.ServiceLocation" namespaceName="Microsoft.Practices.ServiceLocation" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+    <customAssembly location="Microsoft.Practices.Unity.dll" deploymentTarget="WebApplication" sourcePath="..\Libs\Microsoft.Practices.Unity.dll">
+      <safeControls>
+        <safeControl assemblyName="Microsoft.Practices.Unity" namespaceName="Microsoft.Practices.Unity" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+    <customAssembly location="Microsoft.Practices.Unity.Interception.dll" deploymentTarget="WebApplication" sourcePath="..\Libs\Microsoft.Practices.Unity.Interception.dll">
+      <safeControls>
+        <safeControl assemblyName="Microsoft.Practices.Unity.InterceptionExtension" namespaceName="Microsoft.Practices.Unity.InterceptionExtension" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+    <customAssembly location="org.in2bits.MyXls.dll" deploymentTarget="WebApplication" sourcePath="..\Libs\org.in2bits.MyXls.dll">
+      <safeControls>
+        <safeControl assemblyName="org.in2bits.MyXls" namespaceName="org.in2bits.MyXls" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+    <customAssembly location="ExcelLibrary.dll" deploymentTarget="WebApplication" sourcePath="..\Libs\ExcelLibrary.dll">
+      <safeControls>
+        <safeControl assemblyName="ExcelLibrary" namespaceName="ExcelLibrary.SpreadSheet" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+    <customAssembly location="ExcelPackage.dll" deploymentTarget="WebApplication" sourcePath="..\Libs\ExcelPackage.dll">
+      <safeControls>
+        <safeControl assemblyName="ExcelPackage" namespaceName="OfficeOpenXml" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+    <customAssembly location="Telerik.Web.Design.dll" deploymentTarget="WebApplication" sourcePath="..\Libs\Telerik.Web.Design.dll">
+      <safeControls>
+        <safeControl assemblyName="Telerik.Web.Design" namespaceName="Telerik.Web.Design" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+    <customAssembly location="Telerik.Web.UI.dll" deploymentTarget="WebApplication" sourcePath="..\Libs\Telerik.Web.UI.dll">
+      <safeControls>
+        <safeControl assemblyName="Telerik.Web.UI" namespaceName="Telerik.Web.UI" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+    <customAssembly location="Telerik.Web.UI.Skins.dll" deploymentTarget="WebApplication" sourcePath="..\Libs\Telerik.Web.UI.Skins.dll">
+      <safeControls>
+        <safeControl assemblyName="Telerik.Web.UI.Skins" namespaceName="Telerik.Web.UI.Skins" typeName="*" isSafeAgainstScript="false" />
+      </safeControls>
+    </customAssembly>
+  </assemblies>
+  <features>
+    <featureReference itemId="3bce866f-b9a5-4b44-9b12-accfc7189614" />
+    <featureReference itemId="48607186-ce34-4e6c-8d99-292e091c8cd9" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="f14b67fc-d5f6-4322-be42-7a6d15ef71c8" />
+  </projectItems>
+</package>

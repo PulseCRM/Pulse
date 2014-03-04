@@ -1,0 +1,629 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="LeadStarService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://api.myleadstar.com/LeadStarService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://api.myleadstar.com/LeadStarService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://api.myleadstar.com/LeadStarService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LeadStarAPI" />
+      <xsd:import schemaLocation="http://api.myleadstar.com/LeadStarService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ILeadStarService_GetUserEventsByDateRange_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserEventsByDateRange" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetUserEventsByDateRange_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserEventsByDateRangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetBaseURL_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBaseURL" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetBaseURL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBaseURLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetCreditCardPostStringURL_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditCardPostStringURL" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetCreditCardPostStringURL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditCardPostStringURLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_AddToAccountBalance_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddToAccountBalance" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_AddToAccountBalance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddToAccountBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetProspectByIntegrationID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProspectByIntegrationID" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetProspectByIntegrationID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProspectByIntegrationIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_InsertProspect_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertProspect" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_InsertProspect_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertProspectResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_UpdateProspect_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProspect" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_UpdateProspect_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProspectResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_ReassignProspects_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReassignProspects" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_ReassignProspects_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReassignProspectsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetCompanyByIntegrationID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyByIntegrationID" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetCompanyByIntegrationID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCompanyByIntegrationIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_InsertCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCompany" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_InsertCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_UpdateCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompany" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_UpdateCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetBranchByIntegrationID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBranchByIntegrationID" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetBranchByIntegrationID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBranchByIntegrationIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_InsertBranch_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertBranch" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_InsertBranch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_UpdateBranch_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBranch" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_UpdateBranch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetUserByIntegrationID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByIntegrationID" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetUserByIntegrationID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByIntegrationIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_InsertUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUser" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_InsertUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_UpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_UpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetUserCreditCards_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserCreditCards" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetUserCreditCards_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserCreditCardsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetUserAccountBalance_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserAccountBalance" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetUserAccountBalance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserAccountBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetUserTransactionHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserTransactionHistory" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetUserTransactionHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserTransactionHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetAllCampaignCategories_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCampaignCategories" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetAllCampaignCategories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCampaignCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetMarketingCampaignByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMarketingCampaignByID" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetMarketingCampaignByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMarketingCampaignByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetMarketingCampaignsByCategory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMarketingCampaignsByCategory" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetMarketingCampaignsByCategory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMarketingCampaignsByCategoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetCustomMarketingCampaigns_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomMarketingCampaigns" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetCustomMarketingCampaigns_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomMarketingCampaignsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetCampaignEventByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCampaignEventByID" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetCampaignEventByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCampaignEventByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetCampaignEventsByMarketingCampaign_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCampaignEventsByMarketingCampaign" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetCampaignEventsByMarketingCampaign_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCampaignEventsByMarketingCampaignResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_StartDefaultCampaign_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartDefaultCampaign" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_StartDefaultCampaign_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartDefaultCampaignResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_SaveContactCampaignsOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveContactCampaignsOrder" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_SaveContactCampaignsOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveContactCampaignsOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_DeleteContactCampaign_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteContactCampaign" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_DeleteContactCampaign_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteContactCampaignResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetEventsByContactCampaign_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventsByContactCampaign" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetEventsByContactCampaign_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEventsByContactCampaignResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetContactCampaignsByProspect_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContactCampaignsByProspect" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_GetContactCampaignsByProspect_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContactCampaignsByProspectResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_SaveContactCampaignEventCompletion_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveContactCampaignEventCompletion" />
+  </wsdl:message>
+  <wsdl:message name="ILeadStarService_SaveContactCampaignEventCompletion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveContactCampaignEventCompletionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ILeadStarService">
+    <wsdl:operation name="GetUserEventsByDateRange">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadStarService/GetUserEventsByDateRange" message="tns:ILeadStarService_GetUserEventsByDateRange_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadStarService/GetUserEventsByDateRangeResponse" message="tns:ILeadStarService_GetUserEventsByDateRange_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBaseURL">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadStarService/GetBaseURL" message="tns:ILeadStarService_GetBaseURL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadStarService/GetBaseURLResponse" message="tns:ILeadStarService_GetBaseURL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardPostStringURL">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadStarService/GetCreditCardPostStringURL" message="tns:ILeadStarService_GetCreditCardPostStringURL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadStarService/GetCreditCardPostStringURLResponse" message="tns:ILeadStarService_GetCreditCardPostStringURL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddToAccountBalance">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadStarService/AddToAccountBalance" message="tns:ILeadStarService_AddToAccountBalance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadStarService/AddToAccountBalanceResponse" message="tns:ILeadStarService_AddToAccountBalance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectByIntegrationID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadStarService/GetProspectByIntegrationID" message="tns:ILeadStarService_GetProspectByIntegrationID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadStarService/GetProspectByIntegrationIDResponse" message="tns:ILeadStarService_GetProspectByIntegrationID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertProspect">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadStarService/InsertProspect" message="tns:ILeadStarService_InsertProspect_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadStarService/InsertProspectResponse" message="tns:ILeadStarService_InsertProspect_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProspect">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadStarService/UpdateProspect" message="tns:ILeadStarService_UpdateProspect_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadStarService/UpdateProspectResponse" message="tns:ILeadStarService_UpdateProspect_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReassignProspects">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadStarService/ReassignProspects" message="tns:ILeadStarService_ReassignProspects_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadStarService/ReassignProspectsResponse" message="tns:ILeadStarService_ReassignProspects_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyByIntegrationID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadStarService/GetCompanyByIntegrationID" message="tns:ILeadStarService_GetCompanyByIntegrationID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadStarService/GetCompanyByIntegrationIDResponse" message="tns:ILeadStarService_GetCompanyByIntegrationID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadStarService/InsertCompany" message="tns:ILeadStarService_InsertCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadStarService/InsertCompanyResponse" message="tns:ILeadStarService_InsertCompany_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadStarService/UpdateCompany" message="tns:ILeadStarService_UpdateCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadStarService/UpdateCompanyResponse" message="tns:ILeadStarService_UpdateCompany_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchByIntegrationID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadStarService/GetBranchByIntegrationID" message="tns:ILeadStarService_GetBranchByIntegrationID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadStarService/GetBranchByIntegrationIDResponse" message="tns:ILeadStarService_GetBranchByIntegrationID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertBranch">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadStarService/InsertBranch" message="tns:ILeadStarService_InsertBranch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadStarService/InsertBranchResponse" message="tns:ILeadStarService_InsertBranch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBranch">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadStarService/UpdateBranch" message="tns:ILeadStarService_UpdateBranch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadStarService/UpdateBranchResponse" message="tns:ILeadStarService_UpdateBranch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByIntegrationID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadStarService/GetUserByIntegrationID" message="tns:ILeadStarService_GetUserByIntegrationID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadStarService/GetUserByIntegrationIDResponse" message="tns:ILeadStarService_GetUserByIntegrationID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadStarService/InsertUser" message="tns:ILeadStarService_InsertUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadStarService/InsertUserResponse" message="tns:ILeadStarService_InsertUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadStarService/UpdateUser" message="tns:ILeadStarService_UpdateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadStarService/UpdateUserResponse" message="tns:ILeadStarService_UpdateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserCreditCards">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadStarService/GetUserCreditCards" message="tns:ILeadStarService_GetUserCreditCards_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadStarService/GetUserCreditCardsResponse" message="tns:ILeadStarService_GetUserCreditCards_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAccountBalance">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadStarService/GetUserAccountBalance" message="tns:ILeadStarService_GetUserAccountBalance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadStarService/GetUserAccountBalanceResponse" message="tns:ILeadStarService_GetUserAccountBalance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserTransactionHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadStarService/GetUserTransactionHistory" message="tns:ILeadStarService_GetUserTransactionHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadStarService/GetUserTransactionHistoryResponse" message="tns:ILeadStarService_GetUserTransactionHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCampaignCategories">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadStarService/GetAllCampaignCategories" message="tns:ILeadStarService_GetAllCampaignCategories_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadStarService/GetAllCampaignCategoriesResponse" message="tns:ILeadStarService_GetAllCampaignCategories_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMarketingCampaignByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadStarService/GetMarketingCampaignByID" message="tns:ILeadStarService_GetMarketingCampaignByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadStarService/GetMarketingCampaignByIDResponse" message="tns:ILeadStarService_GetMarketingCampaignByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMarketingCampaignsByCategory">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadStarService/GetMarketingCampaignsByCategory" message="tns:ILeadStarService_GetMarketingCampaignsByCategory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadStarService/GetMarketingCampaignsByCategoryResponse" message="tns:ILeadStarService_GetMarketingCampaignsByCategory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomMarketingCampaigns">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadStarService/GetCustomMarketingCampaigns" message="tns:ILeadStarService_GetCustomMarketingCampaigns_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadStarService/GetCustomMarketingCampaignsResponse" message="tns:ILeadStarService_GetCustomMarketingCampaigns_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignEventByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadStarService/GetCampaignEventByID" message="tns:ILeadStarService_GetCampaignEventByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadStarService/GetCampaignEventByIDResponse" message="tns:ILeadStarService_GetCampaignEventByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignEventsByMarketingCampaign">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadStarService/GetCampaignEventsByMarketingCampaign" message="tns:ILeadStarService_GetCampaignEventsByMarketingCampaign_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadStarService/GetCampaignEventsByMarketingCampaignResponse" message="tns:ILeadStarService_GetCampaignEventsByMarketingCampaign_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartDefaultCampaign">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadStarService/StartDefaultCampaign" message="tns:ILeadStarService_StartDefaultCampaign_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadStarService/StartDefaultCampaignResponse" message="tns:ILeadStarService_StartDefaultCampaign_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveContactCampaignsOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadStarService/SaveContactCampaignsOrder" message="tns:ILeadStarService_SaveContactCampaignsOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadStarService/SaveContactCampaignsOrderResponse" message="tns:ILeadStarService_SaveContactCampaignsOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteContactCampaign">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadStarService/DeleteContactCampaign" message="tns:ILeadStarService_DeleteContactCampaign_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadStarService/DeleteContactCampaignResponse" message="tns:ILeadStarService_DeleteContactCampaign_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsByContactCampaign">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadStarService/GetEventsByContactCampaign" message="tns:ILeadStarService_GetEventsByContactCampaign_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadStarService/GetEventsByContactCampaignResponse" message="tns:ILeadStarService_GetEventsByContactCampaign_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContactCampaignsByProspect">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadStarService/GetContactCampaignsByProspect" message="tns:ILeadStarService_GetContactCampaignsByProspect_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadStarService/GetContactCampaignsByProspectResponse" message="tns:ILeadStarService_GetContactCampaignsByProspect_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveContactCampaignEventCompletion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILeadStarService/SaveContactCampaignEventCompletion" message="tns:ILeadStarService_SaveContactCampaignEventCompletion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILeadStarService/SaveContactCampaignEventCompletionResponse" message="tns:ILeadStarService_SaveContactCampaignEventCompletion_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ILeadStarService" type="tns:ILeadStarService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUserEventsByDateRange">
+      <soap:operation soapAction="http://tempuri.org/ILeadStarService/GetUserEventsByDateRange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBaseURL">
+      <soap:operation soapAction="http://tempuri.org/ILeadStarService/GetBaseURL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCardPostStringURL">
+      <soap:operation soapAction="http://tempuri.org/ILeadStarService/GetCreditCardPostStringURL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddToAccountBalance">
+      <soap:operation soapAction="http://tempuri.org/ILeadStarService/AddToAccountBalance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProspectByIntegrationID">
+      <soap:operation soapAction="http://tempuri.org/ILeadStarService/GetProspectByIntegrationID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertProspect">
+      <soap:operation soapAction="http://tempuri.org/ILeadStarService/InsertProspect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProspect">
+      <soap:operation soapAction="http://tempuri.org/ILeadStarService/UpdateProspect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReassignProspects">
+      <soap:operation soapAction="http://tempuri.org/ILeadStarService/ReassignProspects" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanyByIntegrationID">
+      <soap:operation soapAction="http://tempuri.org/ILeadStarService/GetCompanyByIntegrationID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCompany">
+      <soap:operation soapAction="http://tempuri.org/ILeadStarService/InsertCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompany">
+      <soap:operation soapAction="http://tempuri.org/ILeadStarService/UpdateCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchByIntegrationID">
+      <soap:operation soapAction="http://tempuri.org/ILeadStarService/GetBranchByIntegrationID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertBranch">
+      <soap:operation soapAction="http://tempuri.org/ILeadStarService/InsertBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBranch">
+      <soap:operation soapAction="http://tempuri.org/ILeadStarService/UpdateBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByIntegrationID">
+      <soap:operation soapAction="http://tempuri.org/ILeadStarService/GetUserByIntegrationID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUser">
+      <soap:operation soapAction="http://tempuri.org/ILeadStarService/InsertUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="http://tempuri.org/ILeadStarService/UpdateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserCreditCards">
+      <soap:operation soapAction="http://tempuri.org/ILeadStarService/GetUserCreditCards" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAccountBalance">
+      <soap:operation soapAction="http://tempuri.org/ILeadStarService/GetUserAccountBalance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserTransactionHistory">
+      <soap:operation soapAction="http://tempuri.org/ILeadStarService/GetUserTransactionHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCampaignCategories">
+      <soap:operation soapAction="http://tempuri.org/ILeadStarService/GetAllCampaignCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMarketingCampaignByID">
+      <soap:operation soapAction="http://tempuri.org/ILeadStarService/GetMarketingCampaignByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMarketingCampaignsByCategory">
+      <soap:operation soapAction="http://tempuri.org/ILeadStarService/GetMarketingCampaignsByCategory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomMarketingCampaigns">
+      <soap:operation soapAction="http://tempuri.org/ILeadStarService/GetCustomMarketingCampaigns" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignEventByID">
+      <soap:operation soapAction="http://tempuri.org/ILeadStarService/GetCampaignEventByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCampaignEventsByMarketingCampaign">
+      <soap:operation soapAction="http://tempuri.org/ILeadStarService/GetCampaignEventsByMarketingCampaign" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartDefaultCampaign">
+      <soap:operation soapAction="http://tempuri.org/ILeadStarService/StartDefaultCampaign" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveContactCampaignsOrder">
+      <soap:operation soapAction="http://tempuri.org/ILeadStarService/SaveContactCampaignsOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteContactCampaign">
+      <soap:operation soapAction="http://tempuri.org/ILeadStarService/DeleteContactCampaign" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsByContactCampaign">
+      <soap:operation soapAction="http://tempuri.org/ILeadStarService/GetEventsByContactCampaign" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContactCampaignsByProspect">
+      <soap:operation soapAction="http://tempuri.org/ILeadStarService/GetContactCampaignsByProspect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveContactCampaignEventCompletion">
+      <soap:operation soapAction="http://tempuri.org/ILeadStarService/SaveContactCampaignEventCompletion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LeadStarService">
+    <wsdl:port name="BasicHttpBinding_ILeadStarService" binding="tns:BasicHttpBinding_ILeadStarService">
+      <soap:address location="http://api.myleadstar.com/LeadStarService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

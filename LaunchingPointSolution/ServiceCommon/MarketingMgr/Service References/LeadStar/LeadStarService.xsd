@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/LeadStarAPI" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LeadStarAPI" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://api.myleadstar.com/LeadStarService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ArrayOfContactCampaignEvent">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContactCampaignEvent" nillable="true" type="tns:ContactCampaignEvent" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContactCampaignEvent" nillable="true" type="tns:ArrayOfContactCampaignEvent" />
+  <xs:complexType name="ContactCampaignEvent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Action" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Completed" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Contact_Campaign_Event_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contact_Campaign_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventContent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventIcon" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Execution_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Image_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Letter_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Script_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" type="tns:CampaignEventType" />
+      <xs:element minOccurs="0" name="Week" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContactCampaignEvent" nillable="true" type="tns:ContactCampaignEvent" />
+  <xs:simpleType name="CampaignEventType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="TimeSpan" />
+      <xs:enumeration value="Calendar" />
+      <xs:enumeration value="Birthday" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CampaignEventType" nillable="true" type="tns:CampaignEventType" />
+  <xs:complexType name="Prospect">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Address2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Appraised_Value" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Birthdate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Cell_Phone_Area_Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cell_Phone_Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cell_Phone_Prefix" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Closing_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contact_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contact_Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Date_Created" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Date_Modified" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Email_Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email_Notification" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Fax_Area_Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fax_Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fax_Prefix" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="First_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Home_Phone_Area_Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Home_Phone_Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Home_Phone_Prefix" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Integration_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Interest_Rate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="LTV_Ratio" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Last_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Loan_Amount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Loan_Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Loan_Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Monthly_Payment" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Occupancy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Office_Phone_Area_Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Office_Phone_Ext" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Office_Phone_Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Office_Phone_Prefix" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Property_Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Prospect_Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Purchase_Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Referral_Company" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Referral_Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Referral_First_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Referral_Last_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Referral_Phone_Area_Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Referral_Phone_Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Referral_Phone_Prefix" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Referral_Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Salutation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Secondary_Birthdate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Secondary_First_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Secondary_Last_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Suffix" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Target_Refi_Rate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="User_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Website" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zip" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Prospect" nillable="true" type="tns:Prospect" />
+  <xs:complexType name="Company">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Address2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Company_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Company_Key" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Company_Manager_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Company_Manager_Username" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Company_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Company_Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fax_Area_Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fax_Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fax_Prefix" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Integration_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone_Area_Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone_Extension" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone_Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone_Prefix" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zip" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Company" nillable="true" type="tns:Company" />
+  <xs:complexType name="Branch">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Address2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Branch_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Branch_License_1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Branch_License_2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Branch_License_3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Branch_License_4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Branch_License_5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Branch_Manager_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Branch_Manager_Username" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Branch_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Branch_Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Company_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Company_Key" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Disclaimer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fax_Area_Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fax_Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fax_Prefix" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Integration_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone_Area_Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone_Extension" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone_Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone_Prefix" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zip" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Branch" nillable="true" type="tns:Branch" />
+  <xs:complexType name="User">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Branch_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Branch_Integration_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Company_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Company_Integration_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email_Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="First_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Integration_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Last_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="License_Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Logo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone1_Area_Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone1_Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone1_Prefix" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone1_Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone2_Area_Code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone2_Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone2_Prefix" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone2_Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Photo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Secret_Answer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Secret_Question" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Signature" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Suffix" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User_Type" type="tns:UserType" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Web_Address" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:simpleType name="UserType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BranchManager" />
+      <xs:enumeration value="RegionManager" />
+      <xs:enumeration value="CompanyManager" />
+      <xs:enumeration value="BranchUser" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="UserType" nillable="true" type="tns:UserType" />
+  <xs:complexType name="ArrayOfCreditCard">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CreditCard" nillable="true" type="tns:CreditCard" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCreditCard" nillable="true" type="tns:ArrayOfCreditCard" />
+  <xs:complexType name="CreditCard">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Card_Exp_Month" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Card_Exp_Year" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Card_First_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Card_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Card_IsDefault" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Card_Last_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Card_Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Card_SIC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Card_Type" type="tns:PurchCreditCardType" />
+      <xs:element minOccurs="0" name="Company_Key" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Instance_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User_Integration_ID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CreditCard" nillable="true" type="tns:CreditCard" />
+  <xs:simpleType name="PurchCreditCardType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="VISA" />
+      <xs:enumeration value="MasterCard" />
+      <xs:enumeration value="Amex" />
+      <xs:enumeration value="Discover" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PurchCreditCardType" nillable="true" type="tns:PurchCreditCardType" />
+  <xs:complexType name="ArrayOfUserTransaction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserTransaction" nillable="true" type="tns:UserTransaction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserTransaction" nillable="true" type="tns:ArrayOfUserTransaction" />
+  <xs:complexType name="UserTransaction">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Account_Balance" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Amount" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CC_Last_4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Gateway_Response" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Order_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Payment_Method" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Reprocess_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" type="tns:UserTransactionType" />
+      <xs:element minOccurs="0" name="User_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User_Transaction_ID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserTransaction" nillable="true" type="tns:UserTransaction" />
+  <xs:simpleType name="UserTransactionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Debit" />
+      <xs:enumeration value="Credit" />
+      <xs:enumeration value="AccountDeposit" />
+      <xs:enumeration value="CampaignPurchase" />
+      <xs:enumeration value="MembershipPurchase" />
+      <xs:enumeration value="CombinedPurchase" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="UserTransactionType" nillable="true" type="tns:UserTransactionType" />
+  <xs:complexType name="ArrayOfCampaignCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CampaignCategory" nillable="true" type="tns:CampaignCategory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCampaignCategory" nillable="true" type="tns:ArrayOfCampaignCategory" />
+  <xs:complexType name="CampaignCategory">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CampaignCategoryDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CampaignCategoryKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CampaignCategoryValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CampaignCategory" nillable="true" type="tns:CampaignCategory" />
+  <xs:complexType name="MarketingCampaign">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Campaign_Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Campaign_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Campaign_State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Campaign_Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Category" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CoBranding" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Company_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Dash_Product_ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Marketing_Campaign_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Min_Pay_As_Mailed" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Number_Mailings" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Payment_Delivery" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Pricing_Unit_Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Send_Birthday_Primary" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Send_Birthday_Secondary" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sub_Category" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Week" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Years" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MarketingCampaign" nillable="true" type="tns:MarketingCampaign" />
+  <xs:complexType name="ArrayOfMarketingCampaign">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MarketingCampaign" nillable="true" type="tns:MarketingCampaign" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMarketingCampaign" nillable="true" type="tns:ArrayOfMarketingCampaign" />
+  <xs:complexType name="CampaignEvent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Action" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Calendar_Date" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Campaign_Event_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventContent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventIcon" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Image_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Letter_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Marketing_Campaign_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Script_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" type="tns:CampaignEventType" />
+      <xs:element minOccurs="0" name="Week" type="xs:int" />
+      <xs:element minOccurs="0" name="Year" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CampaignEvent" nillable="true" type="tns:CampaignEvent" />
+  <xs:complexType name="ArrayOfCampaignEvent">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CampaignEvent" nillable="true" type="tns:CampaignEvent" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCampaignEvent" nillable="true" type="tns:ArrayOfCampaignEvent" />
+  <xs:complexType name="ContactCampaignsOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Campaign_Start_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Company_Key" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Instance_ID" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="LstProspectIds" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Marketing_Campaign_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Marketing_Partner_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User_Integration_ID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContactCampaignsOrder" nillable="true" type="tns:ContactCampaignsOrder" />
+  <xs:simpleType name="PayerType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Company" />
+      <xs:enumeration value="Branch" />
+      <xs:enumeration value="User" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PayerType" nillable="true" type="tns:PayerType" />
+  <xs:complexType name="ArrayOfContactCampaign">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContactCampaign" nillable="true" type="tns:ContactCampaign" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContactCampaign" nillable="true" type="tns:ArrayOfContactCampaign" />
+  <xs:complexType name="ContactCampaign">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Campaign_Creation_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Campaign_Start_Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Campaign_Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactCampaignEvents" nillable="true" type="tns:ArrayOfContactCampaignEvent" />
+      <xs:element minOccurs="0" name="Contact_Campaign_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Marketing_Campaign_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Marketing_Partner_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Prospect_ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="User_Integration_ID" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContactCampaign" nillable="true" type="tns:ContactCampaign" />
+</xs:schema>

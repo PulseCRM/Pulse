@@ -1,0 +1,91 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/_layouts/LPWeb/MasterPage/Super.master" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="PlaceHolderAdditionalPageHead" runat="Server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script language="javascript" type="text/javascript">
+        // <!CDATA[
+
+        //#region Show/Close Global Popup
+
+        function ShowGlobalPopup(Title, iFrameWidth, iFrameHeight, divWidth, divHeight, iFrameSrc) {
+
+            $("#divGlobalPopup").attr("title", Title);
+
+            $("#ifrGlobalPopup").attr("src", "");
+            $("#ifrGlobalPopup").attr("src", iFrameSrc);
+            $("#ifrGlobalPopup").width(iFrameWidth);
+            $("#ifrGlobalPopup").height(iFrameHeight);
+
+            // show modal
+            $("#divGlobalPopup").dialog({
+                height: divHeight,
+                width: divWidth,
+                modal: true,
+                resizable: false,
+                close: function (event, ui) {
+                    $("#divGlobalPopup").dialog("destroy");
+                    $("#ifrGlobalPopup").attr("src", "about:blank");
+                }
+            });
+            $(".ui-dialog").css("border", "solid 3px #aaaaaa");
+        }
+
+        function CloseGlobalPopup() {
+
+            $("#divGlobalPopup").dialog("close");
+        }
+
+        //#endregion
+
+        // ]]>
+    </script>
+    
+</asp:Content>
+<asp:Content ID="Content2" runat="server" ContentPlaceHolderID="PlaceHolderMain">
+    <div id="PageContent">
+        <div>
+            <asp:ContentPlaceHolder ID="MainArea" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" runat="server" ContentPlaceHolderID="PlaceHolderLeftNavBar">
+    <div id="zz17_V4QuickLaunchMenu" class="s4-ql">
+        <div class="menu vertical menu-vertical">
+            <ul class="root static">
+                <li class="static">
+<%--                    <a class="static menu-item" href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/Marketing/MarketingCampaign.aspx") %>">
+                        <span class="additional-background"><span class="menu-item-text">Marketing</span></span>
+                    </a>--%>
+                    <ul class="static">
+                        <li class="static">
+                            <a class="static menu-item" href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/Marketing/MarketingCampaign.aspx") %>">
+                                <span class="additional-background"><span class="menu-item-text">Campaigns</span></span>
+                            </a>
+                        </li>
+                        <li class="static">
+                            <a class="static menu-item" href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/Marketing/MarketingActivities.aspx") %>">
+                                <span class="additional-background"><span class="menu-item-text">Activities</span></span>
+                            </a>
+                        </li>
+                        <li class="static">
+                            <a class="static menu-item" href="" style="text-decoration: none;" disabled>
+                                <span class="additional-background"><span class="menu-item-text">Account Balance</span></span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="divGlobalPopup" title="Global Popup" style="display: none;">
+        <iframe id="ifrGlobalPopup" frameborder="0" scrolling="no" width="100px" height="100px">
+        </iframe>
+    </div>
+</asp:Content>
+
+<asp:Content ID="Content4" runat="server" ContentPlaceHolderID="PlaceHolderPageTitleInTitleArea">
+    <asp:ContentPlaceHolder ID="PageTitleArea" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>

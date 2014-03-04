@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ddd83129-3f26-4b8c-bbe4-b2a019d694f9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://focpds841:8731/InfoHubService/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="4909af23-6865-4231-8b4f-0fe80b2c78bf" SourceId="1" SourceUrl="http://focpds841:8731/InfoHubService/?xsd=xsd3" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="857ef977-1d18-4a82-b13c-f3843ceaed68" SourceId="1" SourceUrl="http://focpds841:8731/InfoHubService/?xsd=xsd0" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="c12f5ca8-bbe6-40ca-acd3-ff77e57174d3" SourceId="1" SourceUrl="http://focpds841:8731/InfoHubService/?xsd=xsd1" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="33b6c87f-854d-4dd3-9dfa-d86d166ce3bb" SourceId="1" SourceUrl="http://focpds841:8731/InfoHubService/?disco" />
+    <MetadataFile FileName="LP2Service.wsdl" MetadataType="Wsdl" ID="4ee99102-854e-4084-a25e-48305510a275" SourceId="1" SourceUrl="http://focpds841:8731/InfoHubService/?wsdl" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="8bbcf9e3-9c6e-4400-a4b6-96cfe30582b6" SourceId="1" SourceUrl="http://focpds841:8731/InfoHubService/?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

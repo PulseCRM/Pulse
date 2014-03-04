@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/LP2.Service.Common" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LP2.Service.Common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8732/InfoHubService/?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:8732/InfoHubService/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="StartUserImportRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:ReqHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StartUserImportRequest" nillable="true" type="tns:StartUserImportRequest" />
+  <xs:complexType name="ReqHdr">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SecurityToken" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReqHdr" nillable="true" type="tns:ReqHdr" />
+  <xs:complexType name="StartUserImportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:RespHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StartUserImportResponse" nillable="true" type="tns:StartUserImportResponse" />
+  <xs:complexType name="RespHdr">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RequestId" type="xs:int" />
+      <xs:element minOccurs="0" name="StatusInfo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Successful" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RespHdr" nillable="true" type="tns:RespHdr" />
+  <xs:complexType name="StopUserImportRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:ReqHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StopUserImportRequest" nillable="true" type="tns:StopUserImportRequest" />
+  <xs:complexType name="StopUserImportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:RespHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StopUserImportResponse" nillable="true" type="tns:StopUserImportResponse" />
+  <xs:complexType name="ImportADUsersRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AD_OU_Filter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:ReqHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ImportADUsersRequest" nillable="true" type="tns:ImportADUsersRequest" />
+  <xs:complexType name="ImportADUsersResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RequestId" type="xs:int" />
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:RespHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ImportADUsersResponse" nillable="true" type="tns:ImportADUsersResponse" />
+  <xs:complexType name="UpdateADUserRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AD_OU_Filter" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AD_User" nillable="true" type="tns:User" />
+      <xs:element minOccurs="0" name="Command" type="tns:UserMgrCommandType" />
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:ReqHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateADUserRequest" nillable="true" type="tns:UpdateADUserRequest" />
+  <xs:complexType name="User">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cell" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Fax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Firstname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Lastname" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:simpleType name="UserMgrCommandType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="CreateUser" />
+      <xs:enumeration value="UpdateUser" />
+      <xs:enumeration value="ChangePassword" />
+      <xs:enumeration value="DisableUser" />
+      <xs:enumeration value="EnableUser" />
+      <xs:enumeration value="DeleteUser" />
+      <xs:enumeration value="ImportUsers" />
+      <xs:enumeration value="StopImport" />
+      <xs:enumeration value="StartImport" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="UserMgrCommandType" nillable="true" type="tns:UserMgrCommandType" />
+  <xs:complexType name="UpdateADUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:RespHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateADUserResponse" nillable="true" type="tns:UpdateADUserResponse" />
+  <xs:complexType name="GetPointMgrStatusRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:ReqHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetPointMgrStatusRequest" nillable="true" type="tns:GetPointMgrStatusRequest" />
+  <xs:complexType name="GetPointMgrStatusResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Running" type="xs:boolean" />
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:RespHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetPointMgrStatusResponse" nillable="true" type="tns:GetPointMgrStatusResponse" />
+  <xs:complexType name="StartPointImportRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:ReqHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StartPointImportRequest" nillable="true" type="tns:StartPointImportRequest" />
+  <xs:complexType name="StartPointImportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:RespHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StartPointImportResponse" nillable="true" type="tns:StartPointImportResponse" />
+  <xs:complexType name="StopPointImportRequest">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="PointFolders" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:ReqHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StopPointImportRequest" nillable="true" type="tns:StopPointImportRequest" />
+  <xs:complexType name="StopPointImportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:RespHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StopPointImportResponse" nillable="true" type="tns:StopPointImportResponse" />
+  <xs:complexType name="ImportAllLoansRequest">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="PointFolders" nillable="true" type="q2:ArrayOfstring" />
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:ReqHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ImportAllLoansRequest" nillable="true" type="tns:ImportAllLoansRequest" />
+  <xs:complexType name="ImportAllLoansResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RequestId" type="xs:int" />
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:RespHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ImportAllLoansResponse" nillable="true" type="tns:ImportAllLoansResponse" />
+  <xs:complexType name="ImportLoansRequest">
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="FileIds" nillable="true" type="q3:ArrayOfint" />
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:ReqHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ImportLoansRequest" nillable="true" type="tns:ImportLoansRequest" />
+  <xs:complexType name="ImportLoansResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RequestId" type="xs:int" />
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:RespHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ImportLoansResponse" nillable="true" type="tns:ImportLoansResponse" />
+  <xs:complexType name="ImportLoanRepNamesRequest">
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="PointFolders" nillable="true" type="q4:ArrayOfstring" />
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:ReqHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ImportLoanRepNamesRequest" nillable="true" type="tns:ImportLoanRepNamesRequest" />
+  <xs:complexType name="ImportLoanRepNamesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RequestId" type="xs:int" />
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:RespHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ImportLoanRepNamesResponse" nillable="true" type="tns:ImportLoanRepNamesResponse" />
+  <xs:complexType name="ImportCardexRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CardexFile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:ReqHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ImportCardexRequest" nillable="true" type="tns:ImportCardexRequest" />
+  <xs:complexType name="ImportCardexResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RequestId" type="xs:int" />
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:RespHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ImportCardexResponse" nillable="true" type="tns:ImportCardexResponse" />
+  <xs:complexType name="GetPointFileRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PointFile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:ReqHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetPointFileRequest" nillable="true" type="tns:GetPointFileRequest" />
+  <xs:complexType name="GetPointFileResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FileContent" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:RespHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetPointFileResponse" nillable="true" type="tns:GetPointFileResponse" />
+  <xs:complexType name="MoveFileRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FileId" type="xs:int" />
+      <xs:element minOccurs="0" name="LoanStatus" type="tns:LoanStatusEnum" />
+      <xs:element minOccurs="0" name="NewFolderId" type="xs:int" />
+      <xs:element minOccurs="0" name="StatusDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:ReqHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MoveFileRequest" nillable="true" type="tns:MoveFileRequest" />
+  <xs:simpleType name="LoanStatusEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Processing">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Closed">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Canceled">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Denied">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Suspended">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Prospect">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Archive">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="LoanStatusEnum" nillable="true" type="tns:LoanStatusEnum" />
+  <xs:complexType name="MoveFileResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:RespHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MoveFileResponse" nillable="true" type="tns:MoveFileResponse" />
+  <xs:complexType name="DisposeLoanRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FileId" type="xs:int" />
+      <xs:element minOccurs="0" name="LoanStatus" type="tns:LoanStatusEnum" />
+      <xs:element minOccurs="0" name="NewFolderId" type="xs:int" />
+      <xs:element minOccurs="0" name="StatusDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:ReqHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DisposeLoanRequest" nillable="true" type="tns:DisposeLoanRequest" />
+  <xs:complexType name="DisposeLoanResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:RespHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DisposeLoanResponse" nillable="true" type="tns:DisposeLoanResponse" />
+  <xs:complexType name="ExtendRateLockRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DaysExtended" type="xs:int" />
+      <xs:element minOccurs="0" name="FileId" type="xs:int" />
+      <xs:element minOccurs="0" name="NewDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:ReqHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExtendRateLockRequest" nillable="true" type="tns:ExtendRateLockRequest" />
+  <xs:complexType name="ExtendRateLockResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:RespHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExtendRateLockResponse" nillable="true" type="tns:ExtendRateLockResponse" />
+  <xs:complexType name="UpdateEstCloseDateRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FileId" type="xs:int" />
+      <xs:element minOccurs="0" name="NewDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:ReqHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateEstCloseDateRequest" nillable="true" type="tns:UpdateEstCloseDateRequest" />
+  <xs:complexType name="UpdateEstCloseDateResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:RespHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateEstCloseDateResponse" nillable="true" type="tns:UpdateEstCloseDateResponse" />
+  <xs:complexType name="UpdateStageRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FileId" type="xs:int" />
+      <xs:element minOccurs="0" name="StageList" nillable="true" type="tns:ArrayOfStageInfo" />
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:ReqHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateStageRequest" nillable="true" type="tns:UpdateStageRequest" />
+  <xs:complexType name="ArrayOfStageInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StageInfo" nillable="true" type="tns:StageInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStageInfo" nillable="true" type="tns:ArrayOfStageInfo" />
+  <xs:complexType name="StageInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Completed" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StageName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StageInfo" nillable="true" type="tns:StageInfo" />
+  <xs:complexType name="UpdateStageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:RespHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateStageResponse" nillable="true" type="tns:UpdateStageResponse" />
+  <xs:complexType name="ReassignLoanRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FileId" type="xs:int" />
+      <xs:element minOccurs="0" name="NewUserId" type="xs:int" />
+      <xs:element minOccurs="0" name="RoleId" type="xs:int" />
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:ReqHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReassignLoanRequest" nillable="true" type="tns:ReassignLoanRequest" />
+  <xs:complexType name="ReassignLoanResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:RespHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReassignLoanResponse" nillable="true" type="tns:ReassignLoanResponse" />
+  <xs:complexType name="ReassignContactRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContactPerson" nillable="true" type="tns:Agent" />
+      <xs:element minOccurs="0" name="ContactRoleId" type="xs:int" />
+      <xs:element minOccurs="0" name="FileId" type="xs:int" />
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:ReqHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReassignContactRequest" nillable="true" type="tns:ReassignContactRequest" />
+  <xs:complexType name="Agent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Addr" nillable="true" type="tns:Address" />
+      <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contact" nillable="true" type="tns:ContactInfo" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Agent" nillable="true" type="tns:Agent" />
+  <xs:complexType name="Address">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Street" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zip" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Address" nillable="true" type="tns:Address" />
+  <xs:complexType name="ContactInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BusinessPhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CellPhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HomePhone" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContactInfo" nillable="true" type="tns:ContactInfo" />
+  <xs:complexType name="ReassignContactResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:RespHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReassignContactResponse" nillable="true" type="tns:ReassignContactResponse" />
+  <xs:complexType name="AddNoteRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Created" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FileId" type="xs:int" />
+      <xs:element minOccurs="0" name="Note" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:ReqHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AddNoteRequest" nillable="true" type="tns:AddNoteRequest" />
+  <xs:complexType name="AddNoteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:RespHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AddNoteResponse" nillable="true" type="tns:AddNoteResponse" />
+  <xs:complexType name="UpdateBorrowerRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContactId" type="xs:int" />
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:ReqHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateBorrowerRequest" nillable="true" type="tns:UpdateBorrowerRequest" />
+  <xs:complexType name="UpdateBorrowerResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:RespHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateBorrowerResponse" nillable="true" type="tns:UpdateBorrowerResponse" />
+  <xs:complexType name="UpdateLoanInfoRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FileId" type="xs:int" />
+      <xs:element minOccurs="0" name="LoanDetail" nillable="true" type="tns:LoanDetail" />
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:ReqHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateLoanInfoRequest" nillable="true" type="tns:UpdateLoanInfoRequest" />
+  <xs:complexType name="LoanDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Borrower" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Coborrower" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedOn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EstimatedCloseDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InterestRate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoanOfficer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoanProgram" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModifiedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModifiedOn" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PointFilename" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PointFolder" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PropertyAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Ranking" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zip" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LoanDetail" nillable="true" type="tns:LoanDetail" />
+  <xs:complexType name="UpdateLoanInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:RespHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateLoanInfoResponse" nillable="true" type="tns:UpdateLoanInfoResponse" />
+  <xs:complexType name="CreateFileRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LoanDetail" nillable="true" type="tns:LoanDetail" />
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:ReqHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CreateFileRequest" nillable="true" type="tns:CreateFileRequest" />
+  <xs:complexType name="CreateFileResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:RespHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CreateFileResponse" nillable="true" type="tns:CreateFileResponse" />
+  <xs:complexType name="GenerateWorkflowRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FileId" type="xs:int" />
+      <xs:element minOccurs="0" name="WorkflowTemplId" type="xs:int" />
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:ReqHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GenerateWorkflowRequest" nillable="true" type="tns:GenerateWorkflowRequest" />
+  <xs:complexType name="GenerateWorkflowResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ReqId" type="xs:int" />
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:RespHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GenerateWorkflowResponse" nillable="true" type="tns:GenerateWorkflowResponse" />
+  <xs:complexType name="CalculateDueDatesRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FileId" type="xs:int" />
+      <xs:element minOccurs="0" name="NewEstCloseDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:ReqHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CalculateDueDatesRequest" nillable="true" type="tns:CalculateDueDatesRequest" />
+  <xs:complexType name="CalculateDueDatesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:RespHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CalculateDueDatesResponse" nillable="true" type="tns:CalculateDueDatesResponse" />
+  <xs:complexType name="SendEmailRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppendPictureSignature" type="xs:boolean" />
+      <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CCContactIds" nillable="true" type="q5:ArrayOfint" />
+      <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CCEmails" nillable="true" type="q6:ArrayOfstring" />
+      <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CCUserIds" nillable="true" type="q7:ArrayOfint" />
+      <xs:element minOccurs="0" name="EmailBody" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="EmailQueId" type="xs:int" />
+      <xs:element minOccurs="0" name="EmailSubject" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EmailTemplId" type="xs:int" />
+      <xs:element minOccurs="0" name="FileId" type="xs:int" />
+      <xs:element minOccurs="0" name="LoanAlertId" type="xs:int" />
+      <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ToContactIds" nillable="true" type="q8:ArrayOfint" />
+      <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ToEmails" nillable="true" type="q9:ArrayOfstring" />
+      <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ToUserIds" nillable="true" type="q10:ArrayOfint" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:ReqHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SendEmailRequest" nillable="true" type="tns:SendEmailRequest" />
+  <xs:complexType name="SendEmailResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ReqId" type="xs:int" />
+      <xs:element minOccurs="0" name="resp" nillable="true" type="tns:RespHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SendEmailResponse" nillable="true" type="tns:SendEmailResponse" />
+  <xs:complexType name="EmailPreviewRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppendPictureSignature" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EmailBody" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="EmailTemplId" type="xs:int" />
+      <xs:element minOccurs="0" name="FileId" type="xs:int" />
+      <xs:element minOccurs="0" name="LoanAlertId" type="xs:int" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+      <xs:element minOccurs="0" name="hdr" nillable="true" type="tns:ReqHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EmailPreviewRequest" nillable="true" type="tns:EmailPreviewRequest" />
+  <xs:complexType name="EmailPreviewResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EmailHtmlContent" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="resp" nillable="true" type="tns:RespHdr" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EmailPreviewResponse" nillable="true" type="tns:EmailPreviewResponse" />
+</xs:schema>

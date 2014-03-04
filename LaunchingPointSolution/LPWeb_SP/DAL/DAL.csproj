@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{49F5884C-D97B-4086-8870-A005B43ADF3D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAL</RootNamespace>
+    <AssemblyName>DAL</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>FocusIT_LaunchingPoint:%24/LaunchingPointSolution/LPWeb_SP/DAL</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccAuxPath>102642</SccAuxPath>
+    <SccProvider>Dynamsoft SCM Anywhere Hosted:{2db9c764-2000-41D1-A6C3-704E6C1A3DE2}</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArchiveLeadStatus.cs" />
+    <Compile Include="AutoCampaigns.cs" />
+    <Compile Include="Branches.cs" />
+    <Compile Include="BranchesBase.cs" />
+    <Compile Include="BranchManagers.cs" />
+    <Compile Include="BranchManagersBase.cs" />
+    <Compile Include="CompanyExecutives.cs" />
+    <Compile Include="CompanyExecutivesBase.cs" />
+    <Compile Include="CompanyLoanPointFields.cs" />
+    <Compile Include="CompanyLoanPointFieldsBase.cs" />
+    <Compile Include="CompanyTaskPickList.cs" />
+    <Compile Include="Company_Alerts.cs" />
+    <Compile Include="Company_AlertsBase.cs" />
+    <Compile Include="Company_EasyMortgage.cs" />
+    <Compile Include="Company_EasyMortgageBase.cs" />
+    <Compile Include="Company_General.cs" />
+    <Compile Include="Company_GeneralBase.cs" />
+    <Compile Include="Company_Lead_Sources.cs" />
+    <Compile Include="Company_Lead_SourcesBase.cs" />
+    <Compile Include="Company_LoanProgramDetails.cs" />
+    <Compile Include="Company_LoanProgramDetailsBase.cs" />
+    <Compile Include="Company_Loan_Programs.cs" />
+    <Compile Include="Company_Loan_ProgramsBase.cs" />
+    <Compile Include="Company_MCT.cs" />
+    <Compile Include="Company_MCTBase.cs" />
+    <Compile Include="Company_Point.cs" />
+    <Compile Include="Company_PointBase.cs" />
+    <Compile Include="Company_Report.cs" />
+    <Compile Include="Company_ReportBase.cs" />
+    <Compile Include="Company_Web.cs" />
+    <Compile Include="Company_WebBase.cs" />
+    <Compile Include="ContactActivities.cs" />
+    <Compile Include="ContactActivitiesBase.cs" />
+    <Compile Include="ContactBranches.cs" />
+    <Compile Include="ContactBranchesBase.cs" />
+    <Compile Include="ContactCompanies.cs" />
+    <Compile Include="ContactCompaniesBase.cs" />
+    <Compile Include="ContactMailCampaign.cs" />
+    <Compile Include="ContactNotes.cs" />
+    <Compile Include="ContactNotesBase.cs" />
+    <Compile Include="ContactRoles.cs" />
+    <Compile Include="ContactRolesBase.cs" />
+    <Compile Include="Contacts.cs" />
+    <Compile Include="ContactsBase.cs" />
+    <Compile Include="ContactUsers.cs" />
+    <Compile Include="ContactUsersBase.cs" />
+    <Compile Include="Contact_Relationship.cs" />
+    <Compile Include="AutoCampaignsBase.cs" />
+    <Compile Include="Email_AttachmentsTemp.cs" />
+    <Compile Include="Email_AttachmentsTempBase.cs" />
+    <Compile Include="LeadTaskList.cs" />
+    <Compile Include="LeadTaskListBase.cs" />
+    <Compile Include="LoanAutoEmails.cs" />
+    <Compile Include="LoanAutoEmailsBase.cs" />
+    <Compile Include="LoanConditions.cs" />
+    <Compile Include="LoanLocks.cs" />
+    <Compile Include="LoanLocksBase.cs" />
+    <Compile Include="LoanMarketing.cs" />
+    <Compile Include="LoanMarketingBase.cs" />
+    <Compile Include="LoanMarketingEvents.cs" />
+    <Compile Include="LoanMarketingEventsBase.cs" />
+    <Compile Include="LoanProfit.cs" />
+    <Compile Include="LoanProfitBase.cs" />
+    <Compile Include="Loans.cs" />
+    <Compile Include="LoanTask_CompletionEmailsBase.cs" />
+    <Compile Include="MailChimpCampaigns.cs" />
+    <Compile Include="MailChimpLists.cs" />
+    <Compile Include="MarketingCampaignEvents.cs" />
+    <Compile Include="MarketingCampaigns.cs" />
+    <Compile Include="MarketingCampaignsBase.cs" />
+    <Compile Include="MarketingCategory.cs" />
+    <Compile Include="MarketingCategoryBase.cs" />
+    <Compile Include="MarketingSettings.cs" />
+    <Compile Include="Prospect.cs" />
+    <Compile Include="ProspectActivities.cs" />
+    <Compile Include="ProspectActivitiesBase.cs" />
+    <Compile Include="ProspectAlerts.cs" />
+    <Compile Include="ProspectAlertsBase.cs" />
+    <Compile Include="ProspectAssets.cs" />
+    <Compile Include="ProspectAssetsBase.cs" />
+    <Compile Include="ProspectBase.cs" />
+    <Compile Include="ProspectEmployment.cs" />
+    <Compile Include="ProspectEmploymentBase.cs" />
+    <Compile Include="ProspectIncome.cs" />
+    <Compile Include="ProspectIncomeBase.cs" />
+    <Compile Include="ProspectNotes.cs" />
+    <Compile Include="ProspectNotesBase.cs" />
+    <Compile Include="ProspectOtherIncome.cs" />
+    <Compile Include="ProspectOtherIncomeBase.cs" />
+    <Compile Include="ProspectTasks.cs" />
+    <Compile Include="ProspectTasksBase.cs" />
+    <Compile Include="RelationshipRoles.cs" />
+    <Compile Include="RuleManager.cs" />
+    <Compile Include="DbHelperSQL.cs" />
+    <Compile Include="DivisionExecutives.cs" />
+    <Compile Include="DivisionExecutivesBase.cs" />
+    <Compile Include="Divisions.cs" />
+    <Compile Include="DivisionsBase.cs" />
+    <Compile Include="EmailLog.cs" />
+    <Compile Include="EmailLogBase.cs" />
+    <Compile Include="EmailQue.cs" />
+    <Compile Include="EmailQueBase.cs" />
+    <Compile Include="GroupFolder.cs" />
+    <Compile Include="GroupFolderBase.cs" />
+    <Compile Include="Groups.cs" />
+    <Compile Include="GroupsBase.cs" />
+    <Compile Include="GroupUsers.cs" />
+    <Compile Include="GroupUsersBase.cs" />
+    <Compile Include="LoanActivities.cs" />
+    <Compile Include="LoanActivitiesBase.cs" />
+    <Compile Include="LoanAlerts.cs" />
+    <Compile Include="LoanAlertsBase.cs" />
+    <Compile Include="LoanContacts.cs" />
+    <Compile Include="LoanContactsBase.cs" />
+    <Compile Include="LoanNotes.cs" />
+    <Compile Include="LoanNotesBase.cs" />
+    <Compile Include="LoanPointFields.cs" />
+    <Compile Include="LoanPointFieldsBase.cs" />
+    <Compile Include="LoanRules.cs" />
+    <Compile Include="LoanRulesBase.cs" />
+    <Compile Include="LoansBase.cs" />
+    <Compile Include="LoanStages.cs" />
+    <Compile Include="LoanStagesBase.cs" />
+    <Compile Include="LoanTasks.cs" />
+    <Compile Include="LoanTasksBase.cs" />
+    <Compile Include="LoanTeam.cs" />
+    <Compile Include="LoanTeamBase.cs" />
+    <Compile Include="LoanWflTempl.cs" />
+    <Compile Include="LoanWflTemplBase.cs" />
+    <Compile Include="PointFieldDesc.cs" />
+    <Compile Include="PointFieldDescBase.cs" />
+    <Compile Include="PointFiles.cs" />
+    <Compile Include="PointFilesBase.cs" />
+    <Compile Include="PointFolders.cs" />
+    <Compile Include="PointFoldersBase.cs" />
+    <Compile Include="PointImportHistory.cs" />
+    <Compile Include="PointImportHistoryBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegionExecutives.cs" />
+    <Compile Include="RegionExecutivesBase.cs" />
+    <Compile Include="Regions.cs" />
+    <Compile Include="RegionsBase.cs" />
+    <Compile Include="RequestQueueBase.cs" />
+    <Compile Include="Roles.cs" />
+    <Compile Include="RolesBase.cs" />
+    <Compile Include="ServiceStatusBase.cs" />
+    <Compile Include="ServiceTypes.cs" />
+    <Compile Include="TaskReminder.cs" />
+    <Compile Include="Template_Email.cs" />
+    <Compile Include="Template_EmailBase.cs" />
+    <Compile Include="Template_EmailSkins.cs" />
+    <Compile Include="Template_EmailSkinsBase.cs" />
+    <Compile Include="Template_Email_Attachments.cs" />
+    <Compile Include="Template_Email_AttachmentsBase.cs" />
+    <Compile Include="Template_Email_Recipients.cs.cs" />
+    <Compile Include="Template_Email_RecipientsBase.cs" />
+    <Compile Include="Template_Group_N_Rules.cs" />
+    <Compile Include="Template_Group_N_RulesBase.cs" />
+    <Compile Include="Template_Reports.cs" />
+    <Compile Include="Template_RuleCollection.cs" />
+    <Compile Include="Template_RuleCollectionBase.cs" />
+    <Compile Include="Template_RuleConditions.cs" />
+    <Compile Include="Template_RuleConditionsBase.cs" />
+    <Compile Include="Template_RuleGroups.cs" />
+    <Compile Include="Template_RuleGroupsBase.cs" />
+    <Compile Include="Template_Rules.cs" />
+    <Compile Include="Template_RulesBase.cs" />
+    <Compile Include="Template_Stages.cs" />
+    <Compile Include="Template_StagesBase.cs" />
+    <Compile Include="Template_Wfl_CompletionEmailsBase.cs" />
+    <Compile Include="Template_Wfl_Stages.cs" />
+    <Compile Include="Template_Wfl_StagesBase.cs" />
+    <Compile Include="Template_Wfl_Tasks.cs" />
+    <Compile Include="Template_Wfl_TasksBase.cs" />
+    <Compile Include="Template_Wfl_Task_Alerts.cs" />
+    <Compile Include="Template_Wfl_Task_AlertsBase.cs" />
+    <Compile Include="Template_Workflow.cs" />
+    <Compile Include="Template_WorkflowBase.cs" />
+    <Compile Include="User2LeadSource.cs" />
+    <Compile Include="User2LoanType.cs" />
+    <Compile Include="User2Purpose.cs" />
+    <Compile Include="User2State.cs" />
+    <Compile Include="UserGoals.cs" />
+    <Compile Include="UserGoalsBase.cs" />
+    <Compile Include="UserHomePref.cs" />
+    <Compile Include="UserHomePrefBase.cs" />
+    <Compile Include="UserLeadDist.cs" />
+    <Compile Include="UserLicenses.cs" />
+    <Compile Include="UserLoanRep.cs" />
+    <Compile Include="UserLoanRepBase.cs" />
+    <Compile Include="UserLoansViewPointFields.cs" />
+    <Compile Include="UserLoansViewPointFieldsBase.cs" />
+    <Compile Include="UserMarketingTrans.cs" />
+    <Compile Include="UserMarketingTransBase.cs" />
+    <Compile Include="UserPipelineColumns.cs" />
+    <Compile Include="UserPipelineColumnsBase.cs" />
+    <Compile Include="UserPipelineViews.cs" />
+    <Compile Include="UserProspectColumns.cs" />
+    <Compile Include="UserProspectColumnsBase.cs" />
+    <Compile Include="UserRecentItems.cs" />
+    <Compile Include="UserRecentItemsBase.cs" />
+    <Compile Include="Users.cs" />
+    <Compile Include="UsersBase.cs" />
+    <Compile Include="WebAccounts.cs" />
+    <Compile Include="WebAccountsBase.cs" />
+    <Compile Include="WorkflowManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{78AF1227-3783-42DB-AACD-66EFC76FF495}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="key.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

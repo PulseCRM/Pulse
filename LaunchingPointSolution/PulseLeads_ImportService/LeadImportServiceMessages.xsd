@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://tempuri.org/XMLSchema.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/XMLSchema.xsd"
+    xmlns:mstns="http://tempuri.org/XMLSchema.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="PostLeadRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="BorrowerFirstName" nillable="false" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="BorrowerMiddleName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="1" maxOccurs="1" name="BorrowerLastName" nillable="false" type="xs:string" />
+      <xs:element minOccurs="0" name="BranchName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BusinessPhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CellPhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CreditRanking" type="CreditRanking" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HomePhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoanAmount" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="LoanOfficerFirstName" nillable="false" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="LoanOfficerLastName" nillable="false" type="xs:string" />
+      <xs:element minOccurs="0" name="LoanProgram" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="OccupancyType" type="OccupancyType"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="PreferredContactMethod" type="PreferredContactMethod"/>
+      <xs:element minOccurs="0" name="PropertyValue" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Property_City" nillable="false" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Property_State" nillable="false" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Property_Street" nillable="false" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Property_Zip" nillable="false" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="PurposeOfLoan" type="PurposeOfLoan" />
+      <xs:element minOccurs="1" maxOccurs="1" name="RequestHeader" type="ReqHdr"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="CreditRanking">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Excellent"/>
+      <xs:enumeration value="VeryGood"/>
+      <xs:enumeration value="Good"/>
+      <xs:enumeration value="Fair"/>
+      <xs:enumeration value="Poor"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="OccupancyType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PrimaryResidence"/>
+      <xs:enumeration value="SecondHome"/>
+      <xs:enumeration value="InvestmentProperty"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PreferredContactMethod">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="HomePhone"/>
+      <xs:enumeration value="BusinessPhone"/>
+      <xs:enumeration value="CellPhone"/>
+      <xs:enumeration value="Email"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PurposeOfLoan">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Purchase"/>
+      <xs:enumeration value="Refinance_No_Cashout"/>
+      <xs:enumeration value="Refinance_Cashout"/>
+      <xs:enumeration value="Construction"/>
+      <xs:enumeration value="Other"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ReqHdr">
+    <xs:sequence>
+      <xs:element name="SecurityToken" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RespHdr">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Successful" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Address">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="StreetAddr" type="xs:string"/>
+        <xs:element name="City" type ="xs:string"/>
+        <xs:element name="State" type="xs:string"/>
+        <xs:element name="Zip" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Employment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Company" type="xs:string"/>
+        <xs:element name="SelfEmployed" type="xs:boolean"/>
+        <xs:element name="Position" type="xs:string"/>
+        <xs:element name="MonthlySalary" type="xs:decimal"/>
+        <xs:element name="StartMonth" type="xs:int"/>
+        <xs:element name="StartYear" type="xs:int"/>
+        <xs:element name="EndMonth" type="xs:int"/>	
+        <xs:element name="EndYear" type="xs:int"/>
+        <xs:element name="YearsInProfession" type="xs:int"/>
+        <xs:element name="MonthsInProfession" type="xs:int"/>
+	    <xs:element name="Phone" type="xs:string"/>
+        <xs:element ref="Address"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OtherIncome">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Type" type="xs:string"/>
+        <xs:element name="Amount" type="xs:decimal"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LiquidAssets">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="NameOfAccount" type="xs:string"/>
+        <xs:element name="AccountNo" type="xs:string"/>
+        <xs:element name="Amount" type="xs:decimal"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="PostLoanAppRequest">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="BorrowerFirstName" nillable="false" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="BorrowerMiddleName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="1" maxOccurs="1" name="BorrowerLastName" nillable="false" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CoBorrowerFirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CoBorrowerMiddleName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="CoBorrowerLastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="BranchName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="BusinessPhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CellPhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="CreditRanking" type="CreditRanking"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="HomePhone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name ="MailingAddress">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref ="Address"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" maxOccurs="1" name="LoanAmount" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="LoanOfficerFirstName" nillable="false" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="LoanOfficerLastName" nillable="false" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="LoanProgram" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="OccupancyType" type="OccupancyType"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="PreferredContactMethod" type="PreferredContactMethod"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="PropertyValue" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="InterestOnly" type="xs:boolean"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="IncludeEscrows" type="xs:boolean"/>
+      <xs:element minOccurs="1" maxOccurs="1" name="Property">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element ref ="Address"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="1" maxOccurs="1" name="PurposeOfLoan" type="PurposeOfLoan" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref ="Employment"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref ="OtherIncome"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" ref ="LiquidAssets"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="InterestOnly" type="xs:boolean"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="Includeescrows" type="xs:boolean"/>
+      <xs:element minOccurs="1" maxOccurs="1" name="RequestHeader" type="ReqHdr"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
+

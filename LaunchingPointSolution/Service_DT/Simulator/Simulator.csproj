@@ -1,0 +1,2067 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CF270DB8-D59E-4C5D-89D3-C37BCFE50556}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Simulator</RootNamespace>
+    <AssemblyName>Simulator</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ameri007\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AMERI201\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AMGMO001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AMIST001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\APPRO001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ARCST001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ASCEN001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ASCEN002\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ASSET005\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\BANKE010\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\BANKE011\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\BELEM001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\BRIGH001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\BUCKH001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\COMMU100\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CONTI001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CORNE001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CORNE010\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CRLHO001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CROSS004\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DALLA001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DVFGM001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FARME007\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FLAGS002\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\HERNA001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\HIGHP001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\HILLH001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ICGHO001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\INVES003\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\JMJFI001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\localhost\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MERID001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MONEY010\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MORTG022\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\NSHPA001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\OAKTR001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PARAM004\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PLANR001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PLATI001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PREFER001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PREMI007\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PROFI001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PURPO001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\REEVE001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\RELIA005\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ROBER002\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\RUBIC001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SCOTT001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SETTL001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SOUTH008\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SOUTH009\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SWANF001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\testsp\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UNITE010\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\VANTA003\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\VELOC001\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\World005\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\LP2.Service.Common.AddNoteResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.AddToAccountResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.CalculateDueDatesResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.CompleteCampaignEventResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.ConvertToLeadResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.CreateFileResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.DisposeLeadResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.DisposeLoanResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.DT_GetStatusDatesResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.DT_ImportLoansResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.DT_SubmitLoanResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.EmailPreviewResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.ExtendRateLockResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.GenerateReportResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.GenerateWorkflowResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.GetCreditCardRequest.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.GetCreditCardResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.GetPointFileResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.GetPointMgrStatusResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.GetUserAccountBalanceResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.ImportADUsersResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.ImportAllLoansResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.ImportCardexResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.ImportLoanRepNamesResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.ImportLoansResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.MailChimp_Response.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.MoveFileResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.ReassignContactResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.ReassignLoanResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.ReassignProspectResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.RemoveCampaignResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.SendEmailResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.SendLSRResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.StartCampaignResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.StartPointImportResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.StartUserImportResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.StopPointImportResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.StopUserImportResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.UpdateADUserResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.UpdateBorrowerResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.UpdateBranchResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.UpdateCompanyResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.UpdateCreditCardResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.UpdateEstCloseDateResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.UpdateLoanInfoResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.UpdateProspectResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.UpdateRegionResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.UpdateStageResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.UpdateUserResponse.datasource" />
+    <None Include="Service References\ameri007\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ameri007\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ameri007\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ameri007\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ameri007\LP2Service.wsdl" />
+    <None Include="Service References\AMERI201\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AMERI201\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AMERI201\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AMERI201\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AMERI201\LP2Service.wsdl" />
+    <None Include="Service References\AMGMO001\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AMGMO001\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AMGMO001\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AMGMO001\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AMGMO001\LP2Service.wsdl" />
+    <None Include="Service References\AMIST001\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AMIST001\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AMIST001\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AMIST001\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AMIST001\LP2Service.wsdl" />
+    <None Include="Service References\APPRO001\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\APPRO001\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\APPRO001\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\APPRO001\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\APPRO001\LP2Service.wsdl" />
+    <None Include="Service References\ARCST001\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ARCST001\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ARCST001\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ARCST001\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ARCST001\LP2Service.wsdl" />
+    <None Include="Service References\ASCEN001\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ASCEN001\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ASCEN001\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ASCEN001\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ASCEN001\LP2Service.wsdl" />
+    <None Include="Service References\ASCEN002\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ASCEN002\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ASCEN002\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ASCEN002\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ASCEN002\LP2Service.wsdl" />
+    <None Include="Service References\ASSET005\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ASSET005\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ASSET005\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ASSET005\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ASSET005\LP2Service.wsdl" />
+    <None Include="Service References\BANKE010\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BANKE010\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BANKE010\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BANKE010\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BANKE010\LP2Service.wsdl" />
+    <None Include="Service References\BANKE011\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BANKE011\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BANKE011\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BANKE011\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BANKE011\LP2Service.wsdl" />
+    <None Include="Service References\BELEM001\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BELEM001\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BELEM001\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BELEM001\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BELEM001\LP2Service.wsdl" />
+    <None Include="Service References\BRIGH001\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BRIGH001\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BRIGH001\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BRIGH001\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BRIGH001\LP2Service.wsdl" />
+    <None Include="Service References\BUCKH001\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BUCKH001\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BUCKH001\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BUCKH001\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BUCKH001\LP2Service.wsdl" />
+    <None Include="Service References\COMMU100\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\COMMU100\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\COMMU100\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\COMMU100\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\COMMU100\LP2Service.wsdl" />
+    <None Include="Service References\CONTI001\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CONTI001\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CONTI001\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CONTI001\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CONTI001\LP2Service.wsdl" />
+    <None Include="Service References\CORNE001\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CORNE001\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CORNE001\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CORNE001\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CORNE001\LP2Service.wsdl" />
+    <None Include="Service References\CORNE010\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CORNE010\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CORNE010\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CORNE010\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CORNE010\LP2Service.wsdl" />
+    <None Include="Service References\CRLHO001\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRLHO001\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRLHO001\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRLHO001\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CRLHO001\LP2Service.wsdl" />
+    <None Include="Service References\CROSS004\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CROSS004\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CROSS004\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CROSS004\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CROSS004\LP2Service.wsdl" />
+    <None Include="Service References\DALLA001\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DALLA001\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DALLA001\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DALLA001\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DALLA001\LP2Service.wsdl" />
+    <None Include="Service References\DVFGM001\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DVFGM001\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DVFGM001\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DVFGM001\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DVFGM001\LP2Service.wsdl" />
+    <None Include="Service References\FARME007\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FARME007\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FARME007\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FARME007\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FARME007\LP2Service.wsdl" />
+    <None Include="Service References\FLAGS002\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FLAGS002\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FLAGS002\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FLAGS002\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FLAGS002\LP2Service.wsdl" />
+    <None Include="Service References\HERNA001\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\HERNA001\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\HERNA001\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\HERNA001\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\HERNA001\LP2Service.wsdl" />
+    <None Include="Service References\HIGHP001\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\HIGHP001\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\HIGHP001\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\HIGHP001\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\HIGHP001\LP2Service.wsdl" />
+    <None Include="Service References\HILLH001\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\HILLH001\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\HILLH001\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\HILLH001\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\HILLH001\LP2Service.wsdl" />
+    <None Include="Service References\ICGHO001\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ICGHO001\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ICGHO001\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ICGHO001\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ICGHO001\LP2Service.wsdl" />
+    <None Include="Service References\INVES003\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\INVES003\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\INVES003\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\INVES003\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\INVES003\LP2Service.wsdl" />
+    <None Include="Service References\JMJFI001\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\JMJFI001\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\JMJFI001\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\JMJFI001\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\JMJFI001\LP2Service.wsdl" />
+    <None Include="Service References\localhost\item.xsd" />
+    <None Include="Service References\localhost\item1.xsd" />
+    <None Include="Service References\localhost\item2.xsd" />
+    <None Include="Service References\localhost\item3.xsd" />
+    <None Include="Service References\localhost\LP2Service.wsdl" />
+    <None Include="Service References\MERID001\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MERID001\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MERID001\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MERID001\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MERID001\LP2Service.wsdl" />
+    <None Include="Service References\MONEY010\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MONEY010\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MONEY010\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MONEY010\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MONEY010\LP2Service.wsdl" />
+    <None Include="Service References\MORTG022\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MORTG022\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MORTG022\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MORTG022\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MORTG022\LP2Service.wsdl" />
+    <None Include="Service References\NSHPA001\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NSHPA001\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NSHPA001\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NSHPA001\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\NSHPA001\LP2Service.wsdl" />
+    <None Include="Service References\OAKTR001\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OAKTR001\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OAKTR001\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OAKTR001\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OAKTR001\LP2Service.wsdl" />
+    <None Include="Service References\PARAM004\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PARAM004\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PARAM004\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PARAM004\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PARAM004\LP2Service.wsdl" />
+    <None Include="Service References\PLANR001\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PLANR001\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PLANR001\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PLANR001\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PLANR001\LP2Service.wsdl" />
+    <None Include="Service References\PLATI001\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PLATI001\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PLATI001\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PLATI001\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PLATI001\LP2Service.wsdl" />
+    <None Include="Service References\PREFER001\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PREFER001\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PREFER001\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PREFER001\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PREFER001\LP2Service.wsdl" />
+    <None Include="Service References\PREMI007\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PREMI007\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PREMI007\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PREMI007\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PREMI007\LP2Service.wsdl" />
+    <None Include="Service References\PROFI001\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PROFI001\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PROFI001\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PROFI001\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PROFI001\LP2Service.wsdl" />
+    <None Include="Service References\PURPO001\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PURPO001\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PURPO001\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PURPO001\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PURPO001\LP2Service.wsdl" />
+    <None Include="Service References\REEVE001\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\REEVE001\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\REEVE001\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\REEVE001\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\REEVE001\LP2Service.wsdl" />
+    <None Include="Service References\RELIA005\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RELIA005\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RELIA005\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RELIA005\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RELIA005\LP2Service.wsdl" />
+    <None Include="Service References\ROBER002\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ROBER002\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ROBER002\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ROBER002\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ROBER002\LP2Service.wsdl" />
+    <None Include="Service References\RUBIC001\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RUBIC001\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RUBIC001\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RUBIC001\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RUBIC001\LP2Service.wsdl" />
+    <None Include="Service References\SCOTT001\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SCOTT001\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SCOTT001\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SCOTT001\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SCOTT001\LP2Service.wsdl" />
+    <None Include="Service References\SETTL001\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SETTL001\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SETTL001\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SETTL001\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SETTL001\LP2Service.wsdl" />
+    <None Include="Service References\SOUTH008\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SOUTH008\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SOUTH008\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SOUTH008\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SOUTH008\LP2Service.wsdl" />
+    <None Include="Service References\SOUTH009\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SOUTH009\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SOUTH009\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SOUTH009\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SOUTH009\LP2Service.wsdl" />
+    <None Include="Service References\SWANF001\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SWANF001\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SWANF001\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SWANF001\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SWANF001\LP2Service.wsdl" />
+    <None Include="Service References\testsp\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\testsp\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\testsp\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\testsp\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\testsp\LP2Service.wsdl" />
+    <None Include="Service References\UNITE010\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UNITE010\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UNITE010\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UNITE010\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UNITE010\LP2Service.wsdl" />
+    <None Include="Service References\VANTA003\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VANTA003\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VANTA003\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VANTA003\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VANTA003\LP2Service.wsdl" />
+    <None Include="Service References\VELOC001\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VELOC001\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VELOC001\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VELOC001\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VELOC001\LP2Service.wsdl" />
+    <None Include="Service References\World005\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\World005\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\World005\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\World005\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\World005\LP2Service.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ameri007\" />
+    <WCFMetadataStorage Include="Service References\AMERI201\" />
+    <WCFMetadataStorage Include="Service References\AMGMO001\" />
+    <WCFMetadataStorage Include="Service References\AMIST001\" />
+    <WCFMetadataStorage Include="Service References\APPRO001\" />
+    <WCFMetadataStorage Include="Service References\ARCST001\" />
+    <WCFMetadataStorage Include="Service References\ASCEN001\" />
+    <WCFMetadataStorage Include="Service References\ASCEN002\" />
+    <WCFMetadataStorage Include="Service References\ASSET005\" />
+    <WCFMetadataStorage Include="Service References\BANKE010\" />
+    <WCFMetadataStorage Include="Service References\BANKE011\" />
+    <WCFMetadataStorage Include="Service References\BELEM001\" />
+    <WCFMetadataStorage Include="Service References\BRIGH001\" />
+    <WCFMetadataStorage Include="Service References\BUCKH001\" />
+    <WCFMetadataStorage Include="Service References\COMMU100\" />
+    <WCFMetadataStorage Include="Service References\CONTI001\" />
+    <WCFMetadataStorage Include="Service References\CORNE001\" />
+    <WCFMetadataStorage Include="Service References\CORNE010\" />
+    <WCFMetadataStorage Include="Service References\CRLHO001\" />
+    <WCFMetadataStorage Include="Service References\CROSS004\" />
+    <WCFMetadataStorage Include="Service References\DALLA001\" />
+    <WCFMetadataStorage Include="Service References\DVFGM001\" />
+    <WCFMetadataStorage Include="Service References\FARME007\" />
+    <WCFMetadataStorage Include="Service References\FLAGS002\" />
+    <WCFMetadataStorage Include="Service References\HERNA001\" />
+    <WCFMetadataStorage Include="Service References\HIGHP001\" />
+    <WCFMetadataStorage Include="Service References\HILLH001\" />
+    <WCFMetadataStorage Include="Service References\ICGHO001\" />
+    <WCFMetadataStorage Include="Service References\INVES003\" />
+    <WCFMetadataStorage Include="Service References\JMJFI001\" />
+    <WCFMetadataStorage Include="Service References\localhost\" />
+    <WCFMetadataStorage Include="Service References\MERID001\" />
+    <WCFMetadataStorage Include="Service References\MONEY010\" />
+    <WCFMetadataStorage Include="Service References\MORTG022\" />
+    <WCFMetadataStorage Include="Service References\NSHPA001\" />
+    <WCFMetadataStorage Include="Service References\OAKTR001\" />
+    <WCFMetadataStorage Include="Service References\PARAM004\" />
+    <WCFMetadataStorage Include="Service References\PLANR001\" />
+    <WCFMetadataStorage Include="Service References\PLATI001\" />
+    <WCFMetadataStorage Include="Service References\PREFER001\" />
+    <WCFMetadataStorage Include="Service References\PREMI007\" />
+    <WCFMetadataStorage Include="Service References\PROFI001\" />
+    <WCFMetadataStorage Include="Service References\PURPO001\" />
+    <WCFMetadataStorage Include="Service References\REEVE001\" />
+    <WCFMetadataStorage Include="Service References\RELIA005\" />
+    <WCFMetadataStorage Include="Service References\ROBER002\" />
+    <WCFMetadataStorage Include="Service References\RUBIC001\" />
+    <WCFMetadataStorage Include="Service References\SCOTT001\" />
+    <WCFMetadataStorage Include="Service References\SETTL001\" />
+    <WCFMetadataStorage Include="Service References\SOUTH008\" />
+    <WCFMetadataStorage Include="Service References\SOUTH009\" />
+    <WCFMetadataStorage Include="Service References\SWANF001\" />
+    <WCFMetadataStorage Include="Service References\testsp\" />
+    <WCFMetadataStorage Include="Service References\UNITE010\" />
+    <WCFMetadataStorage Include="Service References\VANTA003\" />
+    <WCFMetadataStorage Include="Service References\VELOC001\" />
+    <WCFMetadataStorage Include="Service References\World005\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\localhost\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\localhost\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\localhost\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\localhost\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\testsp\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\testsp\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\testsp\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\testsp\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ameri007\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ameri007\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ameri007\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ameri007\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AMERI201\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AMERI201\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AMERI201\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AMERI201\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AMGMO001\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AMGMO001\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AMGMO001\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AMGMO001\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AMIST001\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AMIST001\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AMIST001\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AMIST001\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\APPRO001\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\APPRO001\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\APPRO001\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\APPRO001\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ARCST001\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ARCST001\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ARCST001\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ARCST001\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ASCEN001\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ASCEN001\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ASCEN001\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ASCEN001\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ASCEN002\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ASCEN002\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ASCEN002\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ASCEN002\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ASSET005\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ASSET005\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ASSET005\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ASSET005\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BANKE010\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BANKE010\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BANKE010\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BANKE010\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BANKE011\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BANKE011\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BANKE011\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BANKE011\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BELEM001\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BELEM001\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BELEM001\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BELEM001\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BRIGH001\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BRIGH001\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BRIGH001\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BRIGH001\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BUCKH001\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BUCKH001\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BUCKH001\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BUCKH001\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\COMMU100\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\COMMU100\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\COMMU100\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\COMMU100\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CONTI001\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CONTI001\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CONTI001\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CONTI001\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CORNE001\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CORNE001\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CORNE001\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CORNE001\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CORNE010\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CORNE010\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CORNE010\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CORNE010\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CRLHO001\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CRLHO001\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CRLHO001\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CRLHO001\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CROSS004\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CROSS004\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CROSS004\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CROSS004\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DALLA001\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DALLA001\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DALLA001\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DALLA001\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DVFGM001\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DVFGM001\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DVFGM001\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DVFGM001\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FARME007\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FARME007\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FARME007\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FARME007\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FLAGS002\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FLAGS002\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FLAGS002\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\FLAGS002\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HIGHP001\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HIGHP001\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HIGHP001\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HIGHP001\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HILLH001\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HILLH001\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HILLH001\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HILLH001\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ICGHO001\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ICGHO001\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ICGHO001\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ICGHO001\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\INVES003\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\INVES003\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\INVES003\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\INVES003\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\JMJFI001\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\JMJFI001\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\JMJFI001\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\JMJFI001\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MERID001\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MERID001\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MERID001\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MERID001\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MORTG022\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MORTG022\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MORTG022\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MORTG022\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\NSHPA001\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\NSHPA001\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\NSHPA001\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\NSHPA001\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OAKTR001\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OAKTR001\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OAKTR001\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\OAKTR001\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PARAM004\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PARAM004\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PARAM004\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PARAM004\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PLANR001\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PLANR001\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PLANR001\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PLANR001\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PLATI001\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PLATI001\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PLATI001\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PLATI001\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PREFER001\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PREFER001\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PREFER001\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PREFER001\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PREMI007\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PREMI007\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PREMI007\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PREMI007\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PROFI001\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PROFI001\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PROFI001\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PROFI001\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PURPO001\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PURPO001\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PURPO001\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PURPO001\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\REEVE001\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\REEVE001\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\REEVE001\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\REEVE001\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RELIA005\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RELIA005\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RELIA005\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RELIA005\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ROBER002\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ROBER002\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ROBER002\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ROBER002\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MONEY010\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MONEY010\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MONEY010\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MONEY010\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RUBIC001\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RUBIC001\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RUBIC001\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RUBIC001\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SCOTT001\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SCOTT001\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SCOTT001\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SCOTT001\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SETTL001\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SETTL001\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SETTL001\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SETTL001\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SOUTH008\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SOUTH008\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SOUTH008\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SOUTH008\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SOUTH009\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SOUTH009\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SOUTH009\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SOUTH009\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SWANF001\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SWANF001\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SWANF001\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\SWANF001\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UNITE010\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UNITE010\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UNITE010\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\UNITE010\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VANTA003\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VANTA003\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VANTA003\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VANTA003\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VELOC001\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VELOC001\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VELOC001\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\VELOC001\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\World005\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\World005\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\World005\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\World005\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HERNA001\item.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HERNA001\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HERNA001\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HERNA001\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SerivceCommon\Common\Common.csproj">
+      <Project>{3BFABAB3-040A-41BF-82E3-76FF9609F04C}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SerivceCommon\DataAccess\DataAccess.csproj">
+      <Project>{E9624569-9DE9-4467-85FA-90B63EDB3B6D}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LP2Service\LP2Service\LP2Service.csproj">
+      <Project>{636B5096-5499-46C2-BC6B-BFC33958CA2A}</Project>
+      <Name>LP2Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

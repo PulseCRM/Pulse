@@ -1,0 +1,128 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/_layouts/LPWeb/MasterPage/Super.master" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="PlaceHolderAdditionalPageHead" runat="Server">
+    <link href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/css/style.web.css") %>" rel="stylesheet"
+        type="text/css" />
+    <link href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/css/style.custom.css") %>"
+        rel="stylesheet" type="text/css" />
+    <script src="<%= this.ResolveClientUrl("~/_layouts/LPWeb/js/jquery.js") %>" type="text/javascript"></script>
+    <script src="<%= this.ResolveClientUrl("~/_layouts/LPWeb/js/common.js") %>" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script language="javascript" type="text/javascript">
+// <![CDATA[
+
+        $(document).ready(function () {
+
+            InitLeftNavMenu();
+
+            // set height of left navigation menu
+            $("#divLeftNavMenu .Widget_Body").height($("#tdRightContent").height() - 28);
+        });
+
+        function InitLeftNavMenu() {
+
+            var Path = window.location.pathname;
+            if (Path.indexOf("Settings/CompanyGeneral.aspx") != -1) {
+
+                SetSelectedMenuItemStyle(0)
+            }
+            if (Path.indexOf("Settings/RegionSetup.aspx") != -1) {
+
+                SetSelectedMenuItemStyle(1)
+            }
+            if (Path.indexOf("Settings/DivisionSetup.aspx") != -1) {
+
+                SetSelectedMenuItemStyle(2)
+            }
+            if (Path.indexOf("Settings/BranchSetup.aspx") != -1) {
+
+                SetSelectedMenuItemStyle(3)
+            }
+            if (Path.indexOf("Settings/GroupSetup.aspx") != -1) {
+
+                SetSelectedMenuItemStyle(4)
+            }
+            if (Path.indexOf("Settings/RoleSetup.aspx") != -1) {
+
+                SetSelectedMenuItemStyle(5)
+            }
+            if (Path.indexOf("Settings/UserList.aspx") != -1) {
+
+                SetSelectedMenuItemStyle(6)
+            }
+            if (Path.indexOf("Settings/PersonalizationSettings.aspx") != -1) {
+
+                SetSelectedMenuItemStyle(7)
+            } 
+            if (Path.indexOf("Settings/PointFolderList.aspx") != -1) {
+
+                SetSelectedMenuItemStyle(8)
+            }
+            if (Path.indexOf("Settings/WorkflowTemplateList.aspx") != -1) {
+
+                SetSelectedMenuItemStyle(9)
+            }
+            if (Path.indexOf("Settings/RuleList.aspx") != -1) {
+
+                SetSelectedMenuItemStyle(10)
+            }
+
+        }
+// ]]>
+    </script>
+</asp:Content>
+<asp:Content ID="Content2" runat="server" ContentPlaceHolderID="PlaceHolderMain">
+    <div id="PageContent">
+        <div>
+            <asp:ContentPlaceHolder ID="MainArea" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" runat="server" ContentPlaceHolderID="PlaceHolderLeftNavBar">
+    <div id="zz17_V4QuickLaunchMenu" class="s4-ql">
+        <div class="menu vertical menu-vertical">
+            <ul class="root static">
+                <li class="static"><a class="static menu-item" href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/Settings/CompanyGeneral.aspx") %>">
+                    <span class="additional-background"><span class="menu-item-text">Settings</span></span></a><ul
+                        class="static">
+                        <li class="static"><a class="static menu-item" href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/Settings/CompanyGeneral.aspx") %>">
+                            <span class="additional-background"><span class="menu-item-text">Company</span></span></a></li>
+                        <li class="static"><a class="static menu-item" href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/Settings/RegionSetup.aspx") %>">
+                            <span class="additional-background"><span class="menu-item-text">Regions</span></span></a></li>
+                        <li class="static"><a class="static menu-item" href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/Settings/DivisionSetup.aspx") %>">
+                            <span class="additional-background"><span class="menu-item-text">Divisions</span></span></a></li>
+                        <li class="static"><a class="static menu-item" href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/Settings/BranchSetup.aspx") %>">
+                            <span class="additional-background"><span class="menu-item-text">Branches</span></span></a></li>
+                        <li class="static"><a class="static menu-item" href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/Settings/GroupSetup.aspx") %>">
+                            <span class="additional-background"><span class="menu-item-text">Groups</span></span></a></li>
+                        <li class="static"><a class="static menu-item" href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/Settings/RoleSetup.aspx") %>">
+                            <span class="additional-background"><span class="menu-item-text">Roles</span></span></a></li>
+                        <li class="static"><a class="static menu-item" href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/Settings/UserList.aspx") %>">
+                            <span class="additional-background"><span class="menu-item-text">Users</span></span></a></li>
+                        <li class="static"><a class="static menu-item" href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/Settings/PersonalizationSettings.aspx") %>">
+                            <span class="additional-background"><span class="menu-item-text">My Account</span></span></a></li>
+                        <li class="static"><a class="static menu-item" href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/Settings/PointFolderList.aspx") %>">
+                            <span class="additional-background"><span class="menu-item-text">Point Folder List</span></span></a></li>
+                        <li class="static"><a class="static menu-item" href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/Settings/EmailTemplateList.aspx") %>">
+                            <span class="additional-background"><span class="menu-item-text">Email Templates</span></span></a></li>
+                        <li class="static"><a class="static menu-item" href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/Settings/WorkflowTemplateList.aspx") %>">
+                            <span class="additional-background"><span class="menu-item-text">Workflow Template List</span></span></a></li>
+                        <li class="static"><a class="static menu-item" href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/Settings/RuleGroupList.aspx") %>">
+                            <span class="additional-background"><span class="menu-item-text">Rule Groups</span></span></a></li>
+                        <li class="static"><a class="static menu-item" href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/Settings/RuleList.aspx") %>">
+                            <span class="additional-background"><span class="menu-item-text">Rules</span></span></a></li>
+                        <li class="static"><a class="static menu-item" href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/Settings/CompanyOverview.aspx") %>">
+                            <span class="additional-background"><span class="menu-item-text">Company Overview</span></span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</asp:Content>
+
+<asp:Content ID="Content4" runat="server" ContentPlaceHolderID="PlaceHolderPageTitleInTitleArea">
+    <asp:ContentPlaceHolder ID="PageTitleArea" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>

@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DA4CF88C-CA72-45D9-930E-560C9A86F91A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PulseLeads</RootNamespace>
+    <AssemblyName>PulseLeads</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\ServiceCommon\Utilities\Libs\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging">
+      <HintPath>..\ServiceCommon\Utilities\Libs\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\ServiceCommon\Utilities\Libs\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PulseLeadService.svc" />
+    <None Include="Properties\DataSources\LP2.Service.Common.AddNoteResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.AddToAccountResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.CalculateDueDatesResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.CheckPointFileStatusResp.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.CompleteCampaignEventResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.ConvertToLeadResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.CreateFileResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.DisposeLeadResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.DisposeLoanResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.DT_GetStatusDatesResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.DT_ImportLoansResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.DT_SubmitLoanResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.EmailPreviewResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.ExtendRateLockResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.GenerateReportResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.GenerateWorkflowResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.GetCreditCardRequest.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.GetCreditCardResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.GetPointFileInfoResp.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.GetPointFileResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.GetPointMgrStatusResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.GetUserAccountBalanceResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.ImportADUsersResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.ImportAllLoansResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.ImportCardexResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.ImportLoanRepNamesResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.ImportLoansResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.ImportLockInfoResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.MailChimp_Response.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.MoveFileResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.PreviewLSRResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.ReassignContactResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.ReassignLoanResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.ReassignProspectResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.RemoveCampaignResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.RespHdr.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.SendEmailResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.SendLSRResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.StartCampaignResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.StartPointImportResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.StartUserImportResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.StopPointImportResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.StopUserImportResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.UpdateADUserResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.UpdateBorrowerResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.UpdateBranchResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.UpdateCompanyResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.UpdateConditionsResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.UpdateCreditCardResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.UpdateEstCloseDateResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.UpdateLoanInfoResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.UpdateLockInfoResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.UpdateProspectResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.UpdateRegionResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.UpdateStageResponse.datasource" />
+    <None Include="Properties\DataSources\LP2.Service.Common.UpdateUserResponse.datasource" />
+    <None Include="Service References\LP2Service\item.disco" />
+    <None Include="Service References\LP2Service\configuration91.svcinfo" />
+    <None Include="Service References\LP2Service\configuration.svcinfo" />
+    <None Include="Service References\LP2Service\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <None Include="Service References\LP2Service\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LP2Service\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LP2Service\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LP2Service\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LP2Service\item4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LP2Service\LP2Service.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PulseLeadService.svc.cs">
+      <DependentUpon>PulseLeadService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="IPulseLeadService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\LP2Service\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ServiceCommon\Common\Common.csproj">
+      <Project>{3BFABAB3-040A-41BF-82E3-76FF9609F04C}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServiceCommon\DataAccess\DataAccess.csproj">
+      <Project>{E9624569-9DE9-4467-85FA-90B63EDB3B6D}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ServiceCommon\Utilities\Utilities.csproj">
+      <Project>{2B6E7D0A-512C-4805-93BF-1E9C576EE373}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\LP2Service\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57523</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+          <EnableWcfTestClientForSVCDefaultValue>True</EnableWcfTestClientForSVCDefaultValue>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

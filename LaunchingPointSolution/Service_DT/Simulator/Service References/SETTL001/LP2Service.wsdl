@@ -1,0 +1,1142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="LP2Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://focpds936:8731/InfoHubService/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://focpds936:8731/InfoHubService/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://focpds936:8731/InfoHubService/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LP2.Service.Common" />
+      <xsd:import schemaLocation="http://focpds936:8731/InfoHubService/?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ILP2Service_GetReplies_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReplies" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_GetReplies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRepliesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_ReplyToMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReplyToMessage" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_ReplyToMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReplyToMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_UpdateCompany_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompany" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_UpdateCompany_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_UpdateRegion_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRegion" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_UpdateRegion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRegionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_UpdateBranch_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBranch" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_UpdateBranch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_UpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_UpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_UpdateProspect_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProspect" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_UpdateProspect_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateProspectResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_StartCampaign_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartCampaign" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_StartCampaign_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartCampaignResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_RemoveCampaign_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCampaign" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_RemoveCampaign_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveCampaignResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_CompleteCampaignEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompleteCampaignEvent" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_CompleteCampaignEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompleteCampaignEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_GetUserAccountBalance_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserAccountBalance" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_GetUserAccountBalance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserAccountBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_UpdateCreditCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCreditCard" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_UpdateCreditCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCreditCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_GetCreditCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditCard" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_GetCreditCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCreditCardResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_AddToAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddToAccount" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_AddToAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddToAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_ReassignProspect_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReassignProspect" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_ReassignProspect_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReassignProspectResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_SyncMarketingData_InputMessage">
+    <wsdl:part name="parameters" element="tns:SyncMarketingData" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_SyncMarketingData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SyncMarketingDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_GenerateReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateReport" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_GenerateReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_SendLSR_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendLSR" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_SendLSR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendLSRResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_DTImportLoans_InputMessage">
+    <wsdl:part name="parameters" element="tns:DTImportLoans" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_DTImportLoans_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DTImportLoansResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_DTGetStatusDates_InputMessage">
+    <wsdl:part name="parameters" element="tns:DTGetStatusDates" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_DTGetStatusDates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DTGetStatusDatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_DTSubmitLoan_InputMessage">
+    <wsdl:part name="parameters" element="tns:DTSubmitLoan" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_DTSubmitLoan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DTSubmitLoanResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_MailChimp_SyncNow_InputMessage">
+    <wsdl:part name="parameters" element="tns:MailChimp_SyncNow" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_MailChimp_SyncNow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MailChimp_SyncNowResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_MailChimp_SubscribeBatch_InputMessage">
+    <wsdl:part name="parameters" element="tns:MailChimp_SubscribeBatch" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_MailChimp_SubscribeBatch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MailChimp_SubscribeBatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_MailChimp_Subscribe_InputMessage">
+    <wsdl:part name="parameters" element="tns:MailChimp_Subscribe" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_MailChimp_Subscribe_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MailChimp_SubscribeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_MailChimp_UnsubscribeBatch_InputMessage">
+    <wsdl:part name="parameters" element="tns:MailChimp_UnsubscribeBatch" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_MailChimp_UnsubscribeBatch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MailChimp_UnsubscribeBatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_MailChimp_Unsubscribe_InputMessage">
+    <wsdl:part name="parameters" element="tns:MailChimp_Unsubscribe" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_MailChimp_Unsubscribe_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MailChimp_UnsubscribeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_ScheduleMailChimp_InputMessage">
+    <wsdl:part name="parameters" element="tns:ScheduleMailChimp" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_ScheduleMailChimp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ScheduleMailChimpResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_GetVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVersion" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_GetVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_StartUserImportService_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartUserImportService" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_StartUserImportService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartUserImportServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_StopUserImportService_InputMessage">
+    <wsdl:part name="parameters" element="tns:StopUserImportService" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_StopUserImportService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StopUserImportServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_ImportADUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportADUsers" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_ImportADUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportADUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_UpdateADUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateADUser" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_UpdateADUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateADUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_GetPointManagerStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPointManagerStatus" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_GetPointManagerStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPointManagerStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_StartPointImportService_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartPointImportService" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_StartPointImportService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartPointImportServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_StopPointImportService_InputMessage">
+    <wsdl:part name="parameters" element="tns:StopPointImportService" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_StopPointImportService_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StopPointImportServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_ImportAllLoans_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportAllLoans" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_ImportAllLoans_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportAllLoansResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_ImportLoans_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportLoans" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_ImportLoans_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportLoansResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_ImportLoanRepNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportLoanRepNames" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_ImportLoanRepNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportLoanRepNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_ImportCardex_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportCardex" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_ImportCardex_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportCardexResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_GetPointFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPointFile" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_GetPointFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPointFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_MoveFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:MoveFile" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_MoveFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MoveFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_DisposeLoan_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisposeLoan" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_DisposeLoan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisposeLoanResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_ExtendRateLock_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExtendRateLock" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_ExtendRateLock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExtendRateLockResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_UpdateEstCloseDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEstCloseDate" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_UpdateEstCloseDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEstCloseDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_UpdateStage_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStage" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_UpdateStage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_ReassignLoan_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReassignLoan" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_ReassignLoan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReassignLoanResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_ReassignContact_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReassignContact" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_ReassignContact_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReassignContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_AddNote_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNote" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_AddNote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_UpdateBorrower_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBorrower" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_UpdateBorrower_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBorrowerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_UpdateLoanInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLoanInfo" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_UpdateLoanInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLoanInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_ConvertToLead_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToLead" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_ConvertToLead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConvertToLeadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_DisposeLead_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisposeLead" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_DisposeLead_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisposeLeadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_GenerateWorkflow_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateWorkflow" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_GenerateWorkflow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateWorkflowResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_CalculateDueDates_InputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateDueDates" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_CalculateDueDates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CalculateDueDatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_SendEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendEmail" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_SendEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_PreviewEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:PreviewEmail" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_PreviewEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PreviewEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_ProcessEmailQue_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessEmailQue" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_ProcessEmailQue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessEmailQueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_ProcessLoanRules_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessLoanRules" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_ProcessLoanRules_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessLoanRulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_AcknowledgeAlert_InputMessage">
+    <wsdl:part name="parameters" element="tns:AcknowledgeAlert" />
+  </wsdl:message>
+  <wsdl:message name="ILP2Service_AcknowledgeAlert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AcknowledgeAlertResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ILP2Service">
+    <wsdl:operation name="GetReplies">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/GetReplies" message="tns:ILP2Service_GetReplies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/GetRepliesResponse" message="tns:ILP2Service_GetReplies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReplyToMessage">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/ReplyToMessage" message="tns:ILP2Service_ReplyToMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/ReplyToMessageResponse" message="tns:ILP2Service_ReplyToMessage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompany">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/UpdateCompany" message="tns:ILP2Service_UpdateCompany_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/UpdateCompanyResponse" message="tns:ILP2Service_UpdateCompany_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRegion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/UpdateRegion" message="tns:ILP2Service_UpdateRegion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/UpdateRegionResponse" message="tns:ILP2Service_UpdateRegion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBranch">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/UpdateBranch" message="tns:ILP2Service_UpdateBranch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/UpdateBranchResponse" message="tns:ILP2Service_UpdateBranch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/UpdateUser" message="tns:ILP2Service_UpdateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/UpdateUserResponse" message="tns:ILP2Service_UpdateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProspect">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/UpdateProspect" message="tns:ILP2Service_UpdateProspect_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/UpdateProspectResponse" message="tns:ILP2Service_UpdateProspect_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartCampaign">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/StartCampaign" message="tns:ILP2Service_StartCampaign_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/StartCampaignResponse" message="tns:ILP2Service_StartCampaign_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCampaign">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/RemoveCampaign" message="tns:ILP2Service_RemoveCampaign_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/RemoveCampaignResponse" message="tns:ILP2Service_RemoveCampaign_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompleteCampaignEvent">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/CompleteCampaignEvent" message="tns:ILP2Service_CompleteCampaignEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/CompleteCampaignEventResponse" message="tns:ILP2Service_CompleteCampaignEvent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAccountBalance">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/GetUserAccountBalance" message="tns:ILP2Service_GetUserAccountBalance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/GetUserAccountBalanceResponse" message="tns:ILP2Service_GetUserAccountBalance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCreditCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/UpdateCreditCard" message="tns:ILP2Service_UpdateCreditCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/UpdateCreditCardResponse" message="tns:ILP2Service_UpdateCreditCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/GetCreditCard" message="tns:ILP2Service_GetCreditCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/GetCreditCardResponse" message="tns:ILP2Service_GetCreditCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddToAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/AddToAccount" message="tns:ILP2Service_AddToAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/AddToAccountResponse" message="tns:ILP2Service_AddToAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReassignProspect">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/ReassignProspect" message="tns:ILP2Service_ReassignProspect_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/ReassignProspectResponse" message="tns:ILP2Service_ReassignProspect_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SyncMarketingData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/SyncMarketingData" message="tns:ILP2Service_SyncMarketingData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/SyncMarketingDataResponse" message="tns:ILP2Service_SyncMarketingData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/GenerateReport" message="tns:ILP2Service_GenerateReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/GenerateReportResponse" message="tns:ILP2Service_GenerateReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendLSR">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/SendLSR" message="tns:ILP2Service_SendLSR_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/SendLSRResponse" message="tns:ILP2Service_SendLSR_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DTImportLoans">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/DTImportLoans" message="tns:ILP2Service_DTImportLoans_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/DTImportLoansResponse" message="tns:ILP2Service_DTImportLoans_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DTGetStatusDates">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/DTGetStatusDates" message="tns:ILP2Service_DTGetStatusDates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/DTGetStatusDatesResponse" message="tns:ILP2Service_DTGetStatusDates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DTSubmitLoan">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/DTSubmitLoan" message="tns:ILP2Service_DTSubmitLoan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/DTSubmitLoanResponse" message="tns:ILP2Service_DTSubmitLoan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MailChimp_SyncNow">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/MailChimp_SyncNow" message="tns:ILP2Service_MailChimp_SyncNow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/MailChimp_SyncNowResponse" message="tns:ILP2Service_MailChimp_SyncNow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MailChimp_SubscribeBatch">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/MailChimp_SubscribeBatch" message="tns:ILP2Service_MailChimp_SubscribeBatch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/MailChimp_SubscribeBatchResponse" message="tns:ILP2Service_MailChimp_SubscribeBatch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MailChimp_Subscribe">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/MailChimp_Subscribe" message="tns:ILP2Service_MailChimp_Subscribe_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/MailChimp_SubscribeResponse" message="tns:ILP2Service_MailChimp_Subscribe_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MailChimp_UnsubscribeBatch">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/MailChimp_UnsubscribeBatch" message="tns:ILP2Service_MailChimp_UnsubscribeBatch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/MailChimp_UnsubscribeBatchResponse" message="tns:ILP2Service_MailChimp_UnsubscribeBatch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MailChimp_Unsubscribe">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/MailChimp_Unsubscribe" message="tns:ILP2Service_MailChimp_Unsubscribe_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/MailChimp_UnsubscribeResponse" message="tns:ILP2Service_MailChimp_Unsubscribe_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ScheduleMailChimp">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/ScheduleMailChimp" message="tns:ILP2Service_ScheduleMailChimp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/ScheduleMailChimpResponse" message="tns:ILP2Service_ScheduleMailChimp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/GetVersion" message="tns:ILP2Service_GetVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/GetVersionResponse" message="tns:ILP2Service_GetVersion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartUserImportService">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/StartUserImportService" message="tns:ILP2Service_StartUserImportService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/StartUserImportServiceResponse" message="tns:ILP2Service_StartUserImportService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StopUserImportService">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/StopUserImportService" message="tns:ILP2Service_StopUserImportService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/StopUserImportServiceResponse" message="tns:ILP2Service_StopUserImportService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportADUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/ImportADUsers" message="tns:ILP2Service_ImportADUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/ImportADUsersResponse" message="tns:ILP2Service_ImportADUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateADUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/UpdateADUser" message="tns:ILP2Service_UpdateADUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/UpdateADUserResponse" message="tns:ILP2Service_UpdateADUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPointManagerStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/GetPointManagerStatus" message="tns:ILP2Service_GetPointManagerStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/GetPointManagerStatusResponse" message="tns:ILP2Service_GetPointManagerStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartPointImportService">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/StartPointImportService" message="tns:ILP2Service_StartPointImportService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/StartPointImportServiceResponse" message="tns:ILP2Service_StartPointImportService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StopPointImportService">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/StopPointImportService" message="tns:ILP2Service_StopPointImportService_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/StopPointImportServiceResponse" message="tns:ILP2Service_StopPointImportService_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportAllLoans">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/ImportAllLoans" message="tns:ILP2Service_ImportAllLoans_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/ImportAllLoansResponse" message="tns:ILP2Service_ImportAllLoans_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportLoans">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/ImportLoans" message="tns:ILP2Service_ImportLoans_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/ImportLoansResponse" message="tns:ILP2Service_ImportLoans_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportLoanRepNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/ImportLoanRepNames" message="tns:ILP2Service_ImportLoanRepNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/ImportLoanRepNamesResponse" message="tns:ILP2Service_ImportLoanRepNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ImportCardex">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/ImportCardex" message="tns:ILP2Service_ImportCardex_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/ImportCardexResponse" message="tns:ILP2Service_ImportCardex_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPointFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/GetPointFile" message="tns:ILP2Service_GetPointFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/GetPointFileResponse" message="tns:ILP2Service_GetPointFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MoveFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/MoveFile" message="tns:ILP2Service_MoveFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/MoveFileResponse" message="tns:ILP2Service_MoveFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisposeLoan">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/DisposeLoan" message="tns:ILP2Service_DisposeLoan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/DisposeLoanResponse" message="tns:ILP2Service_DisposeLoan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExtendRateLock">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/ExtendRateLock" message="tns:ILP2Service_ExtendRateLock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/ExtendRateLockResponse" message="tns:ILP2Service_ExtendRateLock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEstCloseDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/UpdateEstCloseDate" message="tns:ILP2Service_UpdateEstCloseDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/UpdateEstCloseDateResponse" message="tns:ILP2Service_UpdateEstCloseDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStage">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/UpdateStage" message="tns:ILP2Service_UpdateStage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/UpdateStageResponse" message="tns:ILP2Service_UpdateStage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReassignLoan">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/ReassignLoan" message="tns:ILP2Service_ReassignLoan_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/ReassignLoanResponse" message="tns:ILP2Service_ReassignLoan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReassignContact">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/ReassignContact" message="tns:ILP2Service_ReassignContact_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/ReassignContactResponse" message="tns:ILP2Service_ReassignContact_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNote">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/AddNote" message="tns:ILP2Service_AddNote_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/AddNoteResponse" message="tns:ILP2Service_AddNote_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBorrower">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/UpdateBorrower" message="tns:ILP2Service_UpdateBorrower_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/UpdateBorrowerResponse" message="tns:ILP2Service_UpdateBorrower_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLoanInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/UpdateLoanInfo" message="tns:ILP2Service_UpdateLoanInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/UpdateLoanInfoResponse" message="tns:ILP2Service_UpdateLoanInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToLead">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/ConvertToLead" message="tns:ILP2Service_ConvertToLead_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/ConvertToLeadResponse" message="tns:ILP2Service_ConvertToLead_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisposeLead">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/DisposeLead" message="tns:ILP2Service_DisposeLead_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/DisposeLeadResponse" message="tns:ILP2Service_DisposeLead_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateWorkflow">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/GenerateWorkflow" message="tns:ILP2Service_GenerateWorkflow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/GenerateWorkflowResponse" message="tns:ILP2Service_GenerateWorkflow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CalculateDueDates">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/CalculateDueDates" message="tns:ILP2Service_CalculateDueDates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/CalculateDueDatesResponse" message="tns:ILP2Service_CalculateDueDates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/SendEmail" message="tns:ILP2Service_SendEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/SendEmailResponse" message="tns:ILP2Service_SendEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PreviewEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/PreviewEmail" message="tns:ILP2Service_PreviewEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/PreviewEmailResponse" message="tns:ILP2Service_PreviewEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessEmailQue">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/ProcessEmailQue" message="tns:ILP2Service_ProcessEmailQue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/ProcessEmailQueResponse" message="tns:ILP2Service_ProcessEmailQue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessLoanRules">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/ProcessLoanRules" message="tns:ILP2Service_ProcessLoanRules_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/ProcessLoanRulesResponse" message="tns:ILP2Service_ProcessLoanRules_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AcknowledgeAlert">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILP2Service/AcknowledgeAlert" message="tns:ILP2Service_AcknowledgeAlert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILP2Service/AcknowledgeAlertResponse" message="tns:ILP2Service_AcknowledgeAlert_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="InfoHubServiceEndPoint" type="tns:ILP2Service">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetReplies">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/GetReplies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReplyToMessage">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/ReplyToMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompany">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/UpdateCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRegion">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/UpdateRegion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBranch">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/UpdateBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/UpdateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProspect">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/UpdateProspect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartCampaign">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/StartCampaign" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveCampaign">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/RemoveCampaign" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompleteCampaignEvent">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/CompleteCampaignEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAccountBalance">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/GetUserAccountBalance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCreditCard">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/UpdateCreditCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCreditCard">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/GetCreditCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddToAccount">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/AddToAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReassignProspect">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/ReassignProspect" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SyncMarketingData">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/SyncMarketingData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateReport">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/GenerateReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendLSR">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/SendLSR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DTImportLoans">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/DTImportLoans" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DTGetStatusDates">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/DTGetStatusDates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DTSubmitLoan">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/DTSubmitLoan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MailChimp_SyncNow">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/MailChimp_SyncNow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MailChimp_SubscribeBatch">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/MailChimp_SubscribeBatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MailChimp_Subscribe">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/MailChimp_Subscribe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MailChimp_UnsubscribeBatch">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/MailChimp_UnsubscribeBatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MailChimp_Unsubscribe">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/MailChimp_Unsubscribe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ScheduleMailChimp">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/ScheduleMailChimp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/GetVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartUserImportService">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/StartUserImportService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StopUserImportService">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/StopUserImportService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportADUsers">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/ImportADUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateADUser">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/UpdateADUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPointManagerStatus">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/GetPointManagerStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartPointImportService">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/StartPointImportService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StopPointImportService">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/StopPointImportService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportAllLoans">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/ImportAllLoans" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportLoans">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/ImportLoans" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportLoanRepNames">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/ImportLoanRepNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportCardex">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/ImportCardex" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPointFile">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/GetPointFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveFile">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/MoveFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisposeLoan">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/DisposeLoan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExtendRateLock">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/ExtendRateLock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEstCloseDate">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/UpdateEstCloseDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStage">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/UpdateStage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReassignLoan">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/ReassignLoan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReassignContact">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/ReassignContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNote">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/AddNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBorrower">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/UpdateBorrower" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLoanInfo">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/UpdateLoanInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConvertToLead">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/ConvertToLead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisposeLead">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/DisposeLead" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateWorkflow">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/GenerateWorkflow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CalculateDueDates">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/CalculateDueDates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/SendEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PreviewEmail">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/PreviewEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessEmailQue">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/ProcessEmailQue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessLoanRules">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/ProcessLoanRules" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AcknowledgeAlert">
+      <soap:operation soapAction="http://tempuri.org/ILP2Service/AcknowledgeAlert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LP2Service">
+    <wsdl:port name="InfoHubServiceEndPoint" binding="tns:InfoHubServiceEndPoint">
+      <soap:address location="http://focpds936:8731/InfoHubService/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

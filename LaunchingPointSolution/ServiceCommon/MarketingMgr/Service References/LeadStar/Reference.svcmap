@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cfd79dc3-322f-4684-b1e7-4df63e8f6858" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://api.myleadstar.com/LeadStarService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LeadStarService.wsdl" MetadataType="Wsdl" ID="12407593-5814-45d0-87cf-09f432a97b8c" SourceId="1" SourceUrl="http://api.myleadstar.com/LeadStarService.svc?wsdl" />
+    <MetadataFile FileName="LeadStarService.disco" MetadataType="Disco" ID="768a196e-9719-4cae-9e13-46a0594b57f2" SourceId="1" SourceUrl="http://api.myleadstar.com/LeadStarService.svc?disco" />
+    <MetadataFile FileName="LeadStarService.xsd" MetadataType="Schema" ID="8ea8b1ba-9f65-4783-bb3a-1f0961d76e0c" SourceId="1" SourceUrl="http://api.myleadstar.com/LeadStarService.svc?xsd=xsd2" />
+    <MetadataFile FileName="LeadStarService1.xsd" MetadataType="Schema" ID="ff55c97c-6d4e-4b21-b41b-1822a55d70cf" SourceId="1" SourceUrl="http://api.myleadstar.com/LeadStarService.svc?xsd=xsd3" />
+    <MetadataFile FileName="LeadStarService2.xsd" MetadataType="Schema" ID="45069ce6-6897-46cb-a6cf-af98027b9c53" SourceId="1" SourceUrl="http://api.myleadstar.com/LeadStarService.svc?xsd=xsd0" />
+    <MetadataFile FileName="LeadStarService3.xsd" MetadataType="Schema" ID="c86f4976-9222-4621-8214-c28a522a83a3" SourceId="1" SourceUrl="http://api.myleadstar.com/LeadStarService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

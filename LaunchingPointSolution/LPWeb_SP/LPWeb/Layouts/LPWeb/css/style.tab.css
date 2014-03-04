@@ -1,0 +1,222 @@
+#tabs10 {
+    float:left;
+    width:100%;
+    font-size:100%;
+	border-bottom: solid 0px red;
+    line-height:normal;
+    }
+#tabs10 ul {
+	margin:0;
+	padding:0px 0px 0 0px;
+	list-style:none;
+    }
+#tabs10 li {
+    display:inline;
+    margin:0;
+    padding:0;
+    }
+#tabs10 a {
+    float:left;
+    background:url("../images/tableft10.gif") no-repeat left top;
+    margin:0;
+    padding:0 0 0 4px;  /*---- width of left corner ---*/
+    text-decoration:none;
+    margin-left: 2px;   /*---- spacing of tab item ----*/
+    border: solid 0px red;
+    }
+
+#tabs10 a span {
+    float:left;
+    display:block;
+    background:url("../images/tabright10.gif") no-repeat right top;
+    padding:4px 15px 4px 8px;
+    color:#575c5f;
+    white-space: nowrap;
+    }
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+#tabs10 a span {float:none;}
+/* End IE5-Mac hack */
+
+#tabs11 {
+    float:left;
+    width:100%;
+    font-size:100%;
+	border-bottom: solid 0px red;
+    line-height:normal;
+    }
+#tabs11 ul {
+	margin:0;
+	padding:0px 0px 0 0px;
+	list-style:none;
+    }
+#tabs11 li {
+    display:inline;
+    margin:0;
+    padding:0;
+    }
+#tabs11 a {
+    float:left;
+    background:url("../images/tableft10.gif") no-repeat left top;
+    margin:0;
+    padding:0 0 0 4px;  /*---- width of left corner ---*/
+    text-decoration:none;
+    margin-left: 2px;   /*---- spacing of tab item ----*/
+    border: solid 0px red;
+    }
+ #tabs11 a span {
+    float:left;
+    display:block;
+    background:url("../images/tabright10.gif") no-repeat right top;
+    padding:4px 15px 4px 8px;
+    color:#575c5f;
+    white-space: nowrap;
+    }
+    
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+#tabs11 a span {float:none;}
+/* End IE5-Mac hack */
+#tabs11 a:hover {
+    background-position:0% -21px;
+    }
+#tabs11 a:hover span {
+    background-position:100% -21px;
+    }
+
+    #tabs11 #current a {
+    background-position:0% -21px;
+    }
+    #tabs11 #current a span {
+    background-position:100% -21px;
+    }
+    
+#tabs9 a:hover span {
+    color:#FFF;
+    }
+#tabs10 a:hover {
+    background-position:0% -21px;
+    }
+#tabs10 a:hover span {
+    background-position:100% -21px;
+    }
+
+    #tabs10 #current a {
+    background-position:0% -21px;
+    }
+    #tabs10 #current a span {
+    background-position:100% -21px;
+    }
+/*-------------*/
+#tabsubs10 {
+    float:left;
+    width:100%;
+    font-size:100%;
+	border-bottom: solid 0px red;
+    line-height:normal;
+    }
+#tabsubs10 ul {
+	margin:0;
+	padding:0px 0px 0 0px;
+	list-style:none;
+    }
+#tabsubs10 li {
+    display:inline;
+    margin:0;
+    padding:0;
+    }
+#tabsubs10 a {
+    float:left;
+    background:url("../images/tableft10.gif") no-repeat left top;
+    margin:0;
+    padding:0 0 0 4px;  /*---- width of left corner ---*/
+    text-decoration:none;
+    margin-left: 2px;   /*---- spacing of tab item ----*/
+    border: solid 0px red;
+    }
+#tabsubs10 a span {
+    float:left;
+    display:block;
+    background:url("../images/tabright10.gif") no-repeat right top;
+    padding:4px 15px 4px 8px;
+    color:#575c5f;
+    white-space: nowrap;
+    }
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+#tabsubs10 a span {float:none;}
+/* End IE5-Mac hack */
+#tabs9 a:hover span {
+    color:#FFF;
+    }
+#tabsubs10 a:hover {
+    background-position:0% -21px;
+    }
+#tabsubs10 a:hover span {
+    background-position:100% -21px;
+    }
+
+#tabsubs10 #currentsub a {
+    background-position:0% -21px;
+    }
+#tabsubs10 #currentsub a span {
+    background-position:100% -21px;
+    }
+
+
+
+/*---------- custom css for tab -------------*/
+div.JTab
+{
+    
+}
+
+div.JTab #TabBody
+{
+    border: solid 1px #e4e7ef; border-top: none;
+}
+
+div.JTab #TabBody div.TabLeftLine
+{
+     border-top: solid 1px #e4e7ef; position: relative; top: -1px; height: 0px; left: -1px;
+     width: 0px;
+}
+
+div.JTab #TabBody div.TabRightLine
+{
+      border-top: solid 1px #e4e7ef; position: relative; top: -2px; height: 0px; float: right; right: -1px;
+      width: 0px;
+}
+
+div.JTab #TabBody div.TabContent
+{
+    padding: 1px;    
+}
+
+
+
+/*---------- custom css for sub tab -------------*/
+div.subJTab
+{
+    
+}
+
+div.subJTab #TabsubBody
+{
+    border: solid 1px #e4e7ef; border-top: none;
+}
+
+div.subJTab #TabsubBody div.TabLeftLine
+{
+     border-top: solid 1px #e4e7ef; position: relative; top: -1px; height: 0px; left: -1px;
+     width: 0px;
+}
+
+div.subJTab #TabsubBody div.TabRightLine
+{
+      border-top: solid 1px #e4e7ef; position: relative; top: -2px; height: 0px; float: right; right: -1px;
+      width: 0px;
+}
+
+div.subJTab #TabsubBody div.TabSubContent
+{
+    padding: 10px;    
+}
+

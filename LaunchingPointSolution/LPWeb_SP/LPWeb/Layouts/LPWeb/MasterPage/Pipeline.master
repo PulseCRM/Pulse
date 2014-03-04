@@ -1,0 +1,80 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/_layouts/LPWeb/MasterPage/Super.master" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="PlaceHolderAdditionalPageHead" runat="Server">
+    <link href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/css/style.web.css") %>" rel="stylesheet"
+        type="text/css" />
+    <link href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/css/style.custom.css") %>"
+        rel="stylesheet" type="text/css" />
+    <script src="<%= this.ResolveClientUrl("~/_layouts/LPWeb/js/jquery.js") %>" type="text/javascript"></script>
+    <script src="<%= this.ResolveClientUrl("~/_layouts/LPWeb/js/common.js") %>" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script language="javascript" type="text/javascript">
+// <![CDATA[
+
+        $(document).ready(function () {
+
+            InitLeftNavMenu();
+
+            // set height of left navigation menu
+            $("#divLeftNavMenu .Widget_Body").height($("#tdRightContent").height() - 28);
+        });
+
+        function InitLeftNavMenu() {
+
+            var Path = window.location.pathname;
+            if (Path.indexOf("Pipeline/ProcessingPipelineSummary.aspx") != -1) {
+
+                SetSelectedMenuItemStyle(0)
+            }
+            if (Path.indexOf("Pipeline/AlertList.aspx") != -1) {
+
+                SetSelectedMenuItemStyle(1)
+            }
+            if (Path.indexOf("Pipeline/LoanSetup.aspx") != -1) {
+
+                SetSelectedMenuItemStyle(2)
+            }
+
+        }
+// ]]>
+    </script>
+</asp:Content>
+<asp:Content ID="Content2" runat="server" ContentPlaceHolderID="PlaceHolderMain">
+    <div id="PageContent">
+        <div>
+            <asp:ContentPlaceHolder ID="MainArea" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" runat="server" ContentPlaceHolderID="PlaceHolderLeftNavBar">
+    <div id="zz17_V4QuickLaunchMenu" class="s4-ql">
+        <div class="menu vertical menu-vertical">
+            <ul class="root static">
+                <li class="static"><a class="static menu-item" href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/Pipeline/ProcessingPipelineSummary.aspx") %>">
+                    <span class="additional-background"><span class="menu-item-text">My Pipeline</span></span></a><ul
+                        class="static">
+                        <li class="static"><a class="static menu-item" href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/Pipeline/AlertList.aspx") %>">
+                            <span class="additional-background"><span class="menu-item-text">Alert List</span></span></a></li>
+                        <li class="static"><a class="static menu-item" href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/Pipeline/ProcessingPipelineSummary.aspx") %>">
+                            <span class="additional-background"><span class="menu-item-text">Loans</span></span></a></li>
+                        <li class="static"><a class="static menu-item" href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/Pipeline/ProspectPipelineSummaryLoan.aspx") %>">
+                            <span class="additional-background"><span class="menu-item-text">Leads</span></span></a></li>
+                        <li class="static"><a class="static menu-item" href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/Pipeline/ProspectPipelineSummary.aspx") %>">
+                            <span class="additional-background"><span class="menu-item-text">Clients</span></span></a></li>
+                        <li class="static"><a class="static menu-item" href="javascript:menuCreateProspect();">
+                            <span class="additional-background"><span class="menu-item-text">Create Prospect</span></span></a></li>
+                        <li class="static"><a class="static menu-item" href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/Pipeline/AdvancedSearch.aspx") %>">
+                            <span class="additional-background"><span class="menu-item-text">Advanced Search</span></span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</asp:Content>
+
+<asp:Content ID="Content4" runat="server" ContentPlaceHolderID="PlaceHolderPageTitleInTitleArea">
+    <asp:ContentPlaceHolder ID="PageTitleArea" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>

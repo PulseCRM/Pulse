@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ED52445D-CF0E-4E31-BB38-9264CCE6371E}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Scheduled_Analyzer</RootNamespace>
+    <AssemblyName>Scheduled_Analyzer</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FileHelper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SerivceCommon\Common\RefDLLs\FileHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PNTLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SerivceCommon\Common\RefDLLs\PNTLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SerivceCommon\Common\Common.csproj">
+      <Project>{3BFABAB3-040A-41BF-82E3-76FF9609F04C}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SerivceCommon\DataAccess\DataAccess.csproj">
+      <Project>{E9624569-9DE9-4467-85FA-90B63EDB3B6D}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SerivceCommon\EmailManager\EmailManager.csproj">
+      <Project>{A295E946-7A5A-4819-9DF3-7F749758B568}</Project>
+      <Name>EmailManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SerivceCommon\MailChimpMgr\MailChimpMgr.csproj">
+      <Project>{EA7184AE-EE53-4CFC-AC58-96868E84F36E}</Project>
+      <Name>MailChimpMgr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SerivceCommon\MarketingMgr\MarketingMgr.csproj">
+      <Project>{54D86BA8-3547-4E49-A19C-88E33B13B536}</Project>
+      <Name>MarketingMgr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SerivceCommon\PointMgr\PointMgr.csproj">
+      <Project>{1DFFB148-5223-4302-8ECC-E6CE6612CE0A}</Project>
+      <Name>PointMgr</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SerivceCommon\ReportManager\ReportManager.csproj">
+      <Project>{D8D404F9-1CB6-4B1B-920C-02437605FEA4}</Project>
+      <Name>ReportManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SerivceCommon\RuleManager\RuleManager.csproj">
+      <Project>{BCAB395F-FBA1-4EDD-B6D5-8C5929041877}</Project>
+      <Name>RuleManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SerivceCommon\UserManager\UserManager.csproj">
+      <Project>{D10D5284-2086-466E-B6CF-AB74946AAC54}</Project>
+      <Name>UserManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SerivceCommon\WorkflowManager\WorkflowManager.csproj">
+      <Project>{18A2C502-7234-4D45-AB17-C52474AB6C9B}</Project>
+      <Name>WorkflowManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LP2Service\LP2Service\LP2Service.csproj">
+      <Project>{636B5096-5499-46C2-BC6B-BFC33958CA2A}</Project>
+      <Name>LP2Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="LPWebMasterpage" List="116" Url="_catalogs/masterpage/LPWeb">
+    <File Path="LPWebMasterpage\Home.master" Url="Home.master" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Path="LPWebMasterpage\Pipeline.master" Url="Pipeline.master" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Path="LPWebMasterpage\Settings.master" Url="Settings.master" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Path="LPWebMasterpage\Super.master" Url="Super.master" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Path="LPWebMasterpage\Contact.master" Url="Contact.master" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+    <File Path="LPWebMasterpage\Marketing.master" Url="Marketing.master" Type="GhostableInLibrary" IgnoreIfAlreadyExists="TRUE" />
+</Module>
+</Elements>

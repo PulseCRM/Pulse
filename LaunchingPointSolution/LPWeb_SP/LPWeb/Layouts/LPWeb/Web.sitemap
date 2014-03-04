@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="" title="Launching Point"  description="Launching Point">
+    <siteMapNode description="Settings" title="Settings">
+      <siteMapNode url="Settings/UserSetup.aspx" title="User Setup"  description="User Setup" />
+      <siteMapNode url="Settings/UserList.aspx" title="User List View"  description="User List View" />
+      <siteMapNode url="Settings/Personalization.aspx" title="Personalization"  description="Personalization" />
+      <siteMapNode url="Settings/RoleSetup.aspx" title="Role Setup"  description="Role Setup" />
+      <siteMapNode url="Settings/UserCreate.aspx" title="Create User"  description="Create User" />
+      <siteMapNode url="Settings/CompanyLoanPrograms.aspx" title="Company > Loan Programs"  description="Company > Loan Programs" />
+      <siteMapNode url="Settings/CompanyGeneral.aspx" title="Company > General"  description="Company Setup General" />
+      <siteMapNode url="Settings/CompanyWebEmail.aspx" title="Company > Web/Email"  description="Company Setup Web/Email" />
+      <siteMapNode url="Settings/CompanyPoint.aspx" title="Company > Point"  description="Company Setup Point" />
+      <siteMapNode url="Settings/CompanyAlerts.aspx" title="Company > Alerts"  description="Company Setup Alerts" />
+      <siteMapNode url="Settings/LoanPrograms.aspx" title="Company > Loan Programs"  description="Company Setup Loan Programs" />
+      <siteMapNode url="Settings/RegionSetup.aspx" title="Region Setup"  description="Region Setup" />
+      <siteMapNode url="Settings/DivisionSetup.aspx" title="Division Setup"  description="Division Setup" />
+      <siteMapNode url="Settings/BranchSetup.aspx" title="Branch Setup"  description="Branch Setup" />
+      <siteMapNode url="Settings/PointFolderDetails.aspx" title="Folder Details"  description="Folder Details" />
+      <siteMapNode url="Settings/PointFolderList.aspx" title="Point Folder List View"  description="Point Folder List View" />
+      <siteMapNode url="Settings/GroupSetup.aspx" title="Group Setup"  description="Group Setup" />
+      <siteMapNode url="Settings/WorkflowTemplateList.aspx" title="Workflow Template List"  description="Workflow Template List" />
+      <siteMapNode url="Settings/RuleList.aspx" title="Rule List"  description="Rule List" />
+      <siteMapNode url="Settings/CompanyOverview.aspx" title="Company Overview"  description="Company Overview" />
+    </siteMapNode>
+    <siteMapNode description="Pipeline Management" title="Pipeline Management">
+      <siteMapNode url="Pipeline/PipelineSummary.aspx" title="Pipeline Summary"  description="Pipeline Summary" />
+      <siteMapNode url="Pipeline/AlertList.aspx" title="Alert List"  description="Alert List" />
+      <siteMapNode url="LoanDetails/LoanDetails.aspx" title="Loan Detail View"  description="Loan Detail View" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

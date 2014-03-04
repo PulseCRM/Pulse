@@ -1,0 +1,775 @@
+﻿/*============== page layout =================*/
+div#PageContainer
+{
+    width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div#Header
+{
+    
+}
+
+div#PageContent
+{
+     padding: 8px;
+     padding-left: 15px;
+}
+
+div#WelcomeMsg
+{
+    line-height: 23px;
+    background-color: #f9f9f9;
+    border: solid 1px #e4e7ef;
+    text-align: right;
+    color: #575c5f; 
+    padding-right: 20px;
+}
+
+div#WelcomeMsg table
+{
+    margin-left: auto; margin-right: 0;    
+}
+
+/* ---------- css for logo and search -------------*/
+div#LogoContainer
+{
+    height: 49px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 5px;
+}
+
+input#txtSearchContent
+{
+    width: 180px; 
+    font-size: 11px; 
+    background-color: #f3f6f9; 
+    border: solid 1px #b5bbbe; 
+    padding: 3px 4px 2px 5px; 
+    color: #a7b3bc;    
+}
+
+/* -------- css for navigation tab ---------*/
+div#NavContainer
+{
+   letter-spacing: 0px;
+}
+
+table#tNavTab .LeftCorner
+{
+    width: 4px; height: 41px; background: url('../images/navigator/NavTab-Left.jpg') no-repeat left top;    
+}
+
+table#tNavTab .MidBg
+{
+    height: 41px; background: url('../images/navigator/NavTab-Mid.gif') repeat left top;    
+}
+
+table#tNavTab .RightCorner
+{
+    width: 4px; height: 41px; background: url('../images/navigator/NavTab-Right.gif') no-repeat left top;    
+}
+
+table#tNavTabItem a
+{
+    color: #575c5f;
+    position:relative;
+    top: -2px;
+    font-size: 12px;
+}
+
+/*------------- selected tab ---------------*/
+table#tNavTabItem td
+{
+    height: 41px; 
+}
+
+table#tNavTabItem .SelectedTab_Home
+{
+    background: url('../images/navigator/NavTab-Selected-Home.gif') no-repeat left top;  
+    width: 61px; padding-left: 12px; 
+}
+
+table#tNavTabItem .SelectedTab_SendReferral
+{
+    background: url('../images/navigator/NavTab-Selected-SendReferral.gif') no-repeat left top;   
+    width: 113px; padding-left: 18px;
+}
+
+table#tNavTabItem .SelectedTab_Settings
+{
+    background: url('../images/navigator/NavTab-Selected-MyLoan.gif') no-repeat left top;   
+    width: 76px; padding-left: 15px;
+}
+/*---------------- end --------------------*/
+
+/*------- css for site map -------*/
+div#SiteMapContainer
+{
+    line-height: 25px;
+    background-color: #f9f9f9;
+    padding-left: 12px;
+    padding-right: 12px;
+    color: #818892;
+    letter-spacing: 1px;
+}
+
+div#SiteMapContainer table
+{
+    position: relative;
+    top: -2px;    
+}
+
+/*--------- css for footer ---------*/
+div#Footer
+{
+	height: 35px;
+	border: solid 1px #e4e7ef;
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+	color: #b4bccb;
+	text-align: center;
+	padding-top: 8px;
+	letter-spacing: 1px;
+	margin-top: 20px;
+}
+
+
+/*------------- css for widget --------------*/
+div.Widget
+{
+    border: solid 1px #e4e7ef;    
+}
+
+/* header of widget */
+div.Widget .Widget_Header
+{
+    border-bottom: solid 1px #e4e7ef; padding: 1px; line-height: 20px;    
+}
+
+div.Widget .Widget_Header div
+{
+    background: url('../images/Widget-Bg.gif') repeat left top; padding-left: 8px; padding-right: 8px;
+}
+
+div.Widget .Widget_Header table
+{
+    width: 100%; position: relative; top: -2px;    
+}
+
+div.Widget .Widget_Header img
+{
+    position: relative; top: 4px;
+}
+
+div.Widget .Widget_Header table td.wTitle
+{
+    color: #656e7b; font-size: 12px; width: 300px; letter-spacing: 0px;    
+}
+
+/*----- header for left navigation menu -------*/
+div.Widget .Widget_Nav_Header
+{
+    border-bottom: solid 1px #e4e7ef; padding: 1px; line-height: 20px;    
+}
+
+div.Widget .Widget_Nav_Header div
+{
+    background-color: #e4e7ef; padding-left: 8px; padding-right: 8px;
+}
+
+div.Widget .Widget_Nav_Header table
+{
+    width: 100%; position: relative; top: -1px;    
+}
+
+div.Widget .Widget_Nav_Header table td.wTitle
+{
+    color: #656e7b; font-size: 12px;
+}
+
+/* orange widget */
+div.Widget .Widget_Header_Orange
+{
+    border-bottom: solid 1px #e4e7ef; padding: 1px; line-height: 20px;    
+}
+div.Widget .Widget_Header_Orange div
+{
+    background: url('../images/Widget-Bg-Orange.gif') repeat left top; padding-left: 8px; padding-right: 8px;
+}
+
+div.Widget .Widget_Header_Orange table
+{
+    width: 100%; position: relative; top: -2px;    
+}
+
+div.Widget .Widget_Header_Orange img
+{
+    position: relative; top: 4px;
+}
+
+div.Widget .Widget_Header_Orange table td.wTitle
+{
+    color: #a88c02; font-size: 12px; width: 300px; letter-spacing: 0px;    
+}
+
+/*---- header for grid --------*/
+div.Widget .Widget_Grid_Header
+{
+    border-bottom: solid 1px #e4e7ef; 
+    padding: 1px;
+}
+
+div.Widget .Widget_Grid_Header div
+{
+    background-color: #f3f4f5;
+}
+
+div.Widget .Widget_Grid_Header table
+{
+    width: 100%;
+    border-collapse: collapse;
+    color: #656e7b;
+}
+
+div.Widget .Widget_Grid_Header table td
+{
+    border: none;
+    border-right: solid 1px #e4e7ef;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+/* body of widget */
+div.Widget .Widget_Body
+{
+    padding-bottom: 10px;    
+}
+
+/*------------ css for grid odd/even row (heigh=24) -------------*/
+div.GridRow24_Odd
+{
+    line-height: 24px;
+}
+
+div.GridRow24_Odd table
+{
+    width: 100%; 
+    border-collapse: collapse;
+}
+
+div.GridRow24_Odd table td
+{
+    border: none;
+    border-right: solid 1px #e4e7ef;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+div.GridRow24_Even
+{
+     line-height: 24px; background-color: #f7f8fa;
+}
+
+div.GridRow24_Even table
+{
+    width: 100%;  
+    border-collapse: collapse;  
+}
+
+div.GridRow24_Even table td
+{
+    border: none;
+    border-right: solid 1px #e4e7ef;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+/*------------ css for dash odd/even row (heigh=24) -------------*/
+div.DashedRow24_Odd
+{
+     line-height: 24px;
+}
+
+div.DashedRow24_Even
+{
+     line-height: 24px; background-color: #f7f8fa;
+}
+
+div.DashedBorder
+{
+    line-height: 1px; background: url('../images/Dash.gif') repeat left top;    
+}
+
+/*----------- css for email inbox row --------------*/
+
+table.tEmailInboxRow
+{
+    width: 100%;    
+}
+
+table.tEmailInboxRow img
+{
+    position: relative; top: 2px;    
+}
+
+table.tEmailInboxRow a.aEmailSubject
+{
+    color: #b4bccb; 
+    width: 190px;
+}
+
+/*--------- css for left nav menu ------------*/
+ul#LeftNavMenuList
+{
+    padding: 0px; margin: 0; list-style: none; border: solid 0px red; 
+    margin-top: 5px;
+}
+
+ul#LeftNavMenuList li
+{
+    line-height: 28px;
+    border: solid 0px red;
+    padding-left: 9px;
+}
+
+ul#LeftNavMenuList li.SelectedMenuItem
+{
+    line-height: 20px;
+    font-weight: bold;
+    padding-top: 8px;
+    padding-left: 0px;
+}
+
+ul#LeftNavMenuList li.SelectedMenuItem a
+{
+    position: relative;
+    top: -4px;    
+}
+
+ul#LeftNavMenuList li.SelectedMenuItem img
+{
+    position: relative;
+    top: -3px;
+    margin-right: 3px;
+}
+
+
+/*-------- css for ellipsis of overflow text ----------*/
+.TextEllipsis
+{
+    display: block;overflow: hidden;/*注意不要写在最后了*/white-space: nowrap;-o-text-overflow: ellipsis;text-overflow: ellipsis; 
+}
+
+/*------- css for button -------*/
+.Btn-66
+{
+    width:66px;
+    height:25px;
+    border:none;
+    font-size: 11px;
+    background: url(../images/btn/Btn-66.gif) 0 0 no-repeat;
+    letter-spacing:0px;
+    cursor:pointer;
+    line-height:20px;
+    text-align: center;
+    padding-left:0px;
+    padding-bottom: 3px;
+    color: #77787b;
+}
+
+.Btn-91
+{
+    width:91px;
+    height:25px;
+    border:none;
+    font-size: 11px;
+    background: url(../images/btn/Btn-91.gif) 0 0 no-repeat;
+    letter-spacing:0px;
+    cursor:pointer;
+    line-height:20px;
+    text-align: center;
+    padding-left:0px;
+    padding-bottom: 3px;
+    color: #77787b;
+}
+
+.Btn-115
+{
+    width:115px;
+    height:25px;
+    border: solid 0px red;
+    font-size: 11px;
+    background: url(../images/btn/Btn-115.gif) 0 0 no-repeat;
+    letter-spacing:0px;
+    cursor:pointer;
+    line-height:20px;
+    text-align:center;
+    padding-left:0px;   
+    padding-bottom: 5px; 
+    color: #77787b;
+}
+
+.Btn-140
+{
+    width:140px;
+    height:25px;
+    border:none;
+    font-size: 11px;
+    background: url(../images/btn/Btn-140.gif) 0 0 no-repeat;
+    letter-spacing:0px;
+    cursor:pointer;
+    line-height:20px;
+    text-align:center;
+    padding-left:0px;   
+    padding-bottom: 3px; 
+    color: #77787b;
+}
+
+.Btn-150
+{
+    width:150px;
+    height:25px;
+    border:none;
+    font-size: 11px;
+    background: url(../images/btn/Btn-150.gif) 0 0 no-repeat;
+    letter-spacing:0px;
+    cursor:pointer;
+    line-height:20px;
+    text-align:center;
+    padding-left:0px;   
+    padding-bottom: 3px; 
+    color: #77787b;
+}
+
+.Btn-160
+{
+    width:160px;
+    height:25px;
+    border:none;
+    font-size: 11px;
+    background: url(../images/btn/Btn-160.gif) 0 0 no-repeat;
+    letter-spacing:0px;
+    cursor:pointer;
+    line-height:20px;
+    text-align:center;
+    padding-left:0px;   
+    padding-bottom: 3px; 
+    color: #77787b;
+}
+
+.Btn-170
+{
+    width:170px;
+    height:25px;
+    border:none;
+    font-size: 11px;
+    background: url(../images/btn/Btn-170.gif) 0 0 no-repeat;
+    letter-spacing:0px;
+    cursor:pointer;
+    line-height:20px;
+    text-align:center;
+    padding-left:0px;   
+    padding-bottom: 3px; 
+    color: #77787b;
+}
+
+.Btn-250
+{
+    width:250px;
+    height:25px;
+    border:none;
+    font-size: 11px;
+    background: url(../images/btn/Btn-250.gif) 0 0 no-repeat;
+    letter-spacing:0px;
+    cursor:pointer;
+    line-height:20px;
+    text-align:center;
+    padding-left:0px;   
+    padding-bottom: 3px; 
+    color: #77787b;
+}
+
+.Btn-big
+{
+    width:110px;
+    height:40px;
+    border:none;
+    font-size: 11px;
+    background: url(../images/Btn-big.jpg) 0 0 no-repeat;
+    letter-spacing:0px;
+    cursor:pointer;
+    line-height:20px;
+    text-align:center;
+    padding-left:0px;   
+    padding-bottom: 3px; 
+    color: #77787b;
+}
+
+
+.Link-Btn
+{
+    text-decoration: underline;
+}
+
+/*------------ css for form input ----------------*/
+.iTextBox
+{
+    font-size: 11px; padding: 2px 4px 3px 4px;    
+}
+
+.iFileUpload
+{
+    font-size: 11px; padding: 3px 4px 4px 4px;
+}
+
+/*---------- css for list view title ----------*/
+div.ModuleTitle
+{
+    margin-top: 13px; 
+    font-weight:bold; 
+    padding-right: 15px;       
+}
+
+/*---------- css for details title ----------*/
+div.Heading
+{
+    margin-top: 9px; 
+    font-weight: bold; 
+    padding-left: 15px; 
+    padding-right: 15px;
+    font-size: 12px;  
+}
+
+/*---------- css for split line ----------*/
+div.SplitLine
+{
+    border-bottom: solid 1px #e4e7ef; margin-top: 5px;    
+}
+
+div.SplitLine1
+{
+    border-bottom: solid 1px #F4F5F9; margin-top: 5px;    
+}
+
+/*---------- css for details content container ----------*/
+div.DetailsContainer
+{
+    padding-left: 15px;   
+    padding-top: 13px; 
+}
+
+/*============ align center ==============*/
+.AlignCenter
+{
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+/*============ red star for required field =============*/
+font.ReqStar
+{
+    color: Red; margin-right: 2px;    
+}
+
+/*=============== jquery validation error message ==============*/
+label.error
+{
+    color: Red;
+    padding: 5px;
+    font-weight: normal;
+}
+
+/*============= field title ===============*/
+
+.FieldTitle80
+{
+    width: 80px;
+}
+
+.FieldTitle100
+{
+    width: 100px;	
+}
+
+.FieldTitle120
+{
+    width: 120px;
+}
+
+.FieldTitle150
+{
+    width: 150px;
+}
+
+
+/*================ 成功信息 ================*/
+div.SuccessMsgBlock
+{
+    border: solid 1px #FFD0A8; 
+    background-color: #FFFFEE; 
+    line-height: 21px; 
+    margin-top: 20px;
+}
+
+div.SuccessMsgBlock div
+{
+    border: solid 1px #FFF0A8; 
+    height: 100%; 
+    padding: 20px;    
+}
+
+/*=========== Blue GridView =============*/
+.BlueGridView
+{
+    border: 1px solid #E2E2E2; /*border: solid 1px #7DB1FF; */
+    font: 11px Tahoma;
+}
+
+.BlueGridView th
+{
+    border: solid 1px #E2E2E2; 
+    white-space: nowrap;
+    background-color: #F3F3F3;
+    cursor: pointer;
+    padding: 5px 6px 5px 6px;
+    text-align: left;
+    font-weight: bold;
+    height: 18px;
+}
+.BlueGridView td
+{ 
+    border: solid 1px #E2E2E2; 
+	word-break: break-all;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.BlueGridView tr.FocusedRow
+{
+    background-color: #E1E4EC;
+}
+
+.BlueGridView tr.NormalRow
+{
+	background-color: white;
+}
+
+/*=============== AspNetPager ==================*/
+div.AspNetPager
+{
+    position: relative;
+    top: 2px;
+}
+
+/*=============== jquery datepick input ==================*/
+.DateField
+{
+    width: 70px;
+}
+
+
+/*===================== Req. Star, Notes ====================*/
+.ReqStar
+{
+    color: Red; margin-right: 2px;    
+}
+
+.Notes
+{
+	font-size: 9pt; 
+	color: Blue;
+}
+
+.RedFont
+{
+    color: Red;
+    padding: 5px;   
+    font-size: 9pt; 
+}
+
+.BlueFont
+{
+    color: Blue;
+    padding: 5px;   
+    font-size: 9pt; 
+}
+
+
+/*================ ToolBar only ul ==================*/
+
+ul.ToolStrip
+{
+    list-style:none;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    padding-left: 5px;
+}
+
+ul.ToolStrip li
+{
+    display:inline;
+    line-height: 20px;
+}
+
+ul.ToolStrip span
+{
+    padding-left: 10px;
+    padding-right: 8px;
+    color: #818892;
+}
+
+/*------------------ margin-top --------------------*/
+.margin-top-5
+{
+    margin-top:5px;    
+}
+
+.margin-top-10
+{
+    margin-top:10px;    
+}
+
+.margin-top-15
+{
+    margin-top:15px;    
+}
+
+.margin-top-20
+{
+    margin-top:20px;    
+}
+
+.margin-top-25
+{
+    margin-top:25px;    
+}
+
+.margin-top-30
+{
+    margin-top:30px;    
+}
+
+.margin-top-40
+{
+    margin-top:40px;    
+}
+
+/*------------------ margin-bottom --------------------*/
+.margin-bottom-10
+{
+    margin-bottom:10px;    
+}
+
+.margin-bottom-20
+{
+    margin-bottom:20px;    
+}
+
+padding-left-15
+{
+    padding-left: 15px;    
+}

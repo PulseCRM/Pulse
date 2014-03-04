@@ -1,0 +1,50 @@
+
+.jqcontextmenu, .jqcontextmenu ul{ /*topmost and sub ULs, respectively*/
+    position: absolute;
+	width: 200px;
+	z-index: 99999;
+	border: solid 1px #CCC;
+	background: #fff;
+	padding: 0px;
+	margin: 0px;
+	display: none;
+	font-size:11px;
+}
+
+
+.jqcontextmenu li{
+    list-style: none;
+	padding: 0px;
+	margin: 0px;
+	font-size:11px;
+}
+
+.jqcontextmenu  a{
+    color: #333;
+	text-decoration: none;
+	display: block;
+	line-height: 20px;
+	height: 20px;
+	background-position: 6px center;
+	background-repeat: no-repeat;
+	outline: none;
+	padding: 1px 5px;
+	padding-left: 8px;
+}
+
+* html .jqcontextmenu li{ /*IE6 CSS hack*/
+display: inline-block;
+width: 200px; /*width of menu (include side paddings of LI A*/
+}
+
+.jqcontextmenu li a:hover{
+    color: #FFF;
+	background-color: #b6bdd2;
+}
+
+.rightarrowclass{
+position: absolute;
+top: 6px;
+right: 5px;
+}
+

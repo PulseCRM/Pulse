@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://api.myleadstar.com/LeadStarService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LeadStarAPI" />
+  <xs:import schemaLocation="http://api.myleadstar.com/LeadStarService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="GetUserEventsByDateRange">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="instance_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="user_Integration_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="from_Date" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="to_Date" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="company_Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserEventsByDateRangeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/LeadStarAPI" minOccurs="0" name="GetUserEventsByDateRangeResult" nillable="true" type="q1:ArrayOfContactCampaignEvent" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBaseURL">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="instance_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBaseURLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetBaseURLResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCreditCardPostStringURL">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="instance_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="insert" type="xs:boolean" />
+        <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCreditCardPostStringURLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCreditCardPostStringURLResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddToAccountBalance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="instance_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="user_Integration_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_amountToAdd" type="xs:decimal" />
+        <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="company_Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddToAccountBalanceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddToAccountBalanceResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProspectByIntegrationID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="instance_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="integration_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="company_Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProspectByIntegrationIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/LeadStarAPI" minOccurs="0" name="GetProspectByIntegrationIDResult" nillable="true" type="q2:Prospect" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertProspect">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="instance_ID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/LeadStarAPI" minOccurs="0" name="prospect" nillable="true" type="q3:Prospect" />
+        <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="company_Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertProspectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertProspectResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateProspect">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="instance_ID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/LeadStarAPI" minOccurs="0" name="propsect" nillable="true" type="q4:Prospect" />
+        <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="company_Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateProspectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateProspectResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReassignProspects">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="instance_ID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lstProspectIDs" nillable="true" type="q5:ArrayOfstring" />
+        <xs:element minOccurs="0" name="userName_From" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userName_To" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="company_Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReassignProspectsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReassignProspectsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyByIntegrationID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="instance_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="integration_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="company_Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCompanyByIntegrationIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/LeadStarAPI" minOccurs="0" name="GetCompanyByIntegrationIDResult" nillable="true" type="q6:Company" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertCompany">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="instance_ID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/LeadStarAPI" minOccurs="0" name="company" nillable="true" type="q7:Company" />
+        <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertCompanyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertCompanyResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCompany">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="instance_ID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/LeadStarAPI" minOccurs="0" name="company" nillable="true" type="q8:Company" />
+        <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCompanyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateCompanyResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBranchByIntegrationID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="instance_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="integration_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="company_Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBranchByIntegrationIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/LeadStarAPI" minOccurs="0" name="GetBranchByIntegrationIDResult" nillable="true" type="q9:Branch" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertBranch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="instance_ID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/LeadStarAPI" minOccurs="0" name="branch" nillable="true" type="q10:Branch" />
+        <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertBranchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertBranchResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateBranch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="instance_ID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/LeadStarAPI" minOccurs="0" name="branch" nillable="true" type="q11:Branch" />
+        <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateBranchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateBranchResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserByIntegrationID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="instance_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="integration_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="company_Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserByIntegrationIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/LeadStarAPI" minOccurs="0" name="GetUserByIntegrationIDResult" nillable="true" type="q12:User" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="instance_ID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/LeadStarAPI" minOccurs="0" name="_user" nillable="true" type="q13:User" />
+        <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="company_Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsertUserResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="instance_ID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/LeadStarAPI" minOccurs="0" name="_user" nillable="true" type="q14:User" />
+        <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="company_Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateUserResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserCreditCards">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="instance_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="user_Integration_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="company_Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserCreditCardsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/LeadStarAPI" minOccurs="0" name="GetUserCreditCardsResult" nillable="true" type="q15:ArrayOfCreditCard" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserAccountBalance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="instance_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="user_Integration_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="company_Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserAccountBalanceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUserAccountBalanceResult" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserTransactionHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="instance_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="user_Integration_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_Start_Date" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="_End_Date" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="company_Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserTransactionHistoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/LeadStarAPI" minOccurs="0" name="GetUserTransactionHistoryResult" nillable="true" type="q16:ArrayOfUserTransaction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCampaignCategories">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="instance_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCampaignCategoriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/LeadStarAPI" minOccurs="0" name="GetAllCampaignCategoriesResult" nillable="true" type="q17:ArrayOfCampaignCategory" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMarketingCampaignByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="instance_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="marketing_Campaign_ID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMarketingCampaignByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/LeadStarAPI" minOccurs="0" name="GetMarketingCampaignByIDResult" nillable="true" type="q18:MarketingCampaign" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMarketingCampaignsByCategory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="instance_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="category_Key" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="company_Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMarketingCampaignsByCategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/LeadStarAPI" minOccurs="0" name="GetMarketingCampaignsByCategoryResult" nillable="true" type="q19:ArrayOfMarketingCampaign" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomMarketingCampaigns">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="instance_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="user_Integration_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="company_Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomMarketingCampaignsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/LeadStarAPI" minOccurs="0" name="GetCustomMarketingCampaignsResult" nillable="true" type="q20:ArrayOfMarketingCampaign" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCampaignEventByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="instance_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="campaign_Event_ID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCampaignEventByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/LeadStarAPI" minOccurs="0" name="GetCampaignEventByIDResult" nillable="true" type="q21:CampaignEvent" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCampaignEventsByMarketingCampaign">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="instance_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="marketing_Campaign_ID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCampaignEventsByMarketingCampaignResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/LeadStarAPI" minOccurs="0" name="GetCampaignEventsByMarketingCampaignResult" nillable="true" type="q22:ArrayOfCampaignEvent" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StartDefaultCampaign">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="instance_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="user_Integration_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="company_Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StartDefaultCampaignResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StartDefaultCampaignResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveContactCampaignsOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/LeadStarAPI" minOccurs="0" name="ccOrder" nillable="true" type="q23:ContactCampaignsOrder" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/LeadStarAPI" minOccurs="0" name="ptPayer" type="q24:PayerType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveContactCampaignsOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SaveContactCampaignsOrderResult" nillable="true" type="q25:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteContactCampaign">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="instance_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contact_Campaign_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="company_Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteContactCampaignResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/LeadStarAPI" minOccurs="0" name="DeleteContactCampaignResult" nillable="true" type="q26:ArrayOfContactCampaignEvent" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEventsByContactCampaign">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="instance_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contact_Campaign_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="company_Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEventsByContactCampaignResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/LeadStarAPI" minOccurs="0" name="GetEventsByContactCampaignResult" nillable="true" type="q27:ArrayOfContactCampaignEvent" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactCampaignsByProspect">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="instance_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_integration_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="company_Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContactCampaignsByProspectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/LeadStarAPI" minOccurs="0" name="GetContactCampaignsByProspectResult" nillable="true" type="q28:ArrayOfContactCampaign" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveContactCampaignEventCompletion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="instance_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contact_Event_Campaign_ID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="API_Key" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="company_Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveContactCampaignEventCompletionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveContactCampaignEventCompletionResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

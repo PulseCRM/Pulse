@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LPWeb", "LPWeb\LPWeb.csproj", "{AE2636D4-7D56-46B8-A852-C70EC6A9A51F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2B6E7D0A-512C-4805-93BF-1E9C576EE373} = {2B6E7D0A-512C-4805-93BF-1E9C576EE373}
+		{78AF1227-3783-42DB-AACD-66EFC76FF495} = {78AF1227-3783-42DB-AACD-66EFC76FF495}
+		{D6EDCC43-D565-48F5-AF57-9EBB33E2F78A} = {D6EDCC43-D565-48F5-AF57-9EBB33E2F78A}
+		{49F5884C-D97B-4086-8870-A005B43ADF3D} = {49F5884C-D97B-4086-8870-A005B43ADF3D}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{D6EDCC43-D565-48F5-AF57-9EBB33E2F78A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{49F5884C-D97B-4086-8870-A005B43ADF3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{78AF1227-3783-42DB-AACD-66EFC76FF495}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Utilities\Utilities.csproj", "{2B6E7D0A-512C-4805-93BF-1E9C576EE373}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE2636D4-7D56-46B8-A852-C70EC6A9A51F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE2636D4-7D56-46B8-A852-C70EC6A9A51F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE2636D4-7D56-46B8-A852-C70EC6A9A51F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{AE2636D4-7D56-46B8-A852-C70EC6A9A51F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE2636D4-7D56-46B8-A852-C70EC6A9A51F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE2636D4-7D56-46B8-A852-C70EC6A9A51F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{D6EDCC43-D565-48F5-AF57-9EBB33E2F78A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6EDCC43-D565-48F5-AF57-9EBB33E2F78A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6EDCC43-D565-48F5-AF57-9EBB33E2F78A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6EDCC43-D565-48F5-AF57-9EBB33E2F78A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49F5884C-D97B-4086-8870-A005B43ADF3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49F5884C-D97B-4086-8870-A005B43ADF3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49F5884C-D97B-4086-8870-A005B43ADF3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49F5884C-D97B-4086-8870-A005B43ADF3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78AF1227-3783-42DB-AACD-66EFC76FF495}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78AF1227-3783-42DB-AACD-66EFC76FF495}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78AF1227-3783-42DB-AACD-66EFC76FF495}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78AF1227-3783-42DB-AACD-66EFC76FF495}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B6E7D0A-512C-4805-93BF-1E9C576EE373}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B6E7D0A-512C-4805-93BF-1E9C576EE373}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B6E7D0A-512C-4805-93BF-1E9C576EE373}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B6E7D0A-512C-4805-93BF-1E9C576EE373}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(Dynamsoft SCM Anywhere Hosted VSPpackage) = preSolution
+		SccAuxPath = 102642
+		SccProjectName = FocusIT_LaunchingPoint:$/LaunchingPointSolution/LPWeb_SP
+		SccNumbersOfProjects = 5
+		SccProjectUniqueName0 = Model\Model.csproj
+		SccProjectName0 = FocusIT_LaunchingPoint:$/LaunchingPointSolution/LPWeb_SP/Model
+		SccProjectUniqueName1 = LPWeb\LPWeb.csproj
+		SccProjectName1 = FocusIT_LaunchingPoint:$/LaunchingPointSolution/LPWeb_SP/LPWeb
+		SccProjectUniqueName2 = DAL\DAL.csproj
+		SccProjectName2 = FocusIT_LaunchingPoint:$/LaunchingPointSolution/LPWeb_SP/DAL
+		SccProjectUniqueName3 = BLL\BLL.csproj
+		SccProjectName3 = FocusIT_LaunchingPoint:$/LaunchingPointSolution/LPWeb_SP/BLL
+		SccProjectUniqueName4 = Utilities\Utilities.csproj
+		SccProjectName4 = FocusIT_LaunchingPoint:$/LaunchingPointSolution/LPWeb_SP/Utilities
+	EndGlobalSection
+EndGlobal

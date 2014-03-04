@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c869c0a8-d87f-490d-9ad8-db851dbdf021" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://focpds173:8731/InfoHubService/" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="64760949-ae3f-4ee3-8f6a-5f78e9aa16b2" SourceId="1" SourceUrl="http://192.168.253.229:8731/InfoHubService/?xsd=xsd1" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="8b6eafdc-6718-49cf-b1f1-4343fa414057" SourceId="1" SourceUrl="http://192.168.253.229:8731/InfoHubService/?disco" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="f71faf2d-d839-421a-85b6-34f16d5d986c" SourceId="1" SourceUrl="http://192.168.253.229:8731/InfoHubService/?xsd=xsd3" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="5600244e-2a56-4872-b058-d10a67295439" SourceId="1" SourceUrl="http://192.168.253.229:8731/InfoHubService/?xsd=xsd0" />
+    <MetadataFile FileName="LP2Service.wsdl" MetadataType="Wsdl" ID="6989cb14-7645-470c-a1d0-10dbcd4e1aaf" SourceId="1" SourceUrl="http://192.168.253.229:8731/InfoHubService/?wsdl" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="62c6cc9f-046b-4dab-8561-637cb79e64b6" SourceId="1" SourceUrl="http://192.168.253.229:8731/InfoHubService/?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,147 @@
+﻿<%@ Master Language="C#" MasterPageFile="/_catalogs/masterpage/LPWeb/Super.master" %>
+<%@ MasterType VirtualPath="~/_catalogs/masterpage/LPWeb/Super.master" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="PlaceHolderAdditionalPageHead" runat="Server">
+    
+    <link href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/css/jqueryui/jquery.ui.all.css") %>" rel="stylesheet" type="text/css" />
+    <script src="<%= this.ResolveClientUrl("~/_layouts/LPWeb/js/jqueryui/jquery.ui.core.min.js") %>" type="text/javascript"></script>
+    <script src="<%= this.ResolveClientUrl("~/_layouts/LPWeb/js/jqueryui/jquery.ui.widget.min.js") %>" type="text/javascript"></script>
+    <script src="<%= this.ResolveClientUrl("~/_layouts/LPWeb/js/jqueryui/jquery.ui.mouse.min.js") %>" type="text/javascript"></script>
+    <script src="<%= this.ResolveClientUrl("~/_layouts/LPWeb/js/jqueryui/jquery.ui.draggable.min.js") %>" type="text/javascript"></script>
+    <script src="<%= this.ResolveClientUrl("~/_layouts/LPWeb/js/jqueryui/jquery.ui.position.min.js") %>" type="text/javascript"></script>
+    <script src="<%= this.ResolveClientUrl("~/_layouts/LPWeb/js/jqueryui/jquery.ui.dialog.min.js") %>" type="text/javascript"></script>
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <script language="javascript" type="text/javascript">
+
+        //#region Show/Close Global Popup
+
+        function ShowGlobalPopup(Title, iFrameWidth, iFrameHeight, divWidth, divHeight, iFrameSrc) {
+
+            $("#divGlobalPopup").attr("title", Title);
+            
+            $("#ifrGlobalPopup").attr("src", iFrameSrc);
+            $("#ifrGlobalPopup").width(iFrameWidth);
+            $("#ifrGlobalPopup").height(iFrameHeight);
+
+            // show modal
+            $("#divGlobalPopup").dialog({
+                height: divHeight,
+                width: divWidth,
+                modal: true,
+                resizable: false,
+                close: function (event, ui) { 
+                    $("#divGlobalPopup").dialog("destroy"); 
+                    $("#ifrGlobalPopup").attr("src", "");
+                }
+            });
+            $(".ui-dialog").css("border", "solid 3px #aaaaaa")
+        }
+
+        function CloseGlobalPopup() {
+            $("#divGlobalPopup").dialog("close");
+        }
+
+        //#endregion
+        
+        //#region CR48 Task Reminder Popup
+
+        <%
+        LPWeb.Common.LoginUser LoginUser1 = new LPWeb.Common.LoginUser();
+        if(LoginUser1.RemindTaskDue == true && LoginUser1.TaskReminder != null){
+            
+            LPWeb.BLL.LoanTasks LoanTaskManager = new LPWeb.BLL.LoanTasks();
+            bool bShow = LoanTaskManager.ShowTaskReminder(LoginUser1.iUserID, (int)LoginUser1.TaskReminder);
+            if(bShow == true){
+        %>
+            $(document).ready(function () {
+
+                ShowDialog_TaskReminder();
+            });
+        <%
+            }
+        }
+        %>
+
+        function ShowDialog_TaskReminder() {
+
+            var RadomNum = Math.random();
+            var sid = RadomNum.toString().substr(2);
+            var iFrameSrc = "<%= this.ResolveClientUrl("~/_layouts/LPWeb/TaskReminderPopup.aspx") %>?sid=" + sid;
+
+            var BaseWidth = 700;
+            var iFrameWidth = BaseWidth + 2;
+            var divWidth = iFrameWidth + 25;
+
+            var BaseHeight = 400;
+            var iFrameHeight = BaseHeight + 2;
+            var divHeight = iFrameHeight + 40;
+
+            ShowGlobalPopup("Task Reminder", iFrameWidth, iFrameHeight, divWidth, divHeight, iFrameSrc);
+        }
+
+        
+         function ChangeImgRecentItems() {
+            var Tag = $("#imgRecentItems").attr("tag");
+            if (Tag == "0") {
+                $("#imgRecentItems").attr("src", "<%= this.ResolveClientUrl("~/_layouts/LPWeb/Images/ex.jpg") %>");
+                $("#imgRecentItems").attr("tag", "1");
+                $("#divAllRecentItem").show();
+            }
+            else {
+                $("#imgRecentItems").attr("src", "<%= this.ResolveClientUrl("~/_layouts/LPWeb/Images/co.jpg") %>");
+                $("#imgRecentItems").attr("tag", "0");
+                $("#divAllRecentItem").hide();
+            }
+        }
+        //#endregion
+
+    </script>
+
+</asp:Content>
+<asp:Content ID="Content2" runat="server" ContentPlaceHolderID="PlaceHolderMain">
+    <div id="PageContent">
+        <asp:ContentPlaceHolder ID="MainArea" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+</asp:Content>
+<asp:Content ID="Content3" runat="server" ContentPlaceHolderID="PlaceHolderLeftNavBar">
+    <div id="zz17_V4QuickLaunchMenu" class="s4-ql">
+        <div class="menu vertical menu-vertical">
+            <ul class="root static">
+                <li class="static"><a class="static menu-item" href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/DashBoardHome.aspx") %>">
+                    <span class="additional-background"><span class="menu-item-text">Home</span></span></a><ul
+                        class="static">
+                    <li class="static"><a class="static menu-item" href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/Pipeline/ProcessingPipelineSummary.aspx") %>">
+                    <span class="additional-background"><span class="menu-item-text">My Pipeline</span></span></a></li>
+                    <li class="static"><a class="static menu-item" href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/Pipeline/AlertList.aspx") %>">
+                    <span class="additional-background"><span class="menu-item-text">My Alerts</span></span></a></li>
+                    <li class="static"><a class="static menu-item" href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/Contact/PartnerCompanyList.aspx") %>">
+                    <span class="additional-background"><span class="menu-item-text">Contacts</span></span></a></li>
+<%--                    <li class="static"><a class="static menu-item" href="<%= this.ResolveClientUrl("~/_layouts/LPWeb/Marketing/MarketingCampaign.aspx") %>">
+                    <span class="additional-background"><span class="menu-item-text">Marketing</span></span></a></li>--%>
+                    <li class="static"><a class="static menu-item" href="#" onclick="window.open('http://www.mortgagecoachedge.com/');return false;">
+                    <span class="additional-background"><span class="menu-item-text">Edge</span></span></a></li> 
+                </ul>
+                </li>
+            </ul>
+        </div>
+        <div style="margin-left: 5px;">
+            &nbsp;<image id="imgRecentItems" src="<%= this.ResolveClientUrl("~/_layouts/LPWeb/Images/co.jpg") %>" onclick="ChangeImgRecentItems()"
+                     tag="0" />&nbsp;Recent Items
+                     <div id="divAllRecentItem" style="display:none;margin-left: 8px; margin-top: 5px;" >
+                     <%=Master.sHomePageUserRecentItems%>
+                     </div>
+        </div>
+    </div>
+    <div id="divGlobalPopup" title="Global Popup" style="display: none;">
+        <iframe id="ifrGlobalPopup" frameborder="0" scrolling="no" width="100px" height="100px">
+        </iframe>
+    </div>
+</asp:Content>
+
+<asp:Content ID="Content4" runat="server" ContentPlaceHolderID="PlaceHolderPageTitleInTitleArea">
+    <asp:ContentPlaceHolder ID="PageTitleArea" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>

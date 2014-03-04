@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.Module" DefaultFile="Elements.xml" SupportedTrustLevels="All" SupportedDeploymentScopes="Web, Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="LPWebMasterpage\" Type="ElementManifest" />
+    <ProjectItemFile Source="Home.master" Target="LPWebMasterpage\" Type="ElementFile" />
+    <ProjectItemFile Source="Pipeline.master" Target="LPWebMasterpage\" Type="ElementFile" />
+    <ProjectItemFile Source="Settings.master" Target="LPWebMasterpage\" Type="ElementFile" />
+    <ProjectItemFile Source="Super.master" Target="LPWebMasterpage\" Type="ElementFile" />
+    <ProjectItemFile Source="Contact.master" Target="LPWebMasterpage\" Type="ElementFile" />
+    <ProjectItemFile Source="Marketing.master" Target="LPWebMasterpage\" Type="ElementFile" />
+  </Files>
+</ProjectItem>

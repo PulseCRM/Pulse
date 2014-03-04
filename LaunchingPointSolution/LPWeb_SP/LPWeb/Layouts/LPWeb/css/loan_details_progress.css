@@ -1,0 +1,141 @@
+/* scroller */
+.wt-scroller{
+position:relative;	
+display:block;
+font-family:Arial,Helvetica,sans-serif;
+background-color:#fff;	/* scroller background color */
+width:708px;
+height:42px;
+padding-top:10px;
+}
+/* css for slides */
+.wt-scroller .slides{
+position:relative;
+width:648px;
+height:32px;
+float:left;
+overflow:hidden;
+z-index:1;
+border: solid 0px red;	/* test code */
+}
+.wt-scroller .slides ul{
+list-style:none;
+position:relative;
+width:99999px;
+margin:0;
+padding:0;
+z-index:0;
+overflow:hidden;
+}
+.wt-scroller .slides ul li{
+position:relative;
+display:block;
+float:left;
+margin-right:1px;
+overflow:hidden;
+width:108px;
+height:32px;
+background-color:#FFF;
+background: url('images/loan_details_progress/a.gif');
+}
+.wt-scroller .slides ul li img{
+position:absolute;
+top:0;
+left:0;
+z-index:0;
+border:0;
+}
+.wt-scroller .slides ul li p{
+position:absolute;
+top:0;
+left:0;
+z-index:1;
+color:#FFF;
+font-size:11px;
+width:85px;
+padding:0px;
+margin:0;
+visibility:hidden;
+cursor: pointer;
+}
+
+.wt-scroller .slides ul li p span
+{
+    border: solid 0px red;
+    width: 76px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;overflow: hidden;
+    white-space: nowrap;-o-text-overflow: ellipsis;text-overflow: ellipsis;
+    cursor: pointer;
+    text-align: center;
+}
+/*---end of css for slides----*/
+
+.wt-scroller .outside{
+    background-color:#222;
+}
+.wt-scroller .inside{
+    /*-ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#BF000000,endColorstr=#BF000000);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#BF000000,endColorstr=#BF000000);
+    background-color:rgba(0,0,0,0.75);*/
+    
+    border: solid 0px red;
+    text-align: center;
+}
+
+/* css for prev/next btn */
+.wt-scroller .prev-btn,
+.wt-scroller .next-btn{
+float:left;
+position:relative;
+width:30px;
+height:32px;	
+cursor:pointer;
+}
+.wt-scroller .prev-btn{
+background:url(../images/loan_details_progress/Btn_Prev.gif) center no-repeat;
+}
+.wt-scroller .next-btn{
+background:url(../images/loan_details_progress/Btn_Next.gif) center no-repeat;
+}
+/*--- end of css for prev/next btn ---*/
+
+.wt-scroller .lower-panel{
+position:relative;
+clear:both;
+text-align:center;
+font-size:0;
+}
+.wt-scroller .scroll-bar{
+position:relative;
+background-color:#999;
+width:100%;
+height:4px;
+cursor:pointer;
+overflow:hidden;
+}
+.wt-scroller .thumb{
+position:absolute;
+top:0;
+left:0;
+width:100px;
+height:4px;
+background-color:#FFF;
+}
+.wt-scroller .index,
+.wt-scroller .index-hl{
+position:relative;
+display:inline-block;
+width:8px;
+height:8px;
+padding:0 2px;
+}
+.wt-scroller .index{
+background:url(../images/loan_details_progress/circle.png) center no-repeat;
+cursor:pointer;
+}
+.wt-scroller .index-hl{
+background:url(../images/loan_details_progress/circlefill.png) center no-repeat;
+cursor:default;
+}
