@@ -3394,12 +3394,12 @@ namespace LP2Service
                 if (submittedBy.Length < total)
                     return;
                 // condition externalViewing by
-                temp = PNT.getPointField(FieldArray, FieldSeq, 15264);
-                if ((temp == null) || (temp == string.Empty))
-                    temp = "";
-                string[] externalViewing = temp.Split('|');
-                if (externalViewing.Length < total)
-                    return;
+                //temp = PNT.getPointField(FieldArray, FieldSeq, 15264);
+                //if ((temp == null) || (temp == string.Empty))
+                //    temp = "";
+                //string[] externalViewing = temp.Split('|');
+                //if (externalViewing.Length < total)
+                //    return;
 
                 int i;
                 for (i = 0; i < total; i++)
@@ -3420,7 +3420,7 @@ namespace LP2Service
                         ReceivedBy = string.IsNullOrEmpty(receivedBy[i]) ? string.Empty : receivedBy[i].Trim(),
                         Submitted = string.IsNullOrEmpty(submittedDate[i]) ? DateTime.MinValue : DateTime.Parse(submittedDate[i]),
                         SubmittedBy = string.IsNullOrEmpty(submittedBy[i]) ? string.Empty : submittedBy[i].Trim(),
-                        ExternalViewing = string.IsNullOrEmpty(externalViewing[i]) ? false : true
+                        //ExternalViewing = string.IsNullOrEmpty(externalViewing[i]) ? false : true
                     };
                     if (string.IsNullOrEmpty(cond.CondName))
                         continue;
