@@ -3434,6 +3434,7 @@
     <Content Include="Layouts\LPWeb\js\nicEdit.js" />
     <Content Include="Layouts\LPWeb\js\PriviewImage.js" />
     <Content Include="Layouts\LPWeb\js\urlparser.js" />
+    <Content Include="Layouts\LPWeb\js\ZeroClipboard.js" />
     <Content Include="Layouts\LPWeb\LoanDetails\Activity.aspx">
       <SubType>ASPXCodeBehind</SubType>
     </Content>
@@ -4204,6 +4205,7 @@
     <Content Include="Layouts\LPWeb\Settings\PartnerCompanyCreate.aspx">
       <SubType>ASPXCodeBehind</SubType>
     </Content>
+    <Content Include="Layouts\LPWeb\Settings\ZeroClipboard.swf" />
     <Content Include="Layouts\LPWeb\TaskReminderPopup.aspx" />
     <Content Include="Layouts\LPWeb\TaskReminderSnooze.aspx" />
     <Content Include="Layouts\LPWeb\Unauthorize.aspx">

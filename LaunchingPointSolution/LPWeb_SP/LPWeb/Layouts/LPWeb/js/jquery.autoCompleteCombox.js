@@ -5,7 +5,7 @@
 					select = this.element.hide(),
 					selected = select.children(":selected"),
 					value = selected.val() ? selected.text() : "";
-            var input = this.input = $("<input style='color: #818892; border: solid 1px #d9d8d8; font:11px, Arial; padding: 2px 5px 2px 2px;'>")
+            var input = this.input = $("<input id='" + select.attr('id') + "_accTextBox' style='color: #818892; border: solid 1px #d9d8d8; font:11px, Arial; padding: 2px 5px 2px 2px;'>")
 					.insertAfter(select)
 					.val(value)
 					.autocomplete({
@@ -51,6 +51,9 @@
 					                $(this).val("");
 					                select.val("");
 					                input.data("autocomplete").term = "";
+					                if (input.data('invalidValueHandler')) {
+					                    input.data('invalidValueHandler')();
+					                }
 					                return false;
 					            }
 

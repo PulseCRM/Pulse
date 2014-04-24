@@ -74,6 +74,7 @@
     <script src="../js/common.js" type="text/javascript"></script>
     <script src="../js/jquery.base64.js" type="text/javascript"></script>
     <script src="../js/urlparser.js" type="text/javascript"></script>
+    <script src="../js/ZeroClipboard.js" type="text/javascript"></script>
     <script language="javascript" type="text/javascript">
 // <![CDATA[
 
@@ -135,6 +136,39 @@
             ddlFromUserRoles_onchange();
             txtFromEmail_onblur();
 
+            //#region ZeroClipboard
+            var zeroClipboardClient = new ZeroClipboard($("#btnPreviousValueOfPointField_Copy, #btnCurrentValueOfPointField_Copy, #btnValueOfPulseField_Copy"));
+
+            zeroClipboardClient.on("load", function (client) {
+                //alert("ZeroClipboard's flash movie loaded and ready.");
+
+                client.on("complete", function (client, args) {
+                    if (args.text == "") {
+                        alert("Please select a field.");
+                    }
+                });
+            });
+
+            zeroClipboardClient.on("noFlash", function (client) {
+                zeroClipboardClient_ReportProblem(false, client);
+            });
+
+            zeroClipboardClient.on("wrongFlash", function (client, args) {
+                zeroClipboardClient_ReportProblem(true, client, args);
+            });
+
+            function zeroClipboardClient_ReportProblem(isFlashFound, client, args) {
+                //if (!isFlashFound) {
+                //    alert("Flash not found or is disabled.");
+                //} else {
+                //    alert("Flash 10.0.0+ is required but found running Flash " + args.flashVersion.replace(/,/g, ".") + ".");
+                //}
+
+                $("#btnPreviousValueOfPointField_Copy, #btnCurrentValueOfPointField_Copy, #btnValueOfPulseField_Copy").hide();
+                $("#divPreviousValueOfPointField, #divCurrentValueOfPointField, #divValueOfPulseField").show();
+            }
+            //#endregion
+
             // is post back
             var IsPostBack = $("#hdnIsPostBack").val();
             if (IsPostBack == "True") {
@@ -153,20 +187,26 @@
                 source: "GetPointField_Background.aspx",
                 minLength: 2,
                 search: function (event, ui) {
-
                     $("#hdnSelPrevPointFieldID").val("");
                 },
                 select: function (event, ui) {
+                    var fieldLabel = ui.item.value;
 
                     $("#hdnSelPrevPointFieldID").val(ui.item.id);
+
+                    if (fieldLabel != "") {
+                        $("#txtPreviousValueOfPointField").val("<@Previous-" + fieldLabel + "@>");
+                    }
                 }
             });
 
             $("#txtPrevPointField").blur(function () {
-
                 if ($("#hdnSelPrevPointFieldID").val() == "") {
-
                     $("#txtPrevPointField").val("");
+                    $("#txtPreviousValueOfPointField").val("");
+                } else if ($("#txtPrevPointField").val() == "") {
+                    $("#hdnSelPrevPointFieldID").val("");
+                    $("#txtPreviousValueOfPointField").val("");
                 }
             });
             //#endregion
@@ -176,25 +216,46 @@
                 source: "GetPointField_Background.aspx",
                 minLength: 2,
                 search: function (event, ui) {
-
                     $("#hdnSelCurrentPointFieldID").val("");
                 },
                 select: function (event, ui) {
+                    var fieldLabel = ui.item.value;
 
                     $("#hdnSelCurrentPointFieldID").val(ui.item.id);
+
+                    if (fieldLabel != "") {
+                        $("#txtCurrentValueOfPointField").val("<@" + fieldLabel + "@>");
+                    }
                 }
             });
 
             $("#txtCurrentPointField").blur(function () {
-
                 if ($("#hdnSelCurrentPointFieldID").val() == "") {
-
                     $("#txtCurrentPointField").val("");
+                    $("#txtCurrentValueOfPointField").val("");
+                } else if ($("#txtCurrentPointField").val() == "") {
+                    $("#hdnSelCurrentPointFieldID").val("");
+                    $("#txtCurrentValueOfPointField").val("");
                 }
             });
             //#endregion
 
-            $("#ddlInfoHubFields").combobox();
+            //#region pulse database field
+            $("#ddlInfoHubFields").combobox({
+                'selected': function (selectedIndex, selectedVale) {
+                    var fieldLabel = selectedVale.item.value;
+
+                    $("#txtValueOfPulseField").val((fieldLabel != "0" && fieldLabel != "-- select a field --" ? "<@DB-" + fieldLabel + "@>" : ""));
+                }
+            });
+
+            $("input[role='textbox'][id^='ddlInfoHubFields_']").data('invalidValueHandler', function (event) {
+                if ($(this).val() == "" || $(this).val() == "-- select a field --") {
+                    $("#txtValueOfPulseField").val("");
+                }
+            });
+            //#endregion
+
             $("#toggle").click(function () {
                 $("#ddlInfoHubFields").toggle();
             });
@@ -1414,31 +1475,42 @@
                                     <tr>
                                         <td style="width: 180px;">Previous value of Point Field:</td>
                                         <td>
-                                            <input id="btnInsert_Preview" type="button" value="Insert" onclick="btnInsert_Preview_onclick()" style="border: none; background-color: White;" />
+                                            <input id="btnInsert_Preview" type="button" value="Insert" onclick="btnInsert_Preview_onclick()" style="display: none; border: none; background-color: White;" />
+                                            <input id="btnPreviousValueOfPointField_Copy" type="button" value="Copy" data-clipboard-target="txtPreviousValueOfPointField" class="Btn-66" />
                                         </td>
                                     </tr>
                                 </table>
                                 <div>
-                                    <input id="txtPrevPointField" type="text" />
+                                    <input id="txtPrevPointField" type="text" /><br />
+                                    <div id="divPreviousValueOfPointField" style="display: none;">
+                                        Merge tag for searched Point Field:
+                                        <input id="txtPreviousValueOfPointField" type="text" readonly="readonly" class="ui-autocomplete-input" style="background-color: lightgrey;" />
+                                    </div>
                                 </div>
                                 <br />
                                 <table cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td style="width: 180px;">Current value of Point Field:</td>
                                         <td>
-                                            <input id="btnInsert_Current" type="button" value="Insert" onclick="btnInsert_Current_onclick()" style="border: none; background-color: White;" />
+                                            <input id="btnInsert_Current" type="button" value="Insert" onclick="btnInsert_Current_onclick()" style="display: none; border: none; background-color: White;" />
+                                            <input id="btnCurrentValueOfPointField_Copy" type="button" value="Copy" data-clipboard-target="txtCurrentValueOfPointField" class="Btn-66" />
                                         </td>
                                     </tr>
                                 </table>
                                 <div>
-                                    <input id="txtCurrentPointField" type="text" />
+                                    <input id="txtCurrentPointField" type="text" /><br />
+                                    <div id="divCurrentValueOfPointField" style="display: none;">
+                                        Merge tag for searched Point Field:
+                                        <input id="txtCurrentValueOfPointField" type="text" readonly="readonly" class="ui-autocomplete-input" style="background-color: lightgrey;" />
+                                    </div>
                                 </div>
                                 <br />
                                 <table cellpadding="0" cellspacing="0">
                                     <tr>
-                                        <td style="width: 180px;">Pulse database field:</td>
+                                        <td style="width: 180px;">Pulse database Field:</td>
                                         <td>
-                                            <input id="btnInsert_InfoHub" type="button" value="Insert" onclick="btnInsert_InfoHub_onclick()" style="border: none; background-color: White;" />
+                                            <input id="btnInsert_InfoHub" type="button" value="Insert" onclick="btnInsert_InfoHub_onclick()" style="display: none; border: none; background-color: White;" />
+                                            <input id="btnValueOfPulseField_Copy" type="button" value="Copy" data-clipboard-target="txtValueOfPulseField" class="Btn-66" />
                                         </td>
                                     </tr>
                                 </table>
@@ -1522,7 +1594,11 @@
                                         <asp:ListItem>Task Alert Link</asp:ListItem>
                                         <asp:ListItem>Loan Link</asp:ListItem>
                                         <asp:ListItem>Rule Alert Link</asp:ListItem>
-                                    </asp:DropDownList>
+                                    </asp:DropDownList><br />
+                                    <div id="divValueOfPulseField" style="display: none;">
+                                        Merge tag for searched Pulse database Field:
+                                        <input id="txtValueOfPulseField" type="text" readonly="readonly" class="ui-autocomplete-input" style="background-color: lightgrey;" />
+                                    </div>
                                 </div>
                             </td>
                             <td>
