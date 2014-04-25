@@ -147,6 +147,7 @@
     <Compile Include="Template_RuleConditions.cs" />
     <Compile Include="Template_RuleGroups.cs" />
     <Compile Include="Template_Rules.cs" />
+    <Compile Include="Template_Rules_LoanTarget.cs" />
     <Compile Include="Template_Stages.cs" />
     <Compile Include="Template_Wfl_CompletionEmails.cs" />
     <Compile Include="Template_Wfl_Stages.cs" />

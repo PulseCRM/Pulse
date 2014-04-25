@@ -66,8 +66,28 @@ public partial class Settings_RuleAdd : BasePage
 
         string sScope = this.ddlScope.SelectedValue;
         Int16 iScope = Convert.ToInt16(sScope);
-        string sTarget = this.ddlTarget.SelectedValue;
-        Int16 iTarget = Convert.ToInt16(sTarget);
+
+        #region get loan target
+
+        //string sTarget = this.ddlTarget.SelectedValue;
+        //Int16 iTarget = Convert.ToInt16(sTarget);
+
+        LPWeb.Model.Template_Rules_LoanTarget modelLoanTarget = new LPWeb.Model.Template_Rules_LoanTarget();
+
+        modelLoanTarget.ActiveLoans = this.chkTargetActiveLoans.Checked;
+        modelLoanTarget.ActiveLeads = this.chkTargetActiveLeads.Checked;
+        modelLoanTarget.ArchivedLoans = this.chkTargetArchivedLoans.Checked;
+        modelLoanTarget.ArchivedLeads = this.chkTargetArchivedLeads.Checked;
+
+        Int16 iTarget = modelLoanTarget.LoanTargetValue;
+
+        if (iTarget == 0)
+        {
+            this.ClientScript.RegisterClientScriptBlock(this.GetType(), "_NoLoanTarget", "$('#divContainer').hide();alert('No target for rule selected. Please select a rule target.');$('#divContainer').show();", true);
+            return;
+        }
+
+        #endregion
 
         #endregion
 

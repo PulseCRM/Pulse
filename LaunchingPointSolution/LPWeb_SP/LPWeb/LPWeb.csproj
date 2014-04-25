@@ -2449,6 +2449,7 @@
     </Compile>
     <Compile Include="Layouts\LPWeb\Settings\UserLeadRouting.aspx.cs">
       <DependentUpon>UserLeadRouting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Layouts\LPWeb\Settings\UserLeadRouting.aspx.designer.cs">
       <DependentUpon>UserLeadRouting.aspx.cs</DependentUpon>

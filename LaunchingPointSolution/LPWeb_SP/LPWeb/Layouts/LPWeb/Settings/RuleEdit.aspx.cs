@@ -90,8 +90,19 @@ public partial class Settings_RuleEdit : BasePage
             this.chkReqAck.Checked = Convert.ToBoolean(RuleInfo.Rows[0]["AckReq"]);
             this.txtFormula.Text = RuleInfo.Rows[0]["AdvFormula"].ToString();
             this.ddlScope.SelectedValue = RuleInfo.Rows[0]["RuleScope"].ToString();
-            this.ddlTarget.SelectedValue = RuleInfo.Rows[0]["LoanTarget"].ToString();
-           
+
+            #region get loan target
+
+            //this.ddlTarget.SelectedValue = RuleInfo.Rows[0]["LoanTarget"].ToString();
+
+            LPWeb.Model.Template_Rules_LoanTarget modelLoanTarget = new LPWeb.Model.Template_Rules_LoanTarget(Convert.ToInt16(RuleInfo.Rows[0]["LoanTarget"]));
+
+            this.chkTargetActiveLoans.Checked = modelLoanTarget.ActiveLoans;
+            this.chkTargetActiveLeads.Checked = modelLoanTarget.ActiveLeads;
+            this.chkTargetArchivedLoans.Checked = modelLoanTarget.ArchivedLoans;
+            this.chkTargetArchivedLeads.Checked = modelLoanTarget.ArchivedLeads;
+
+            #endregion
 
             #endregion
             if (RuleInfo.Rows[0]["AutoCampaignId"].ToString() != "")
@@ -130,8 +141,28 @@ public partial class Settings_RuleEdit : BasePage
 
         string sScope = this.ddlScope.SelectedValue;
         Int16 iScope = Convert.ToInt16(sScope);
-        string sTarget = this.ddlTarget.SelectedValue;
-        Int16 iTarget = Convert.ToInt16(sTarget);
+
+        #region get loan target
+
+        //string sTarget = this.ddlTarget.SelectedValue;
+        //Int16 iTarget = Convert.ToInt16(sTarget);
+
+        LPWeb.Model.Template_Rules_LoanTarget modelLoanTarget = new LPWeb.Model.Template_Rules_LoanTarget();
+
+        modelLoanTarget.ActiveLoans = this.chkTargetActiveLoans.Checked;
+        modelLoanTarget.ActiveLeads = this.chkTargetActiveLeads.Checked;
+        modelLoanTarget.ArchivedLoans = this.chkTargetArchivedLoans.Checked;
+        modelLoanTarget.ArchivedLeads = this.chkTargetArchivedLeads.Checked;
+
+        Int16 iTarget = modelLoanTarget.LoanTargetValue;
+
+        if (iTarget == 0)
+        {
+            this.ClientScript.RegisterClientScriptBlock(this.GetType(), "_NoLoanTarget", "$('#divContainer').hide();alert('No target for rule selected. Please select a rule target.');$('#divContainer').show();", true);
+            return;
+        }
+
+        #endregion
 
         #endregion
 

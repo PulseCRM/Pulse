@@ -75,6 +75,42 @@ public partial class Settings_RuleClone {
     protected global::System.Web.UI.WebControls.DropDownList ddlTarget;
     
     /// <summary>
+    /// chkTargetActiveLoans control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.CheckBox chkTargetActiveLoans;
+    
+    /// <summary>
+    /// chkTargetActiveLeads control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.CheckBox chkTargetActiveLeads;
+    
+    /// <summary>
+    /// chkTargetArchivedLoans control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.CheckBox chkTargetArchivedLoans;
+    
+    /// <summary>
+    /// chkTargetArchivedLeads control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.CheckBox chkTargetArchivedLeads;
+    
+    /// <summary>
     /// ddlRecomActionTemplate control.
     /// </summary>
     /// <remarks>

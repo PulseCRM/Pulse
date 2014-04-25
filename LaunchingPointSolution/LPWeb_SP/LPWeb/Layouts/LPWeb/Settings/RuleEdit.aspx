@@ -882,17 +882,21 @@
                     </td>
                     <td style="width: 45px;">Target:</td>
                     <td>
-                        <asp:DropDownList ID="ddlTarget" runat="server">
+                        <asp:DropDownList ID="ddlTarget" Visible="false" runat="server">
                             <asp:ListItem Value="0">Processing</asp:ListItem>
                             <asp:ListItem Value="1">Prospect</asp:ListItem>
                             <asp:ListItem Value="2">Processing and Prospect</asp:ListItem>
                         </asp:DropDownList>
+                        <asp:CheckBox ID="chkTargetActiveLoans" Text="Active Loans" runat="server" /><br />
+                        <asp:CheckBox ID="chkTargetActiveLeads" Text="Active Leads" runat="server" /><br />
+                        <asp:CheckBox ID="chkTargetArchivedLoans" Text="Archived Loans" runat="server" /><br />
+                        <asp:CheckBox ID="chkTargetArchivedLeads" Text="Archived Leads" runat="server" />
                     </td>
                 </tr>
             </table>
             <table cellpadding="0" cellspacing="0" style="margin-top: 15px;">
                 <tr>
-                    <td style="width: 130px;">Recommended Action <br />Template:</td>
+                    <td style="width: 130px;">Email Template # 1:</td>
                     <td style="vertical-align: top;">
                         <asp:DropDownList ID="ddlRecomActionTemplate" runat="server" Width="300px" DataValueField="TemplEmailId" DataTextField="Name">
                         </asp:DropDownList>
@@ -904,7 +908,7 @@
             </table>
             <table cellpadding="0" cellspacing="0" style="margin-top: 5px;">
                 <tr>
-                    <td style="width: 130px;">Alert Email Template:</td>
+                    <td style="width: 130px;">Email Template # 2:</td>
                     <td>
                         <asp:DropDownList ID="ddlAlertEmailTemplate" runat="server" Width="300px" DataValueField="TemplEmailId" DataTextField="Name">
                         </asp:DropDownList>
