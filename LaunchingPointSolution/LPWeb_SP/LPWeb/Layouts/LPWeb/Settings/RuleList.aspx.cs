@@ -7,7 +7,7 @@ using System.Data;
 using Utilities;
 using LPWeb.Common;
 using LPWeb.BLL;
-
+using LPWeb.Model;
 
 namespace LPWeb.Settings
 {
@@ -68,6 +68,7 @@ namespace LPWeb.Settings
 
         private BLL.Template_Rules template = new BLL.Template_Rules();
         public string FromURL = string.Empty;
+        private string sDbTable = "(SELECT Template_Rules.*, Template_Email.Name AS EmailTemplateName, CASE RuleScope WHEN 0 THEN 'Loan' WHEN 1 THEN 'Company' WHEN 2 THEN 'Region' WHEN 3 THEN 'Division' WHEN 4 THEN 'Branch' ELSE '' END AS ScopeName, (SELECT STUFF((SELECT DISTINCT ', ' + LoanTargets.LT FROM (SELECT CASE WHEN Template_Rules.LoanTarget=" + Template_Rules_LoanTarget._constOldProcessing + " OR Template_Rules.LoanTarget=" + Template_Rules_LoanTarget._constOldProcessingAndProspect + " THEN 'Active Loans' END AS LT UNION ALL SELECT CASE WHEN Template_Rules.LoanTarget=" + Template_Rules_LoanTarget._constOldProspect + " OR Template_Rules.LoanTarget=" + Template_Rules_LoanTarget._constOldProcessingAndProspect + " THEN 'Active Leads' END AS LT UNION ALL SELECT CASE WHEN Template_Rules.LoanTarget & " + Template_Rules_LoanTarget._constActiveLoans + " = " + Template_Rules_LoanTarget._constActiveLoans + " THEN 'Active Loans' END AS LT UNION ALL SELECT CASE WHEN Template_Rules.LoanTarget & " + Template_Rules_LoanTarget._constActiveLeads + " = " + Template_Rules_LoanTarget._constActiveLeads + " THEN 'Active Leads' END AS LT UNION ALL SELECT CASE WHEN Template_Rules.LoanTarget & " + Template_Rules_LoanTarget._constArchivedLoans + " = " + Template_Rules_LoanTarget._constArchivedLoans + " THEN 'Archived Loans' END AS LT UNION ALL SELECT CASE WHEN Template_Rules.LoanTarget & " + Template_Rules_LoanTarget._constArchivedLeads + " = " + Template_Rules_LoanTarget._constArchivedLeads + " THEN 'Archived Leads' END AS LT) AS LoanTargets FOR XML PATH('')), 1, 2, '')) AS TargetName FROM Template_Rules LEFT OUTER JOIN Template_Email ON Template_Rules.AlertEmailTemplId=Template_Email.TemplEmailId) t";
         #endregion 
 
 
@@ -89,6 +90,7 @@ namespace LPWeb.Settings
                 if (this.IsPostBack == false)
                 {
                     this.RuleSqlDataSource.ConnectionString = LPWeb.DAL.DbHelperSQL.connectionString;
+                    this.RuleSqlDataSource.SelectParameters["DbTable"].DefaultValue = this.sDbTable;
 
                     //LoginUser loginUser = new LoginUser();
                     //loginUser.ValidatePageVisitPermission("RuleList");//页面访问权限验证
@@ -112,7 +114,12 @@ namespace LPWeb.Settings
                             btnDelete.Enabled = false;
                         }
                     }
-                    
+
+                    this.ddlRuleTarget.Items.Add(new ListItem("Active Loans", Template_Rules_LoanTarget._constActiveLoans.ToString()));
+                    this.ddlRuleTarget.Items.Add(new ListItem("Active Leads", Template_Rules_LoanTarget._constActiveLeads.ToString()));
+                    this.ddlRuleTarget.Items.Add(new ListItem("Archived Loans", Template_Rules_LoanTarget._constArchivedLoans.ToString()));
+                    this.ddlRuleTarget.Items.Add(new ListItem("Archived Leads", Template_Rules_LoanTarget._constArchivedLeads.ToString()));
+
                     this.BindingGrid();
                 }
             }
@@ -226,8 +233,8 @@ namespace LPWeb.Settings
         {
             try
             {
-
                 this.RuleSqlDataSource.ConnectionString = LPWeb.DAL.DbHelperSQL.connectionString;
+                this.RuleSqlDataSource.SelectParameters["DbTable"].DefaultValue = this.sDbTable;
 
                 string sWhere = "";
                 bool bSetWhere = false;
@@ -247,8 +254,26 @@ namespace LPWeb.Settings
 
                 if (this.ddlRuleTarget.SelectedValue.ToString() != "")
                 {
-                    sWhere += " AND (LoanTarget=" + this.ddlRuleTarget.SelectedValue.ToString() + ")";
-                    bSetWhere = true;
+                    if (this.ddlRuleTarget.SelectedValue == Template_Rules_LoanTarget._constActiveLoans.ToString())
+                    {
+                        sWhere += " AND (LoanTarget=" + Template_Rules_LoanTarget._constOldProcessing + " OR LoanTarget=" + Template_Rules_LoanTarget._constOldProcessingAndProspect + " OR LoanTarget & " + Template_Rules_LoanTarget._constActiveLoans + "=" + Template_Rules_LoanTarget._constActiveLoans + ")";
+                        bSetWhere = true;
+                    }
+                    else if (this.ddlRuleTarget.SelectedValue == Template_Rules_LoanTarget._constActiveLeads.ToString())
+                    {
+                        sWhere += " AND (LoanTarget=" + Template_Rules_LoanTarget._constOldProspect + " OR LoanTarget=" + Template_Rules_LoanTarget._constOldProcessingAndProspect + " OR LoanTarget & " + Template_Rules_LoanTarget._constActiveLeads + "=" + Template_Rules_LoanTarget._constActiveLeads + ")";
+                        bSetWhere = true;
+                    }
+                    else if (this.ddlRuleTarget.SelectedValue == Template_Rules_LoanTarget._constArchivedLoans.ToString())
+                    {
+                        sWhere += " AND (LoanTarget & " + Template_Rules_LoanTarget._constArchivedLoans + "=" + Template_Rules_LoanTarget._constArchivedLoans + ")";
+                        bSetWhere = true;
+                    }
+                    else if (this.ddlRuleTarget.SelectedValue == Template_Rules_LoanTarget._constArchivedLeads.ToString())
+                    {
+                        sWhere += " AND (LoanTarget & " + Template_Rules_LoanTarget._constArchivedLeads + "=" + Template_Rules_LoanTarget._constArchivedLeads + ")";
+                        bSetWhere = true;
+                    }
                 }
 
                 // Get data number

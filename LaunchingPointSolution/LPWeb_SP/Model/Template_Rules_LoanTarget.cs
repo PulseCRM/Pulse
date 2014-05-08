@@ -4,8 +4,13 @@ namespace LPWeb.Model
     [Serializable]
     public class Template_Rules_LoanTarget
     {
-        public Template_Rules_LoanTarget() { }
+        public Template_Rules_LoanTarget()
+        {
+            this.ActiveLoans = this.ActiveLeads = this.ArchivedLoans = this.ArchivedLeads = false;
+        }
+
         public Template_Rules_LoanTarget(Int16 iLoanTargetValue)
+            : this()
         {
             if (iLoanTargetValue == _constOldProcessing) { this.ActiveLoans = true; }
             else if (iLoanTargetValue == _constOldProspect) { this.ActiveLeads = true; }
@@ -21,13 +26,13 @@ namespace LPWeb.Model
 
         #region Model
 
-        private static readonly Int16 _constOldProcessing = 0;
-        private static readonly Int16 _constOldProspect = 1;
-        private static readonly Int16 _constOldProcessingAndProspect = 2;
-        private static readonly Int16 _constActiveLoans = Convert.ToInt16("10001", 2);
-        private static readonly Int16 _constActiveLeads = Convert.ToInt16("10010", 2);
-        private static readonly Int16 _constArchivedLoans = Convert.ToInt16("10100", 2);
-        private static readonly Int16 _constArchivedLeads = Convert.ToInt16("11000", 2);
+        public static readonly Int16 _constOldProcessing = 0;
+        public static readonly Int16 _constOldProspect = 1;
+        public static readonly Int16 _constOldProcessingAndProspect = 2;
+        public static readonly Int16 _constActiveLoans = Convert.ToInt16("10001", 2);
+        public static readonly Int16 _constActiveLeads = Convert.ToInt16("10010", 2);
+        public static readonly Int16 _constArchivedLoans = Convert.ToInt16("10100", 2);
+        public static readonly Int16 _constArchivedLeads = Convert.ToInt16("11000", 2);
 
         public bool ActiveLoans { get; set; }
         public bool ActiveLeads { get; set; }

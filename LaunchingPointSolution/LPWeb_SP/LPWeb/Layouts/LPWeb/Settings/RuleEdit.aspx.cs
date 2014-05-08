@@ -95,7 +95,15 @@ public partial class Settings_RuleEdit : BasePage
 
             //this.ddlTarget.SelectedValue = RuleInfo.Rows[0]["LoanTarget"].ToString();
 
-            LPWeb.Model.Template_Rules_LoanTarget modelLoanTarget = new LPWeb.Model.Template_Rules_LoanTarget(Convert.ToInt16(RuleInfo.Rows[0]["LoanTarget"]));
+            LPWeb.Model.Template_Rules_LoanTarget modelLoanTarget;
+            if (!RuleInfo.Rows[0].IsNull("LoanTarget"))
+            {
+                modelLoanTarget = new LPWeb.Model.Template_Rules_LoanTarget(Convert.ToInt16(RuleInfo.Rows[0]["LoanTarget"]));
+            }
+            else
+            {
+                modelLoanTarget = new LPWeb.Model.Template_Rules_LoanTarget();
+            }
 
             this.chkTargetActiveLoans.Checked = modelLoanTarget.ActiveLoans;
             this.chkTargetActiveLeads.Checked = modelLoanTarget.ActiveLeads;

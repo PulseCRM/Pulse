@@ -264,9 +264,6 @@
                         Rule Target:&nbsp;&nbsp;
                         <asp:DropDownList ID="ddlRuleTarget" runat="server">
                             <asp:ListItem Text="All" Value=""></asp:ListItem>
-                            <asp:ListItem Text="Processing" Value="0"></asp:ListItem>
-                            <asp:ListItem Text="Prospect" Value="1"></asp:ListItem>
-                            <asp:ListItem Text="Processing and Prospect" Value="2"></asp:ListItem>
                         </asp:DropDownList>
                     </td>
                     <td style="padding-left: 15px;">
@@ -385,7 +382,7 @@
                     <asp:Parameter Name="OrderByField" Type="String" DefaultValue="RuleId" />
                     <asp:Parameter Name="AscOrDesc" Type="String" DefaultValue="asc" />
                     <asp:Parameter Name="Fields" Type="String" DefaultValue="*" />
-                    <asp:Parameter Name="DbTable" Type="String" DefaultValue="(SELECT Template_Rules.*,Template_Email.Name AS EmailTemplateName, CASE RuleScope WHEN 0 THEN 'Loan' WHEN 1 THEN 'Company' WHEN 2 THEN 'Region' WHEN 3 THEN 'Division' WHEN 4 THEN 'Branch' ELSE '' END AS ScopeName, (SELECT STUFF((SELECT ', ' + LoanTargets.LT FROM (SELECT CASE Template_Rules.LoanTarget WHEN 0 THEN 'Active Loans' END AS LT UNION SELECT CASE Template_Rules.LoanTarget WHEN 1 THEN 'Active Leads' END AS LT UNION SELECT CASE Template_Rules.LoanTarget WHEN 2 THEN 'Active Loans, Active Leads' END AS LT UNION SELECT CASE WHEN Template_Rules.LoanTarget & 17 = 17 THEN 'Active Loans' END AS LT UNION SELECT CASE WHEN Template_Rules.LoanTarget & 18 = 18 THEN 'Active Leads' END AS LT UNION SELECT CASE WHEN Template_Rules.LoanTarget & 20 = 20 THEN 'Archived Loans' END AS LT UNION SELECT CASE WHEN Template_Rules.LoanTarget & 24 = 24 THEN 'Archived Leads' END AS LT) AS LoanTargets FOR XML PATH('')), 1, 2, '')) AS TargetName FROM Template_Rules LEFT OUTER JOIN Template_Email ON Template_Rules.AlertEmailTemplId=Template_Email.TemplEmailId) t" />
+                    <asp:Parameter Name="DbTable" Type="String" DefaultValue="" />
                     <asp:Parameter Name="Where" Type="String" DefaultValue="" ConvertEmptyStringToNull="False" />
                     <asp:ControlParameter ControlID="AspNetPager1" DefaultValue="1" Name="StartIndex"
                         PropertyName="StartRecordIndex" Type="Int32" />
