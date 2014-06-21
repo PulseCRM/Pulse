@@ -1,0 +1,87 @@
+﻿<?xml version="1.0"?>
+<!-- This is a contact from Zillow in reference to quote on Zillow Mortgage Marketplace.-->
+<contact version="6" xmlns="https://mortgageapi.zillow.com/schema">
+  <id>LC-EXAMPLE</id>
+  <created>2014-04-29T22:23:00Z</created>
+  <type>quote</type>
+  <description>This is a contact from Zillow in reference to quote ZQ-EXAMPLE.</description>
+  <price>0.0</price>
+  <sender>
+    <firstName>John</firstName>
+    <lastName>Doe</lastName>
+    <emailAddress>john.doe@example.com</emailAddress>
+    <phoneNumber>(206) 555-1212</phoneNumber>
+  </sender>
+  <lender>
+    <id>ZUz1chc7p3m0w9_4eq92</id>
+    <firstName>Larry</firstName>
+    <lastName>Lenderson</lastName>
+    <emailAddress>larry@larry-lenderson-lending.com</emailAddress>
+  </lender>
+  <details>
+    <message>I would like to talk about your quote on Zillow Mortgage Marketplace.</message>
+    <loanRequest>
+      <id>ZR-EXAMPLE</id>
+      <created>2014-04-29T21:01:38Z</created>
+      <clickPrice>1.00</clickPrice>
+      <loanPurpose>Purchase</loanPurpose>
+      <loanAmount>240000</loanAmount>
+      <loanToValuePercent>80.0</loanToValuePercent>
+      <debtToIncomePercent>0.0</debtToIncomePercent>
+      <county>Santa Clara</county>
+      <state>CA</state>
+      <zipCode>94087</zipCode>
+      <propertyValue>300000</propertyValue>
+      <propertyType>SingleFamilyHome</propertyType>
+      <propertyUse>Primary</propertyUse>
+      <selfReportedCreditScore>720</selfReportedCreditScore>
+      <annualIncome>70000</annualIncome>
+      <monthlyDebts>0</monthlyDebts>
+      <totalAssets>0</totalAssets>
+      <selfEmployed>false</selfEmployed>
+      <hasBankruptcy>false</hasBankruptcy>
+      <hasForeclosure>false</hasForeclosure>
+      <purchase>
+        <downPayment>60000</downPayment>
+        <firstTimeBuyer>false</firstTimeBuyer>
+        <newConstruction>false</newConstruction>
+      </purchase>
+      <desiredPrograms>
+        <desiredProgram>Fixed30Year</desiredProgram>
+        <desiredProgram>Fixed15Year</desiredProgram>
+        <desiredProgram>ARM5</desiredProgram>
+        <desiredProgram>Fixed20Year</desiredProgram>
+        <desiredProgram>ARM7</desiredProgram>
+      </desiredPrograms>
+    </loanRequest>
+    <quote>
+      <id>ZQ-EXAMPLE</id>
+      <created>2014-04-29T21:01:39Z</created>
+      <rate>2.125</rate>
+      <termMonths>360</termMonths>
+      <dueInMonths>360</dueInMonths>
+      <lockDays>120</lockDays>
+      <fees>
+        <fee>
+          <hudLine>803</hudLine>
+          <name>Appraisal fee</name>
+          <amount>575</amount>
+        </fee>
+        <fee>
+          <hudLine>812</hudLine>
+          <name>Underwriting fee</name>
+          <amount>1300</amount>
+        </fee>
+      </fees>
+      <computedByZillow>
+        <apr>2.183</apr>
+        <loanAmount>240000</loanAmount>
+        <feesRolledIntoLoanAmount>0</feesRolledIntoLoanAmount>
+        <upfrontCost>1875</upfrontCost>
+        <points>0.0</points>
+        <monthlyPrincipalAndInterest>902</monthlyPrincipalAndInterest>
+        <monthlyMortgageInsurance>0</monthlyMortgageInsurance>
+      </computedByZillow>
+    </quote>
+  </details>
+</contact>

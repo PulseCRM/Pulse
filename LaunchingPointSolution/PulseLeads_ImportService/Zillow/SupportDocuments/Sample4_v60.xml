@@ -1,0 +1,40 @@
+﻿<?xml version="1.0"?>
+<!-- This is a contact from the Buyer’s Agent list on the Zillow home details page.-->
+<contact version="6" xmlns="https://mortgageapi.zillow.com/schema">
+  <id>LC-EXAMPLE</id>
+  <created>2014-04-30T16:43:00Z</created>
+  <type>propertyPreapproval</type>
+  <description>This is a contact from the Zillow home details page for 123 Main Street, Seattle, WA, 98102.</description>
+  <price>0.0</price>
+  <sender>
+    <firstName>John</firstName>
+    <lastName>Doe</lastName>
+    <emailAddress>john.doe@example.com</emailAddress>
+    <phoneNumber>(206) 555-1212</phoneNumber>
+  </sender>
+  <lender>
+    <id>ZUz1chc7p3m0w9_4eq92</id>
+    <firstName>Larry</firstName>
+    <lastName>Lenderson</lastName>
+    <emailAddress>larry@larry-lenderson-lending.com</emailAddress>
+  </lender>
+  <details>
+    <message>This is a pre-approval contact from Zillow. State: WA, City: Seattle, Price: 626995, Type: Purchase Message sent to agent: Can you get me a showing of this house?</message>
+    <purchasePrice>626995</purchasePrice>
+    <downPayment>125399</downPayment>
+    <loanAmount>501596</loanAmount>
+    <propertyAddress>
+      <street>123 Main Street</street>
+      <city>Seattle</city>
+      <state>WA</state>
+      <zipCode>98102</zipCode>
+    </propertyAddress>
+    <propertyAgent>
+      <id>ZUyyuacnv2ahhl_540hk</id>
+      <firstName>Alan</firstName>
+      <lastName>Agent</lastName>
+      <emailAddress>alan@alan-agent.com</emailAddress>
+      <phoneNumber>(206) 555-1313</phoneNumber>
+    </propertyAgent>
+  </details>
+</contact>

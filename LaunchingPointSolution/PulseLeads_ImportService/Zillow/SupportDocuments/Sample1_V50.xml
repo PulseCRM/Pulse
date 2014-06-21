@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<zmn:ZillowMortgageContactList version="5" xmlns:zmn="http://www.zillow.com/static/xsd/ZillowMortgageContact" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ZillowMortgageContact>
+    <WebContact>
+      <FirstName>JeffreyA</FirstName>
+      <LastName>GoodwinA</LastName>
+      <PhoneNumber>221-333-4444</PhoneNumber>
+      <EmailAddress>testerA@test.us</EmailAddress>
+      <ContactRequest>RequestContact</ContactRequest>
+      <Message>This loan looks great please call me tonight at 206-123-2345</Message>
+    </WebContact>
+    <LenderEmail>lender3@zillow.test</LenderEmail>
+    <DateCreated>2010-03-29T21:59:30Z</DateCreated>
+    <ContactPrice>2.00</ContactPrice>
+    <OriginalContactPrice>23.00</OriginalContactPrice>
+    <FreeContactReason>Lender has already been contacted for this loan request.</FreeContactReason>
+    <ContactId>X1-LDz1ci6orew6io_1zn01</ContactId>
+    <LoanRequestCreated>
+      <LoanRequestId>ZR-VHPZNHC</LoanRequestId>
+      <LoanPurpose>refinance</LoanPurpose>
+      <DateCreated>2010-03-29T21:27:18Z</DateCreated>
+      <ContactPricing>
+        <Price contactType="click">2.5</Price>
+        <Price contactType="website">2.5</Price>
+      </ContactPricing>
+      <PropertyDetails>
+        <ZipCode>98122</ZipCode>
+        <County>King</County>
+        <State>Washington</State>
+        <PropertyType>singleFamily</PropertyType>
+        <PropertyUsage>primaryResidence</PropertyUsage>
+        <EstimatedPropertyValue source="zestimate">500000</EstimatedPropertyValue>
+      </PropertyDetails>
+      <LoanDetails>
+        <LoanAmount>35000</LoanAmount>
+        <LoanToValuePercent>7.0</LoanToValuePercent>
+        <DebtToIncomePercent>9.25</DebtToIncomePercent>
+        <CurrentMortgageBalance>35000</CurrentMortgageBalance>
+        <CurrentLoanProgram>30yearFixed</CurrentLoanProgram>
+        <CurrentMortgageRate>6.8</CurrentMortgageRate>
+        <CurrentLoanOriginationYear>2005</CurrentLoanOriginationYear>
+        <AcceptPrePayPenalty>false</AcceptPrePayPenalty>
+        <LoanNeededTimeFrameMaxDays>60</LoanNeededTimeFrameMaxDays>
+        <LoanProgramsOfInterest>
+
+          <LoanProgram>30yearFixed</LoanProgram>
+          <LoanProgram>15yearFixed</LoanProgram>
+          <LoanProgram>5yearARM</LoanProgram>
+          <LoanProgram>20yearFixed</LoanProgram>
+          <LoanProgram>7yearARM</LoanProgram>
+          <LoanProgram>10yearFixed</LoanProgram>
+          <LoanProgram>3yearARM</LoanProgram>
+          <LoanProgram>lowOrNoDownPayment</LoanProgram>
+          <LoanProgram>interestOnly</LoanProgram>
+        </LoanProgramsOfInterest>
+        <PlansToLiveInHomeDurationMinYears>0</PlansToLiveInHomeDurationMinYears>
+        <ReasonForLoan>Unanswered</ReasonForLoan>
+      </LoanDetails>
+      <PrimaryBorrower>
+
+        <CreditScore source="estimated">760</CreditScore>
+        <DeclaredBankruptcyLast7Years>false</DeclaredBankruptcyLast7Years>
+        <ForeclosedLast7Years>false</ForeclosedLast7Years>
+        <BaseMonthlyIncome>7000</BaseMonthlyIncome>
+        <AdditionalMonthlyIncome>0</AdditionalMonthlyIncome>
+        <SelfEmployed>false</SelfEmployed>
+        <HasProofOfIncome>true</HasProofOfIncome>
+        <EligibleForVALoan>false</EligibleForVALoan>
+        <Assets sum="10000">
+          <Asset type="Car">5000</Asset>
+          <Asset type="Stocks">4000</Asset>
+          <Asset type="Savings">1000</Asset>
+		</Assets>
+        <MonthlyDebts sum="649">
+          <Debt type="CreditCard">450</Debt>
+          <Debt type="AutoDebt">143</Debt>
+          <Debt type="StudentLoan">56</Debt>
+        </MonthlyDebts>
+      </PrimaryBorrower>
+    </LoanRequestCreated>
+    <LoanQuoteDetails>
+
+      <InterestRate>4.2</InterestRate>
+      <AssumedLockDays>30</AssumedLockDays>
+      <AmortizationType>fixed</AmortizationType>
+      <TermMonths>360</TermMonths>
+      <NoteDueInMonths>360</NoteDueInMonths>
+      <PrepaymentPenalty>false</PrepaymentPenalty>
+      <InterestOnlyLoan>false</InterestOnlyLoan>
+      <LenderPaidInsurance>false</LenderPaidInsurance>
+      <FHALoan>false</FHALoan>
+      <VALoan>false</VALoan>
+      <Fees>
+
+        <Fee hudLine="801" description="Loan origination fee" includeInAPR="true" percentageAmount="1.0"/>
+        <Fee hudLine="802" description="Loan discount fee" includeInAPR="true" percentageAmount="1.0"/>
+      </Fees>
+      <AdditionalNotes>I hope you like the great loan I put together for you.</AdditionalNotes>
+    </LoanQuoteDetails>
+    <ZillowQuoteDetails>
+
+      <APR>4.667</APR>
+      <LoanQuoteId>ZQ-QXRCMSR</LoanQuoteId>
+      <LoanDisplayName>30 year fixed</LoanDisplayName>
+      <MonthlyPayment>
+
+        <PrincipalInterest>171</PrincipalInterest>
+        <PropertyTaxes>321</PropertyTaxes>
+        <HazardInsurance>50</HazardInsurance>
+      </MonthlyPayment>
+    </ZillowQuoteDetails>
+  </ZillowMortgageContact>
+</zmn:ZillowMortgageContactList>

@@ -51,6 +51,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="TestHarnessPulseLeads.cs" />
+    <Compile Include="TestHarnessZillow.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Sample1_v60.xml" />
@@ -60,11 +62,22 @@
     <Content Include="Sample5_v60.xml" />
     <Content Include="Sample6_v60.xml" />
     <Content Include="Sample1_V50.xml" />
+    <None Include="Service References\PulseLeadServiceClient\PulseLeadService1.disco" />
     <None Include="MortgageTypes_V5.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\PulseLeadServiceClient\PulseLeads.ConsoleTest.PulseLeadServiceClient.RespHdr.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PulseLeadServiceClient\PulseLeadService1.wsdl" />
+    <None Include="Service References\PulseLeadServiceClient\PulseLeadService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PulseLeadServiceClient\PulseLeadService31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PulseLeadServiceClient\PulseLeadService32.xsd">
+      <SubType>Designer</SubType>
     </None>
     <None Include="Service References\PulseLeadServiceClient\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
@@ -72,7 +85,6 @@
     </None>
     <None Include="Service References\PulseLeadServiceClient\configuration.svcinfo" />
     <None Include="Service References\PulseLeadServiceClient\configuration91.svcinfo" />
-    <None Include="Service References\PulseLeadServiceClient\PulseLeadService.disco" />
     <None Include="ZillowMortgageContact_V5.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -82,16 +94,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Service References\PulseLeadServiceClient\PulseLeadService.wsdl" />
-    <None Include="Service References\PulseLeadServiceClient\PulseLeadService.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PulseLeadServiceClient\PulseLeadService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\PulseLeadServiceClient\PulseLeadService2.xsd">
-      <SubType>Designer</SubType>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\PulseLeadServiceClient\" />

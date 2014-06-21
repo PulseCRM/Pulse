@@ -1,0 +1,30 @@
+﻿<?xml version="1.0"?>
+<!-- This is a contact from the Zillow Home Loans shopping wizard.-->
+<contact version="6" xmlns="https://mortgageapi.zillow.com/schema">
+  <id>LC-EXAMPLE</id>
+  <created>2014-04-29T22:27:00Z</created>
+  <type>shoppingWizard</type>
+  <description>This is a contact from the Zillow Home Loans shopping wizard.</description>
+  <price>0.0</price>
+  <sender>
+    <firstName>John</firstName>
+    <lastName>Doe</lastName>
+    <emailAddress>john.doe@example.com</emailAddress>
+    <phoneNumber>(206) 555-1212</phoneNumber>
+  </sender>
+  <lender>
+    <id>ZUz1chc7p3m0w9_4eq92</id>
+    <firstName>Larry</firstName>
+    <lastName>Lenderson</lastName>
+    <emailAddress>larry@larry-lenderson-lending.com</emailAddress>
+  </lender>
+  <details>
+    <purchasePrice>400000</purchasePrice>
+    <downPayment>80000</downPayment>
+    <loanAmount>320000</loanAmount>
+    <state>WA</state>
+    <zipCode>98102</zipCode>
+    <selfReportedCreditScore>720</selfReportedCreditScore>
+    <lendersContacted>3</lendersContacted>
+  </details>
+</contact>

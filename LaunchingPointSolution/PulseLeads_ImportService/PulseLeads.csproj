@@ -72,24 +72,6 @@
     <Content Include="PulseLeadService.svc" />
     <Content Include="Zillow\ContactAPI.aspx" />
     <Content Include="Zillow\ContactAPITest.aspx" />
-    <Content Include="Web_dev.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Web_dev.Debug.config">
-      <DependentUpon>Web_dev.config</DependentUpon>
-    </Content>
-    <Content Include="Web_dev.Release.config">
-      <DependentUpon>Web_dev.config</DependentUpon>
-    </Content>
-    <Content Include="Web_prod.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Web_prod.Debug.config">
-      <DependentUpon>Web_prod.config</DependentUpon>
-    </Content>
-    <Content Include="Web_prod.Release.config">
-      <DependentUpon>Web_prod.config</DependentUpon>
-    </Content>
     <None Include="Zillow\Models\SQL Scripts\Tables.sql" />
     <Content Include="Zillow\SupportDocuments\Sample1_V50.xml" />
     <None Include="Zillow\SupportDocuments\Sample1_v60.xml" />

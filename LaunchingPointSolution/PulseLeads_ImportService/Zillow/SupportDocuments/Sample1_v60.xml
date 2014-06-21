@@ -1,0 +1,56 @@
+﻿<?xml version="1.0"?>
+<!-- This is a contact from the Zillow contact form featured next to loan request ZR-EXAMPLE.-->
+<contact version="6" xmlns="https://mortgageapi.zillow.com/schema">
+  <id>LC-EXAMPLE</id>
+  <created>2014-04-29T22:34:00Z</created>
+  <type>featuredContactForm</type>
+  <description>This is a contact from the Zillow contact form featured next to loan request ZR-EXAMPLE.</description>
+  <price>0.0</price>
+  <sender>
+    <firstName>John</firstName>
+    <lastName>Doe</lastName>
+    <emailAddress>john.doe@example.com</emailAddress>
+    <phoneNumber>(206) 555-1212</phoneNumber>
+  </sender>
+  <lender>
+    <id>ZUz1chc7p3m0w9_4eq92</id>
+    <firstName>Larry</firstName>
+    <lastName>Lenderson</lastName>
+    <emailAddress>larry@larry-lenderson-lending.com</emailAddress>
+  </lender>
+  <details>
+    <message>I am interested in receiving more information about a purchase loan of $240,000 with a 20% down payment.</message>
+    <loanRequest>
+      <id>ZR-EXAMPLE</id>
+      <created>2014-04-29T22:33:29Z</created>
+      <clickPrice>8.20</clickPrice>
+      <loanPurpose>Purchase</loanPurpose>
+      <loanAmount>240000</loanAmount>
+      <loanToValuePercent>80.0</loanToValuePercent>
+      <debtToIncomePercent>0.0</debtToIncomePercent>
+      <county>King</county>
+      <state>WA</state>
+      <zipCode>98102</zipCode>
+      <propertyValue>300000</propertyValue>
+      <propertyType>SingleFamilyHome</propertyType>
+      <propertyUse>Primary</propertyUse>
+      <selfReportedCreditScore>720</selfReportedCreditScore>
+      <annualIncome>70000</annualIncome>
+      <monthlyDebts>0</monthlyDebts>
+      <totalAssets>0</totalAssets>
+      <selfEmployed>false</selfEmployed>
+      <hasBankruptcy>false</hasBankruptcy>
+      <hasForeclosure>false</hasForeclosure>
+      <purchase>
+        <downPayment>60000</downPayment>
+        <firstTimeBuyer>false</firstTimeBuyer>
+        <newConstruction>false</newConstruction>
+      </purchase>
+      <desiredPrograms>
+        <desiredProgram>Fixed30Year</desiredProgram>
+        <desiredProgram>Fixed15Year</desiredProgram>
+        <desiredProgram>ARM5</desiredProgram>
+      </desiredPrograms>
+    </loanRequest>
+  </details>
+</contact>

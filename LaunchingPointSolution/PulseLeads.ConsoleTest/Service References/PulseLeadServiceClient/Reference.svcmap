@@ -18,14 +18,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:57523/PulseLeadService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://api-equic001.pulsedashboard.net/PulseLeadService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="PulseLeadService.xsd" MetadataType="Schema" ID="b77e2d23-0c18-4314-8ed7-9d6324d6cd8a" SourceId="1" SourceUrl="http://localhost:57523/PulseLeadService.svc?xsd=xsd0" />
-    <MetadataFile FileName="PulseLeadService1.xsd" MetadataType="Schema" ID="6117e540-06a8-4dfa-8ab5-397e3de59bed" SourceId="1" SourceUrl="http://localhost:57523/PulseLeadService.svc?xsd=xsd2" />
-    <MetadataFile FileName="PulseLeadService.wsdl" MetadataType="Wsdl" ID="cca690de-421c-4167-a7f9-061f31b5f168" SourceId="1" SourceUrl="http://localhost:57523/PulseLeadService.svc?wsdl" />
-    <MetadataFile FileName="PulseLeadService2.xsd" MetadataType="Schema" ID="469afafa-3d64-412f-895c-acbf671eadfb" SourceId="1" SourceUrl="http://localhost:57523/PulseLeadService.svc?xsd=xsd1" />
-    <MetadataFile FileName="PulseLeadService.disco" MetadataType="Disco" ID="078c4afe-73b4-420f-8b46-a06924f08070" SourceId="1" SourceUrl="http://localhost:57523/PulseLeadService.svc?disco" />
+    <MetadataFile FileName="PulseLeadService3.xsd" MetadataType="Schema" ID="0f815f61-fff8-498c-b3d6-1c8420e7abd6" SourceId="1" SourceUrl="http://api-equic001.pulsedashboard.net/PulseLeadService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PulseLeadService1.disco" MetadataType="Disco" ID="676d7bab-2214-466e-84a6-2401fad895f8" SourceId="1" SourceUrl="http://api-equic001.pulsedashboard.net/PulseLeadService.svc?disco" />
+    <MetadataFile FileName="PulseLeadService31.xsd" MetadataType="Schema" ID="b9c0b102-354f-4f2a-86d6-502267a88b16" SourceId="1" SourceUrl="http://api-equic001.pulsedashboard.net/PulseLeadService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PulseLeadService1.wsdl" MetadataType="Wsdl" ID="ad0a6c65-3603-47f6-a25f-66e3aa355ffa" SourceId="1" SourceUrl="http://api-equic001.pulsedashboard.net/PulseLeadService.svc?wsdl" />
+    <MetadataFile FileName="PulseLeadService32.xsd" MetadataType="Schema" ID="d9305301-d45f-4ee6-90e8-9c1eb313113c" SourceId="1" SourceUrl="http://api-equic001.pulsedashboard.net/PulseLeadService.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

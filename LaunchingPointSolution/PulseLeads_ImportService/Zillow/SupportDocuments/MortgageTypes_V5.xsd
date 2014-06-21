@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<xsd:schema attributeFormDefault="unqualified"
+            elementFormDefault="unqualified"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:MortgageTypes="http://www.zillow.com/static/xsd/MortgageTypes"
+            targetNamespace="http://www.zillow.com/static/xsd/MortgageTypes">
+
+    <!-- GLOBAL MORTGAGE API TYPES -->
+
+    <xsd:complexType name="Credentials">
+        <xsd:sequence>
+            <xsd:element name="EmailAddress" type="xsd:string"/>
+            <xsd:element name="Password" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:simpleType name="Status">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="success"/>
+            <xsd:enumeration value="error"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType  name="Error">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attribute name="code" type="xsd:int" use="required"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+                
+    <!-- REQUEST TYPES -->
+
+    <xsd:simpleType name="LoanPurpose">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="purchase"/>
+            <xsd:enumeration value="refinance"/>
+            <xsd:enumeration value="homeEquity"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="ContactType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="phone"/>
+            <xsd:enumeration value="email"/>
+            <xsd:enumeration value="website"/>
+            <xsd:enumeration value="click"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:complexType name="ContactPricing">
+        <xsd:sequence>
+            <xsd:element name="Price" minOccurs="0" maxOccurs="unbounded">
+                <xsd:complexType>
+                    <xsd:simpleContent>
+                        <xsd:extension base="xsd:decimal">
+                            <xsd:attribute name="contactType" type="MortgageTypes:ContactType" use="required"/>
+                        </xsd:extension>
+                    </xsd:simpleContent>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:simpleType name="PropertyType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="singleFamily"/>
+            <xsd:enumeration value="townhouse"/>
+            <xsd:enumeration value="condo4orFewerStories"/>
+            <xsd:enumeration value="condo5+Stories"/>
+            <xsd:enumeration value="coop"/>
+            <xsd:enumeration value="mobileOrManufactured"/>
+            <xsd:enumeration value="modular"/>
+            <xsd:enumeration value="leasehold"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="PropertyUsage">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="primaryResidence"/>
+            <xsd:enumeration value="secondaryOrVacation"/>
+            <xsd:enumeration value="investmentOrRental"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="EstimatedPropertyValueSource">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="zestimate"/>
+            <xsd:enumeration value="appraisal"/>
+            <xsd:enumeration value="comparativeMarketAnalysis"/>
+            <xsd:enumeration value="purchasePrice"/>
+            <xsd:enumeration value="other"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:complexType name="PropertyDetails">
+        <xsd:sequence>
+            <xsd:element name="ZipCode" type="xsd:string"/>
+            <xsd:element name="County" type="xsd:string"/>
+            <xsd:element name="State" type="xsd:string"/>
+            <xsd:element name="PropertyType" type="MortgageTypes:PropertyType"/>
+            <xsd:element name="PropertyUsage" type="MortgageTypes:PropertyUsage"/>
+            <xsd:element name="NewConstruction" type="xsd:boolean" minOccurs="0"/>
+            <xsd:element name="EstimatedPurchasePrice" type="xsd:int" minOccurs="0"/>
+            <xsd:element name="EstimatedPropertyValue" minOccurs="0">
+                <xsd:complexType>
+                    <xsd:simpleContent>
+                        <xsd:extension base="xsd:int">
+                            <xsd:attribute name="source" type="MortgageTypes:EstimatedPropertyValueSource" use="required"/>
+                        </xsd:extension>
+                    </xsd:simpleContent>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="YearPropertyPurchased" type="xsd:string" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:simpleType name="LoanProgram">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="40yearFixed"/>
+            <xsd:enumeration value="30yearFixed"/>
+            <xsd:enumeration value="25yearFixed"/>
+            <xsd:enumeration value="20yearFixed"/>
+            <xsd:enumeration value="15yearFixed"/>
+            <xsd:enumeration value="10yearFixed"/>
+            <xsd:enumeration value="10yearARM"/>
+            <xsd:enumeration value="7yearARM"/>
+            <xsd:enumeration value="5yearARM"/>
+            <xsd:enumeration value="3yearARM"/>
+            <xsd:enumeration value="10yearBalloon"/>
+            <xsd:enumeration value="5yearBalloon"/>
+            <xsd:enumeration value="lowOrNoDownPayment"/>
+            <xsd:enumeration value="interestOnly"/>
+            <xsd:enumeration value="30yearFixedHomeEquity"/>
+            <xsd:enumeration value="30/15yearFixedHomeEquity"/>
+            <xsd:enumeration value="15yearFixedHomeEquity"/>
+            <xsd:enumeration value="20yearAdjustableHELOC"/>
+            <xsd:enumeration value="15yearAdjustableHELOC"/>
+            <xsd:enumeration value="10yearAdjustableHELOC"/>
+            <xsd:enumeration value="other"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:complexType name="LoanDetails">
+        <xsd:sequence>
+            <xsd:element name="LoanAmount" type="xsd:int"/>
+            <xsd:element name="LoanToValuePercent" type="xsd:float"/>
+            <xsd:element name="DebtToIncomePercent" type="xsd:float"/>
+            <xsd:element name="EstimatedDownPayment" type="xsd:int" minOccurs="0"/>
+            <xsd:element name="FirstTimeBuyer" type="xsd:boolean" minOccurs="0"/>
+            <xsd:element name="CurrentMortgageBalance" type="xsd:int" minOccurs="0"/>
+            <xsd:element name="CurrentLoanProgram" type="MortgageTypes:LoanProgram" minOccurs="0"/>
+            <xsd:element name="CurrentMortgageRate" type="xsd:float" minOccurs="0"/>
+            <xsd:element name="CurrentMonthlyPrincipalAndInterest" type="xsd:int" minOccurs="0"/>
+            <xsd:element name="CurrentLoanOriginationYear" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="AcceptPrePayPenalty" type="xsd:boolean"/>
+            <xsd:element name="LoanNeededTimeFrameMaxDays" type="xsd:int"/>
+            <xsd:element name="CashOutAmount" type="xsd:int" minOccurs="0"/>
+            <xsd:element name="DesiredLoanAmount" type="xsd:int" minOccurs="0"/>
+            <xsd:element name="LoanProgramsOfInterest">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="LoanProgram" type="MortgageTypes:LoanProgram" minOccurs="0" maxOccurs="unbounded"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="LoanOwnedByFannie" type="xsd:boolean"/>
+            <xsd:element name="LoanOwnedByFreddie" type="xsd:boolean"/>
+            <xsd:element name="LoanOwnedByFHA" type="xsd:boolean"/>
+            <xsd:element name="PlansToLiveInHomeDurationMinYears" type="xsd:int" minOccurs="0"/>
+            <xsd:element name="ReasonForLoan" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="AdditionalNotes" type="MortgageTypes:AdditionalNotes" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:simpleType name="CreditScoreSource">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="estimated"/>
+            <xsd:enumeration value="userProvided"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="CreditScore">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:int">
+                <xsd:attribute name="source" type="MortgageTypes:CreditScoreSource" use="required"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="Asset">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:int">
+                <xsd:attribute name="type" type="xsd:string" use="required"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+
+    <xsd:complexType name="Debt">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:int">
+                <xsd:attribute name="type" type="xsd:string" use="required"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    
+    <xsd:simpleType name="VeteranType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="regularMilitary"/>
+            <xsd:enumeration value="reserves"/>
+            <xsd:enumeration value="nationalGuard"/>
+            <xsd:enumeration value="spouseOfRegularMilitary"/>
+            <xsd:enumeration value="spouseOfReserveMilitary"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:complexType name="Borrower">
+        <xsd:sequence>
+            <xsd:element name="CreditScore" type="MortgageTypes:CreditScore"/>
+            <xsd:element name="DeclaredBankruptcyLast7Years" type="xsd:boolean"/>
+            <xsd:element name="ForeclosedLast7Years" type="xsd:boolean"/>
+            <xsd:element name="BaseMonthlyIncome" type="xsd:int"/>
+            <xsd:element name="AdditionalMonthlyIncome" type="xsd:int"/>
+            <xsd:element name="SelfEmployed" type="xsd:boolean"/>
+            <xsd:element name="HasProofOfIncome" type="xsd:boolean"/>
+            <xsd:element name="EligibleForVALoan" type="xsd:boolean"/>
+            <xsd:element name="VALoanFirstTimeUse" type="xsd:boolean" minOccurs="0"/>
+            <xsd:element name="HasVARelatedDisability" type="xsd:boolean" minOccurs="0"/>
+            <xsd:element name="VeteranType" type="MortgageTypes:VeteranType" minOccurs="0"/>
+            <xsd:element name="Assets">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="Asset" type="MortgageTypes:Asset" minOccurs="0" maxOccurs="unbounded"/>
+                    </xsd:sequence>
+                    <xsd:attribute name="sum" type="xsd:int" use="required"/>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="MonthlyDebts">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="Debt" type="MortgageTypes:Debt" minOccurs="0" maxOccurs="unbounded"/>
+                    </xsd:sequence>
+                    <xsd:attribute name="sum" type="xsd:int" use="required"/>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="LoanRequestCreated">
+        <xsd:sequence>
+            <xsd:element name="LoanRequestId" type="xsd:string"/>
+            <xsd:element name="LoanPurpose" type="MortgageTypes:LoanPurpose"/>
+            <xsd:element name="DateCreated" type="xsd:dateTime"/>
+            <xsd:element name="ContactPricing" type="MortgageTypes:ContactPricing"/>
+            <xsd:element name="PropertyDetails" type="MortgageTypes:PropertyDetails"/>
+            <xsd:element name="LoanDetails" type="MortgageTypes:LoanDetails"/>
+            <xsd:element name="PrimaryBorrower" type="MortgageTypes:Borrower"/>
+            <xsd:element name="SecondaryBorrower" type="MortgageTypes:Borrower" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <!-- QUOTE TYPES -->
+
+    <xsd:simpleType name="PartnerId">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="10"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="InterestRate">
+        <xsd:restriction base="xsd:float">
+            <xsd:minInclusive value="0.125"/>
+            <xsd:maxInclusive value="12"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="AnnualPercentageRate">
+        <xsd:restriction base="xsd:float">
+            <xsd:minInclusive value="0.125"/>
+            <xsd:maxInclusive value="12"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="AssumedLockDays">
+        <xsd:restriction base="xsd:int">
+            <xsd:enumeration value="15"/>
+            <xsd:enumeration value="30"/>
+            <xsd:enumeration value="45"/>
+            <xsd:enumeration value="60"/>
+            <xsd:enumeration value="90"/>
+            <xsd:enumeration value="120"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="AmortizationType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="fixed"/>
+            <xsd:enumeration value="adjustable"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="ARMIndexType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="CMT"/>
+            <xsd:enumeration value="LIBOR_6_MONTH"/>
+            <xsd:enumeration value="COSI"/>
+            <xsd:enumeration value="TBill"/>
+            <xsd:enumeration value="COFI"/>
+            <xsd:enumeration value="CD"/>
+            <xsd:enumeration value="PrimeRate"/>
+            <xsd:enumeration value="MTA"/>
+            <xsd:enumeration value="CODI"/>
+            <xsd:enumeration value="LIBOR_1_YEAR"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="Margin">
+        <xsd:restriction base="xsd:float">
+            <xsd:minInclusive value="0"/>
+            <xsd:maxInclusive value="12"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="InterestOnlyForMonths">
+        <xsd:restriction base="xsd:int">
+            <xsd:minInclusive value="1"/>
+            <xsd:maxInclusive value="120"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="RateFixedForMonths">
+        <xsd:restriction base="xsd:int">
+            <xsd:minInclusive value="1"/>
+            <xsd:maxInclusive value="120"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="RateAdjustmentPeriodMonths">
+        <xsd:restriction base="xsd:int">
+            <xsd:minInclusive value="1"/>
+            <xsd:maxInclusive value="120"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="InitialCap">
+        <xsd:restriction base="xsd:float">
+            <xsd:minInclusive value="0"/>
+            <xsd:maxInclusive value="12"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="PeriodicCap">
+        <xsd:restriction base="xsd:float">
+            <xsd:minInclusive value="0"/>
+            <xsd:maxInclusive value="12"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="LifetimeCap">
+        <xsd:restriction base="xsd:float">
+            <xsd:minInclusive value="0"/>
+            <xsd:maxInclusive value="24"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="YearsInMonths">
+        <xsd:restriction base="xsd:int">
+            <xsd:enumeration value="60"/>
+            <xsd:enumeration value="120"/>
+            <xsd:enumeration value="180"/>
+            <xsd:enumeration value="240"/>
+            <xsd:enumeration value="300"/>
+            <xsd:enumeration value="360"/>
+            <xsd:enumeration value="480"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="MaxAllowedLTV">
+        <xsd:restriction base="xsd:int">
+            <xsd:minInclusive value="5"/>
+            <xsd:maxInclusive value="125"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+        
+    <xsd:simpleType name="DollarFeeAmount">
+        <xsd:restriction base="xsd:int">
+            <xsd:minInclusive value="-99999"/>
+			<xsd:maxInclusive value="99999"/>
+        </xsd:restriction>
+    </xsd:simpleType>  
+
+    <xsd:simpleType name="CreditDollarFeeAmount">
+        <xsd:restriction base="xsd:int">
+            <xsd:minInclusive value="0"/>
+			<xsd:maxInclusive value="99999"/>
+        </xsd:restriction>
+    </xsd:simpleType>  
+        
+    <xsd:simpleType name="PercentageFeeAmount">
+        <xsd:restriction base="xsd:float">
+            <xsd:minInclusive value="-12"/>
+			<xsd:maxInclusive value="12"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:complexType name="Fee">
+        <xsd:attribute name="hudLine" type="xsd:string" use="required"/>
+        <xsd:attribute name="description" type="xsd:string" use="required"/>
+        <xsd:attribute name="includeInAPR" type="xsd:boolean" use="required"/>
+        <xsd:attribute name="dollarAmount" type="MortgageTypes:DollarFeeAmount"/>
+        <xsd:attribute name="percentageAmount" type="MortgageTypes:PercentageFeeAmount"/>
+    </xsd:complexType>
+
+    <xsd:complexType name="Credit">
+        <xsd:attribute name="description" type="xsd:string" use="required"/>
+        <xsd:attribute name="dollarAmount" type="MortgageTypes:CreditDollarFeeAmount"/>
+        <xsd:attribute name="percentageAmount" type="MortgageTypes:PercentageFeeAmount"/>
+    </xsd:complexType>
+
+    <xsd:simpleType name="AdditionalNotes">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="4000"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="LoanQuoteDetails">
+        <xsd:sequence>
+            <xsd:element name="InterestRate" type="MortgageTypes:InterestRate"/>
+            <xsd:element name="AnnualPercentageRate" type="MortgageTypes:AnnualPercentageRate" minOccurs="0"/>
+            <xsd:element name="IsJumbo" type="xsd:boolean" minOccurs="0"/>
+            <xsd:element name="AssumedLockDays" type="MortgageTypes:AssumedLockDays"/>
+            <xsd:element name="AmortizationType" type="MortgageTypes:AmortizationType"/>
+            <xsd:element name="ARMIndexType" type="MortgageTypes:ARMIndexType" minOccurs="0"/>
+            <xsd:element name="Margin" type="MortgageTypes:Margin" minOccurs="0"/>
+            <xsd:element name="RateFixedForMonths" type="MortgageTypes:RateFixedForMonths" minOccurs="0"/>
+            <xsd:element name="RateAdjustmentPeriodMonths" type="MortgageTypes:RateAdjustmentPeriodMonths" minOccurs="0"/>
+            <xsd:element name="InitialCap" type="MortgageTypes:InitialCap" minOccurs="0"/>
+            <xsd:element name="PeriodicCap" type="MortgageTypes:PeriodicCap" minOccurs="0"/>
+            <xsd:element name="LifetimeCap" type="MortgageTypes:LifetimeCap" minOccurs="0"/>
+            <xsd:element name="TermMonths" type="MortgageTypes:YearsInMonths"/>
+            <xsd:element name="NoteDueInMonths" type="MortgageTypes:YearsInMonths"/>
+            <xsd:element name="MaxAllowedLTV" type="MortgageTypes:MaxAllowedLTV" minOccurs="0"/>
+            <xsd:element name="PrepaymentPenalty" type="xsd:boolean"/>
+            <xsd:element name="InterestOnlyLoan" type="xsd:boolean"/>
+            <xsd:element name="InterestOnlyForMonths" type="MortgageTypes:InterestOnlyForMonths" minOccurs="0"/>
+            <xsd:element name="LenderPaidInsurance" type="xsd:boolean"/>
+            <xsd:element name="AnnualMortgageInsurancePremiumPercent" type="xsd:float" minOccurs="0"/>
+            <xsd:element name="HARPLoan" type="xsd:boolean"/>
+            <xsd:element name="FHAStreamlineLoan" type="xsd:boolean"/>
+            <xsd:element name="FHALoan" type="xsd:boolean"/>
+            <xsd:element name="FHAUpfrontInsurancePremiumPercent" type="xsd:float" minOccurs="0"/>
+            <xsd:element name="FHAAnnualInsurancePremiumPercent" type="xsd:float" minOccurs="0"/>
+            <xsd:element name="VALoan" type="xsd:boolean"/>
+            <xsd:element name="VALoanFundingFeePercent" type="xsd:float" minOccurs="0"/>
+            <xsd:element name="FreddieLoanRequired" type="xsd:boolean" minOccurs="0"/>
+            <xsd:element name="FannieLoanRequired" type="xsd:boolean" minOccurs="0"/>
+            <xsd:element name="ApplyNowURL" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="Fees">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="Fee" type="MortgageTypes:Fee" minOccurs="0" maxOccurs="unbounded"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Credit" type="MortgageTypes:Credit" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="AdditionalNotes" type="MortgageTypes:AdditionalNotes" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <!-- Contact Types -->
+    <xsd:complexType name="ZillowMortgageContactType">
+        <xsd:sequence>
+            <xsd:choice>
+                <xsd:element name="WebContact" type="MortgageTypes:WebContactType"/>
+                <xsd:element name="PhoneContact" type="MortgageTypes:PhoneContactType"/>
+            </xsd:choice>
+            <xsd:element name="LenderEmail" type="xsd:string"/>
+            <xsd:element name="DateCreated" type="xsd:dateTime"/>
+            <xsd:element name="ContactPrice" type="xsd:decimal"/>
+            <xsd:element name="OriginalContactPrice" type="xsd:decimal" minOccurs="0"/>
+            <xsd:element name="FreeContactReason" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="ContactId" type="xsd:string"/>
+            <xsd:element name="LoanRequestCreated" type="MortgageTypes:LoanRequestCreated" minOccurs="0"/>
+            <xsd:element name="LoanQuoteDetails" type="MortgageTypes:LoanQuoteDetails" minOccurs="0"/>
+            <xsd:element name="ZillowQuoteDetails" type="MortgageTypes:ZillowQuoteDetailsType" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="ZillowQuoteDetailsType">
+        <xsd:sequence>
+            <xsd:element name="APR" type="xsd:float"/>
+            <xsd:element name="LoanQuoteId" type="xsd:string"/>
+            <xsd:element name="LoanDisplayName" type="xsd:string"/>
+            <xsd:element name="MonthlyPayment">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="PrincipalInterest" type="xsd:int"/>
+                       <xsd:element name="PropertyTaxes" type="xsd:int"/>
+                        <xsd:element name="HazardInsurance" type="xsd:int"/>
+                        <xsd:element name="MortgageInsurance" type="xsd:int" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="WebContactType">
+        <xsd:sequence>
+            <xsd:element name="FirstName" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="LastName" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="PhoneNumber" type="xsd:string" minOccurs="0"/>
+            <xsd:element name="EmailAddress" type="xsd:string"/>
+            <xsd:element name="ContactRequest" type="MortgageTypes:ContactRequestType"/>
+            <xsd:element name="Message" type="xsd:string"/>
+            <xsd:element name="Agents" type="MortgageTypes:AgentListType" minOccurs="0"/>
+            <xsd:element name="PropertyInfo" type="MortgageTypes:PropertyInfoType" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="PhoneContactType">
+        <xsd:sequence>
+            <xsd:element name="CallerName" type="xsd:string"/>
+            <xsd:element name="CallerNumber" type="xsd:string" />
+            <xsd:element name="DestinationNumber" type="xsd:string"/>
+            <xsd:element name="CallStartTime" type="xsd:dateTime"/>
+            <xsd:element name="CallEndTime" type="xsd:dateTime"/>
+            <xsd:element name="CallDuration" type="xsd:int"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:simpleType name="ContactRequestType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="RequestGFE"/>
+            <xsd:enumeration value="AskQuestion"/>
+            <xsd:enumeration value="RequestContact"/>
+            <xsd:enumeration value="PreApproval"/>
+            <xsd:enumeration value="ContactMePurchase"/>
+            <xsd:enumeration value="ContactMeRefinance"/>
+            <xsd:enumeration value="ContactMeEmail"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:complexType name="AgentListType">
+        <xsd:sequence>
+            <xsd:element name="Agent" type="MortgageTypes:AgentType" minOccurs="1" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="AgentType">
+        <xsd:sequence>
+            <xsd:element name="FirstName" type="xsd:string"/>
+            <xsd:element name="LastName" type="xsd:string"/>
+            <xsd:element name="BusinessName" type="xsd:string"/>
+            <xsd:element name="PhoneNumber" type="xsd:string"/>
+            <xsd:element name="EmailAddress" type="xsd:string"/>
+            <xsd:element name="ID" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="PropertyInfoType">
+        <xsd:sequence>
+            <xsd:element name="StreetAddress" type="xsd:string"/>
+            <xsd:element name="City" type="xsd:string"/>
+            <xsd:element name="State" type="xsd:string"/>
+            <xsd:element name="Zip" type="xsd:string"/>
+            <xsd:element name="LoanAmount" type="xsd:int"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>
+
