@@ -1,0 +1,40 @@
+﻿<?xml version="1.0"?>
+<!-- This is a contact from the Buyer’s Agent list on the Zillow home details page.-->
+<contact xmlns="https://mortgageapi.zillow.com/schema" version="6">
+  <id>LC-EXAMPLE</id>
+  <created>2013-01-03T18:30:00Z</created>
+  <type>preapproval</type>
+  <description>This is a preapproval contact from Zillow.</description>
+  <price>0.0</price>
+  Zillow Contact API V6
+  Confidential and Proprietary, Zillow, Inc. 19
+  <sender>
+    <firstName>John</firstName>
+    <lastName>Doe</lastName>
+    <emailAddress>john.doe@example.com</emailAddress>
+    <phoneNumber>(206) 555-1212</phoneNumber>
+  </sender>
+  <lender>
+    <id>ZUz1chc7p3m0w9_4eq92</id>
+    <firstName>Larry</firstName>
+    <lastName>Lenderson</lastName>
+    <emailAddress>larry@larry-lenderson-lending.com</emailAddress>
+  </lender>
+  <details>
+    <purchasePrice>500000</purchasePrice>
+    <downPayment>100000</downPayment>
+    <loanAmount>400000</loanAmount>
+    <state>WA</state>
+    <selfReportedCreditScore>720</selfReportedCreditScore>
+    <annualIncome>120000</annualIncome>
+    <monthlyDebts>1000</monthlyDebts>
+    <selfEmployed>false</selfEmployed>
+    <hasBankruptcy>false</hasBankruptcy>
+    <hasCoborrower>false</hasCoborrower>
+    <hasForeclosure>false</hasForeclosure>
+    <creditReportId>EXAMPLE</creditReportId>
+    <creditReportScore>734</creditReportScore>
+    <preapprovalLetterId>PL-EXAMPLE-EXAMPLE</preapprovalLetterId>
+    <lenderMustFollowUp>true</lenderMustFollowUp>
+  </details>
+</contact>

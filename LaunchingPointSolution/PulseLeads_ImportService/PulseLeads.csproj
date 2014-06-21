@@ -70,6 +70,34 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="PulseLeadService.svc" />
+    <Content Include="Zillow\ContactAPI.aspx" />
+    <Content Include="Zillow\ContactAPITest.aspx" />
+    <Content Include="Web_dev.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web_dev.Debug.config">
+      <DependentUpon>Web_dev.config</DependentUpon>
+    </Content>
+    <Content Include="Web_dev.Release.config">
+      <DependentUpon>Web_dev.config</DependentUpon>
+    </Content>
+    <Content Include="Web_prod.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web_prod.Debug.config">
+      <DependentUpon>Web_prod.config</DependentUpon>
+    </Content>
+    <Content Include="Web_prod.Release.config">
+      <DependentUpon>Web_prod.config</DependentUpon>
+    </Content>
+    <None Include="Zillow\Models\SQL Scripts\Tables.sql" />
+    <Content Include="Zillow\SupportDocuments\Sample1_V50.xml" />
+    <None Include="Zillow\SupportDocuments\Sample1_v60.xml" />
+    <None Include="Zillow\SupportDocuments\Sample2_v60.xml" />
+    <None Include="Zillow\SupportDocuments\Sample3_v60.xml" />
+    <None Include="Zillow\SupportDocuments\Sample4_v60.xml" />
+    <None Include="Zillow\SupportDocuments\Sample5_v60.xml" />
+    <None Include="Zillow\SupportDocuments\Sample6_v60.xml" />
     <None Include="Properties\DataSources\LP2.Service.Common.AddNoteResponse.datasource" />
     <None Include="Properties\DataSources\LP2.Service.Common.AddToAccountResponse.datasource" />
     <None Include="Properties\DataSources\LP2.Service.Common.CalculateDueDatesResponse.datasource" />
@@ -158,6 +186,12 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\LP2Service\LP2Service.wsdl" />
+    <None Include="Zillow\SupportDocuments\MortgageTypes_V5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Zillow\SupportDocuments\ZillowMortgageContact_V5.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PulseLeadService.svc.cs">
@@ -171,6 +205,37 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="ServiceManager.cs" />
+    <Compile Include="Zillow\ContactAPI.aspx.cs">
+      <DependentUpon>ContactAPI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Zillow\ContactAPI.aspx.designer.cs">
+      <DependentUpon>ContactAPI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Zillow\ContactAPITest.aspx.cs">
+      <DependentUpon>ContactAPITest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Zillow\ContactAPITest.aspx.designer.cs">
+      <DependentUpon>ContactAPITest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Zillow\Controllers\ImportManager.cs" />
+    <Compile Include="Zillow\Controllers\NLogger.cs" />
+    <Compile Include="Zillow\Controllers\PulseLeadClient.cs" />
+    <Compile Include="Zillow\Controllers\PostLead.cs" />
+    <Compile Include="Zillow\Models\Address.cs" />
+    <Compile Include="Zillow\Models\Employment.cs" />
+    <Compile Include="Zillow\Models\InternalLeadReq.cs" />
+    <Compile Include="Zillow\Models\LiquidAssets.cs" />
+    <Compile Include="Zillow\Models\OtherIncome.cs" />
+    <Compile Include="Zillow\Models\PostArgs.cs" />
+    <Compile Include="Zillow\Models\PostLeadRequest.cs" />
+    <Compile Include="Zillow\Models\RequestHeader.cs" />
+    <Compile Include="Zillow\Models\ResponseHeader.cs" />
+    <Compile Include="Zillow\_Code\Helpers.cs" />
+    <Compile Include="Zillow\Models\ZillowAttributeCollection.cs" />
+    <Compile Include="Zillow\Models\ZillowAttribute.cs" />
+    <Compile Include="Zillow\Models\ZillowLogger.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
